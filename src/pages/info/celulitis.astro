@@ -1,0 +1,357 @@
+---
+import { Image } from 'astro:assets';
+import celulitisImagen from '../../assets/fotos/celulitis.jpg';
+import Contact from '../../components/Contact.astro';
+import Treatments from '../../components/Treatments';
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Celulitis | Información y Tratamientos";
+const description = "Información completa sobre la celulitis, sus diferentes tipos y tratamientos disponibles. Descubra cómo mejorar la apariencia de su piel.";
+
+import ejercicio from '../../assets/fotos/ejercicio.avif';
+import nutricion from '../../assets/fotos/nutricion.jpg';
+---
+
+<Layout title={title} description={description}>
+  <main class="mt-16">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-white to-pink-100 py-20 overflow-hidden">
+      <div class="container mx-auto px-4 md:px-8 relative z-10">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-title-100 text-center font-title">
+          <span class="inline-block transform hover:scale-105 transition-transform duration-300">Celulitis</span>
+        </h1>
+        <p class="text-primary-200 text-center mt-4 max-w-xl mx-auto text-lg">
+          El 90% de las mujeres tiene celulitis en algún momento de su vida. No estás sola.
+        </p>
+      </div>
+    </section>
+
+    <!-- Introducción -->
+    <section class="py-16 bg-white bg-gradient-to-b from-pink-100 to-white relative">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="flex flex-col lg:flex-row items-start gap-8 text-justify">
+          <div class="lg:w-1/2">
+            <h2 class="text-2xl font-title font-bold text-primary-200 mb-6 relative inline-block">
+              ¿Qué es la Celulitis?
+              <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-primary-100"></span>
+            </h2>
+            <div class="space-y-4 text-black leading-relaxed">
+              <p>
+                La celulitis, también conocida como "piel de naranja", es una condición que afecta principalmente a las mujeres y se caracteriza por cambios en la estructura de la piel y el tejido subcutáneo. Se produce cuando las células grasas (adipocitos) se agrupan y empujan contra el tejido conectivo, creando esa apariencia irregular y ondulada en la piel.
+              </p>
+              <p>
+                Este fenómeno está influenciado por varios factores:
+              </p>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>Factores hormonales (especialmente estrógenos)</li>
+                <li>Predisposición genética</li>
+                <li>Mala circulación sanguínea y linfática</li>
+                <li>Acumulación de toxinas en el tejido adiposo</li>
+                <li>Inflamación del tejido conectivo</li>
+              </ul>
+              <p>
+                La celulitis puede aparecer en diferentes zonas del cuerpo, siendo las más comunes:
+              </p>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>Muslos y glúteos</li>
+                <li>Abdomen</li>
+                <li>Brazos</li>
+                <li>Rodillas</li>
+              </ul>
+              <p>
+                Es importante entender que la celulitis no es solo un problema estético, sino que puede estar relacionada con la salud general del cuerpo. Por eso, es fundamental un diagnóstico preciso del tipo de celulitis que se presenta para poder abordarla de manera efectiva.
+              </p>
+            </div>
+          </div>
+          
+          <div class="lg:w-1/2 relative">
+            <div class="rounded-lg overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-102 hover:shadow-2xl">
+              <Image 
+                transition:name={celulitisImagen.src}
+                src={celulitisImagen}
+                alt="Consulta médica especializada en celulitis" 
+                class="w-full h-auto object-cover aspect-4/3"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tipos de Celulitis -->
+    <section class="py-16 bg-primary-50 bg-gradient-to-b from-white to-pink-100">
+      <div class="container mx-auto px-4 md:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-title-100 mb-12 font-title">
+          Tipos de Celulitis
+        </h2>
+        
+        <div class="max-w-6xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Celulitis Blanda -->
+            <div class=" bg-white  rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div class="relative">
+                <div class="p-8 relative">
+                  <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-2xl font-title font-bold text-title-100">Celulitis Blanda</h3>
+                    <span class="px-4 py-2 bg-white/80 backdrop-blur-sm text-primary-200 rounded-full text-sm font-medium shadow-sm">
+                      La más común
+                    </span>
+                  </div>
+                  
+                  <div class="space-y-6">
+                    <div>
+                      <h4 class="text-lg font-semibold text-primary-200 mb-3 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Características
+                      </h4>
+                      <ul class="space-y-2">
+                        <li class="flex items-center text-gray-700">
+                          <span class="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2"></span>
+                          Piel con aspecto de naranja
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                          <span class="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2"></span>
+                          Presencia de flacidez
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                          <span class="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2"></span>
+                          Se mueve al cambiar de posición
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 class="text-lg font-semibold text-primary-200 mb-3 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                        </svg>
+                        Tratamiento Recomendado
+                      </h4>
+                      <ul class="space-y-2">
+                        <li class="flex items-center text-gray-700">
+                          <span class="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2"></span>
+                          Radiofrecuencia HiImFu CRyo RF MAX 
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                          <span class="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2"></span>
+                          Mesoterapia con lipolíticos
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                          <span class="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2"></span>
+                          Ejercicios de tonificación
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                          <span class="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2"></span>
+                          Alimntacion saludable e hidrtacion adecuada 
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Celulitis Dura -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div class="relative">
+                <div class="p-8 relative">
+                  <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-2xl font-title font-bold text-title-100">Celulitis Dura</h3>
+                    <span class="px-4 py-2 bg-white/80 backdrop-blur-sm text-primary-200 rounded-full text-sm font-medium shadow-sm">
+                      Dolorosa
+                    </span>
+                  </div>
+                  
+                  <div class="space-y-6">
+                    <div>
+                      <h4 class="text-lg font-semibold text-primary-200 mb-3 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Características
+                      </h4>
+                      <ul class="space-y-2">
+                        <li class="flex items-center text-gray-700">
+                          <span class="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2"></span>
+                          Dolorosa al tacto
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                          <span class="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2"></span>
+                          Panículos adiposos rígidos
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                          <span class="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2"></span>
+                          Puede presentar fibrosis
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 class="text-lg font-semibold text-primary-200 mb-3 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                        </svg>
+                        Tratamiento Recomendado
+                      </h4>
+                      <ul class="space-y-2">
+                        <li class="flex items-center text-gray-700">
+                          <span class="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2"></span>
+                          Radiofrecuencia HiImFu Refreeze
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                          <span class="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2"></span>
+                          Mesoterapia vasodilatadora
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                          <span class="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2"></span>
+                          Presoterapia
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recomendaciones para el hogar -->
+    <section class="py-16 bg-gradient-to-b from-pink-100 to-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-title-100 mb-12 font-title"> 
+          Recomendaciones para el Hogar
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Alimentación -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <div class="relative">
+              <Image 
+                src={nutricion}
+                alt="Alimentación saludable"
+                class="w-full h-48 object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <h3 class="absolute bottom-4 left-4 text-2xl font-bold text-white">Alimentación Saludable</h3>
+            </div>
+            
+            <div class="p-6">
+              <div class="space-y-4">
+                <div class="flex items-start gap-4 p-4 bg-pink-50 rounded-xl hover:bg-pink-100 transition-colors duration-300">
+                  <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center">
+                    <span class="text-primary-600 text-xl">🥗</span>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800 mb-1">Dieta Balanceada</h4>
+                    <p class="text-black text-sm">Consume frutas, verduras y proteínas magras en cada comida</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4 p-4 bg-pink-50 rounded-xl hover:bg-pink-100 transition-colors duration-300">
+                  <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center">
+                    <span class="text-primary-600 text-xl">🚫</span>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800 mb-1">Evitar Azúcares</h4>
+                    <p class="text-black text-sm">Reduce el consumo de harinas refinadas y azúcares</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4 p-4 bg-pink-50 rounded-xl hover:bg-pink-100 transition-colors duration-300">
+                  <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center">
+                    <span class="text-primary-600 text-xl">💧</span>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800 mb-1">Hidratación</h4>
+                    <p class="text-black text-sm">Bebe al menos 2 litros de agua al día</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4 p-4 bg-pink-50 rounded-xl hover:bg-pink-100 transition-colors duration-300">
+                  <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center">
+                    <span class="text-primary-600 text-xl">🌾</span>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800 mb-1">Fibra Natural</h4>
+                    <p class="text-black text-sm">Incluye alimentos ricos en fibra en tu dieta</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ejercicio y Cuidados -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <div class="relative">
+              <Image 
+                src={ejercicio}
+                alt="Ejercicio y cuidados"
+                class="w-full h-48 object-cover     "
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <h3 class="absolute bottom-4 left-4 text-2xl font-bold text-white">Ejercicio y Cuidados</h3>
+            </div>
+            
+            <div class="p-6">
+              <div class="space-y-4">
+                <div class="flex items-start gap-4 p-4 bg-pink-50 rounded-xl hover:bg-pink-100 transition-colors duration-300">
+                  <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center">
+                    <span class="text-primary-600 text-xl">💆‍♀️</span>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800 mb-1">Masajes Diarios</h4>
+                    <p class="text-black text-sm">Realiza masajes circulares con cremas especializadas</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4 p-4 bg-pink-50 rounded-xl hover:bg-pink-100 transition-colors duration-300">
+                  <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center">
+                    <span class="text-primary-600 text-xl">🏃‍♀️</span>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800 mb-1">Ejercicio Regular</h4>
+                    <p class="text-black text-sm">Practica actividad física al menos 30 minutos diarios</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4 p-4 bg-pink-50 rounded-xl hover:bg-pink-100 transition-colors duration-300">
+                  <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center">
+                    <span class="text-primary-600 text-xl">👕</span>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800 mb-1">Ropa Adecuada</h4>
+                    <p class="text-black text-sm">Evita prendas muy ajustadas que dificulten la circulación</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4 p-4 bg-pink-50 rounded-xl hover:bg-pink-100 transition-colors duration-300">
+                  <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center">
+                    <span class="text-primary-600 text-xl">🧘‍♀️</span>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800 mb-1">Postura Correcta</h4>
+                    <p class="text-black text-sm">Mantén una buena postura durante el día</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tratamientos disponibles -->
+    <section class="bg-gradient-to-b from-white to-pink-100">
+      <div class="container mx-auto px-4 md:px-8">
+        <Treatments client:load category='celulitis' layout='carousel'/>
+      </div>
+    </section>
+
+    <!-- Componente de contacto -->
+    <Contact />
+  </main>
+</Layout> 

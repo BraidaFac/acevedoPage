@@ -1,22 +1,41 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import Nav from '../components/Nav.jsx';
+import '../styles/global.css';
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Dra. Acevedo Cecilia</title>
+		<ClientRouter  />
 	</head>
-	<body>
+	<body class="font-display">
+		<Nav client:load/>
 		<slot />
 	</body>
+	<script>
+		import { initAccordions, initDropdowns } from 'flowbite';
+		document.addEventListener('astro:after-swap', () => {
+			initDropdowns();
+			initAccordions();
+		});
+		
+		// Inicializar en la carga inicial
+		document.addEventListener('DOMContentLoaded', () => {
+			initDropdowns();
+			initAccordions();
+		});
+	</script>
 </html>
 
-<style>
+<style is:global>
 	html,
 	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+		overflow-x: hidden;
 	}
+	
 </style>

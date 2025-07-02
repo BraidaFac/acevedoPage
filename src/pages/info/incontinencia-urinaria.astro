@@ -1,0 +1,192 @@
+---
+import { Image } from 'astro:assets';
+import incontinenciaImagen from '../../assets/fotos/incontinencia.jpg';
+import Contact from '../../components/Contact.astro';
+import Treatments from '../../components/Treatments';
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Incontinencia Urinaria Femenina | Información Médica";
+const description = "Información completa sobre la incontinencia urinaria femenina, causas, factores de riesgo y tratamientos disponibles. Descubra cómo mejorar su calidad de vida.";
+
+// Datos estructurados para los factores de riesgo
+const factoresRiesgo = [
+  {
+    icono: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
+    titulo: "Factores Genéticos",
+    descripcion: "Predisposiciones asociadas con daños motores, problemas de inervación, hiperlaxitud y deficiencias en la síntesis de colágeno."
+  },
+  {
+    icono: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+    titulo: "Sobrepeso",
+    descripcion: "El exceso de peso es un factor tanto genético como adquirido que aumenta significativamente el riesgo de incontinencia."
+  },
+  {
+    icono: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+    titulo: "Embarazos y Partos",
+    descripcion: "Los embarazos múltiples y partos vaginales debilitan progresivamente los músculos del suelo pélvico."
+  },
+  {
+    icono: "M13 10V3L4 14h7v7l9-11h-7z",
+    titulo: "Ejercicios de Impacto",
+    descripcion: "Actividades físicas de alto impacto que pueden desarrollar esta patología en personas con predisposición."
+  },
+  {
+    icono: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+    titulo: "Otros Factores",
+    descripcion: "Constipación, actividad sexual, enfermedades cancerosas y condiciones autoinmunes también contribuyen al desarrollo."
+  }
+];
+
+// Datos para tratamientos
+const tratamientos = [
+  {
+    nombre: "Radiofrecuencia Orbital Enygma",
+    descripcion: "Estimula la producción de colágeno para fortalecer el suelo pélvico de forma no invasiva",
+    beneficios: ["No invasivo", "Sin tiempo de recuperación", "Resultados progresivos"],
+    link: "/tratamientos/enygma"
+  },
+  {
+    nombre: "Ejercicios del Suelo Pélvico",
+    descripcion: "Fortalecimiento específico de la musculatura que sostiene la vejiga y controla la micción",
+    beneficios: ["Técnica natural", "Sin efectos secundarios", "Mejora a largo plazo"],
+    link: "/tratamientos/ejercicios-suelo-pelvico"
+  },
+  {
+    nombre: "Tratamiento Farmacológico",
+    descripcion: "Medicamentos específicos para controlar la urgencia miccional y fortalecer el esfínter",
+    beneficios: ["Alivio rápido", "Control de síntomas", "Fácil administración"],
+    link: "/tratamientos/farmacologico"
+  }
+];
+---
+
+<Layout title={title} description={description}>
+  <main class="mt-16">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-white to-pink-100 py-20 overflow-hidden">
+      <div class="container mx-auto px-4 md:px-8 relative z-10">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-title-100 text-center font-title">
+          <span class="inline-block transform hover:scale-105 transition-transform duration-300">Incontinencia</span> 
+          <span class="inline-block transform hover:scale-105 transition-transform duration-300">Urinaria</span> 
+          <span class="inline-block transform hover:scale-105 transition-transform duration-300">Femenina</span>
+        </h1>
+        <p class="text-primary-200 text-center mt-4 max-w-xl mx-auto text-lg">
+          Comprender las causas y encontrar las soluciones adecuadas para mejorar su calidad de vida
+        </p>
+      </div>
+    </section>
+
+    <!-- Introducción con imagen al lado -->
+    <section class="py-16 bg-white bg-gradient-to-b from-pink-100 to-white relative">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="flex flex-col lg:flex-row items-start gap-8 text-justify">
+          <div class="lg:w-1/2">
+            <h2 class="text-2xl font-title font-bold text-primary-200 mb-6 relative inline-block">
+              ¿De qué hablamos cuando hablamos de Incontinencia Urinaria Femenina?
+              <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-primary-100"></span>
+            </h2>
+            <div class="space-y-4 text-black leading-relaxed">
+              <p>
+                La gran mayoría de las mujeres sufre en menor o mayor grado pérdida involuntaria de orina, transformándose esto en un problema, no solo higiénico sino también social.
+              </p>
+              <p>
+                Sea por contracciones voluntarias o involuntarias, la incontinencia urinaria obliga a quien la padece a sufrir privaciones o cambios en su estilo de vida.
+              </p>
+              
+              <div class="mt-8">
+                <h3 class="text-xl font-title font-semibold text-primary-200 mb-4">¿Por qué ocurre esto?</h3>
+                <p class="mb-4">
+                  El origen de esta patología es de causas múltiples y combinadas, como siempre los factores están asociados a la predisposición genética y a los factores adquiridos.
+                </p>
+                <p class="mb-4">
+                  Múltiples predisposiciones genéticas están asociadas con la aparición de esta patología, entre ellas aquellas asociadas con daños motores, de inervación, de sobrepeso, autoinmunes, así como también las asociadas a la hiperlaxitud y/o las deficiencias en la síntesis de colágeno.
+                </p>
+                <p>
+                  Cuando hablamos de factores adquiridos nos referimos a todo aquello que con predisposición puede generar el desarrollo de esta patología, entre ellos los factores más comunes están el sobrepeso, los ejercicios de impacto, embarazos múltiples, partos vaginales, constipación o estreñimiento, actividad sexual, enfermedades cancerosas.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="lg:w-1/2 relative">
+            <div class="rounded-lg overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-102 hover:shadow-2xl">
+              <Image 
+                src={incontinenciaImagen}
+                transition:name={incontinenciaImagen.src}
+                alt="Consulta médica especializada en incontinencia urinaria" 
+                class="w-full h-auto object-cover aspect-4/3"
+              />
+            </div>
+            
+            <!-- Badge flotante -->
+            <div class="absolute -bottom-4 -right-4 bg-primary-100 text-primary-600 rounded-full px-4 py-2 text-sm font-bold shadow-lg">
+              Cuidado especializado
+            </div>
+          </div>
+        </div>
+        
+        <!-- Sección adicional debajo -->
+        <div class="mt-12 max-w-4xl mx-auto">
+          <div class="bg-pink-100 p-6 rounded-xl shadow-2xl">
+            <h3 class="text-xl font-semibold text-primary-200 mb-4">La importancia del tratamiento precoz</h3>
+            <p class="mb-4 text-black">
+              Quien padece esta patología no necesita que se le describan los síntomas, pero es importante conocer cuáles son los riesgos de no tratarla y permitir su avance.
+            </p>
+            <p class="mb-4 text-black">
+              El riesgo de pasar de su grado inicial o incontinencia de esfuerzo a la llamada urgencia miccional o vaciado de vejiga involuntario es lo que nos lleva a educar a nuestros pacientes, tratando y previniendo el avance de esta patología tan común.
+            </p>
+            <p class="mb-4 text-black">
+              En su estadio inicial, encontramos incontinencia ante situaciones cotidianas como toser, reír, saltar, correr, etc. En cambio en la urgencia miccional la patología se agrava porque el paciente suele no llegar al baño, generándose la consecuente micción involuntaria.
+            </p>
+            <p class="font-medium text-primary-200">
+              El diagnóstico y tratamiento precoz de la incontinencia mejora no solo el estrés físico, sino sobre todo el emocional de quien la padece, mejorando su calidad de vida.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Factores de riesgo - Timeline horizontal -->
+    <section class="py-16 bg-primary-50 bg-gradient-to-b from-white to-pink-100">
+      <div class="container mx-auto px-4 md:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-title-100 mb-12 font-title">
+          Principales factores de riesgo
+        </h2>
+        
+        <div class="max-w-6xl mx-auto">
+          <!-- Timeline horizontal -->
+          <div class="relative">
+            <!-- Línea horizontal -->
+            <div class="hidden md:block absolute top-8 left-0 right-0 h-0.5 bg-primary-200"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+              {factoresRiesgo.map((factor, index) => (
+                <div class="relative flex flex-col items-center text-center">
+                  <div class="w-16 h-16 bg-white border-4 border-primary-200 rounded-full flex items-center justify-center z-10 shadow-md mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={factor.icono} />
+                    </svg>
+                  </div>
+                  
+                  <div class="bg-white rounded-lg shadow-md p-4 transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <h3 class="text-lg font-title font-semibold text-primary-600 mb-2">{factor.titulo}</h3>
+                    <p class="text-black text-sm leading-relaxed">{factor.descripcion}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tratamientos disponibles -->
+    <section class="bg-gradient-to-b from-pink-100 to-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <Treatments client:load category='incontinencia-urinaria' layout='carousel'/>
+      </div>
+    </section>
+    <!-- Componente de contacto -->
+    <Contact />
+  </main>
+</Layout> 

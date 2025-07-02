@@ -1,0 +1,45 @@
+/* Estilos personalizados para Swiper en Treatments */
+.swiper-pagination-custom .swiper-pagination-bullet-active {
+  background-color: #e91e63 !important;
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet:hover {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Estilos para manejar imágenes PNG con fondo negro */
+.treatment-image-container {
+  background-color: white;
+  position: relative;
+  padding: 20px; /* Espacio para crear un marco blanco */
+}
+
+.treatment-image-container img {
+  /* Para PNGs con fondo negro, usar contain para mostrar toda la imagen */
+  object-fit: contain;
+  object-position: center;
+  background-color: white;
+
+  /* Opcional: añadir un ligero filtro para suavizar bordes duros */
+  border-radius: 8px;
+}
+
+/* Clase específica para invertir colores de PNGs con fondo negro */
+.treatment-image-invert {
+  filter: invert(1);
+  background-color: white;
+}
+
+/* Para casos donde necesites que la imagen ocupe todo el espacio pero con fondo blanco */
+.treatment-image-padded {
+  object-fit: contain;
+  background-color: white;
+  padding: 10px;
+}

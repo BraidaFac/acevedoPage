@@ -1,0 +1,224 @@
+---
+import { Image } from 'astro:assets';
+import hiperlaxitudImagen from '../../assets/fotos/hiperlaxitud.jpeg';
+import Contact from '../../components/Contact.astro';
+import Treatments from '../../components/Treatments';
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Hiperlaxitud Vaginal | Información y Tratamientos";
+const description = "Información completa sobre la hiperlaxitud vaginal, sus causas y tratamientos disponibles. Descubra cómo mejorar su salud íntima.";
+---
+
+<Layout title={title} description={description}>
+  <main class="mt-16">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-white to-pink-100 py-20 overflow-hidden">
+      <div class="container mx-auto px-4 md:px-8 relative z-10">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-title-100 text-center font-title">
+          <span class="inline-block transform hover:scale-105 transition-transform duration-300">Hiperlaxitud Vaginal</span>
+        </h1>
+        <p class="text-primary-200 text-center mt-4 max-w-xl mx-auto text-lg">
+          Una condición común que afecta la salud íntima femenina y que tiene solución.
+        </p>
+      </div>
+    </section>
+
+    <!-- Introducción -->
+    <section class="py-16 bg-white bg-gradient-to-b from-pink-100 to-white relative">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="flex flex-col lg:flex-row items-start gap-8 text-justify">
+          <div class="lg:w-1/2">
+            <h2 class="text-2xl font-title font-bold text-primary-200 mb-6 relative inline-block">
+              ¿Qué es la Hiperlaxitud Vaginal?
+              <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-primary-100"></span>
+            </h2>
+            <div class="space-y-4 text-black leading-relaxed">
+              <p>
+                La hiperlaxitud vaginal es una condición en la que los tejidos de la vagina pierden tonicidad, firmeza y elasticidad. Esto genera una sensación de ensanchamiento o amplitud en el canal vaginal, que puede afectar la percepción del cuerpo y la calidad de las relaciones sexuales.
+              </p>
+              <p>
+                No se trata solo de una cuestión estética o sexual: la hiperlaxitud refleja un cambio estructural en el tejido vaginal y el suelo pélvico, que puede tener múltiples causas y afectar distintas áreas de la salud íntima femenina.
+              </p>
+              <p>
+                Esta condición puede manifestarse de diferentes maneras y en distintos grados de severidad. Algunas mujeres pueden experimentar cambios sutiles, mientras que otras pueden notar una diferencia más significativa en la sensación y función vaginal. Es importante destacar que la hiperlaxitud vaginal no es una enfermedad, sino una condición que puede afectar la calidad de vida y el bienestar emocional de la mujer.
+              </p>
+              <p>
+                La vagina es un órgano muscular con una extraordinaria capacidad de adaptación. Está diseñada para expandirse y contraerse según sea necesario, manteniendo su tono muscular y elasticidad gracias a una compleja red de tejidos conectivos y músculos del suelo pélvico. Cuando estos tejidos pierden su firmeza natural, puede ocurrir la hiperlaxitud.
+              </p>
+              <p>
+                Es fundamental entender que esta condición es más común de lo que se piensa y puede afectar a mujeres de todas las edades, aunque es más frecuente después del parto y durante la menopausia. La buena noticia es que existen tratamientos efectivos que pueden ayudar a mejorar significativamente esta condición y restaurar la calidad de vida.
+              </p>
+            </div>
+          </div>
+          
+          <div class="lg:w-1/2 relative">
+            <div class="rounded-lg overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-102 hover:shadow-2xl">
+              <Image 
+                transition:name={hiperlaxitudImagen.src}
+                src={hiperlaxitudImagen}
+                alt="Consulta médica especializada en hiperlaxitud vaginal" 
+                class="w-full h-auto object-cover aspect-4/3"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Causas y Consecuencias -->
+    <section class="py-16 bg-primary-50 bg-gradient-to-b from-white to-pink-100">
+      <div class="container mx-auto px-4 md:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-title-100 mb-12 font-title">
+          Causas y Consecuencias de la Hiperlaxitud Vaginal
+        </h2>
+        
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="mb-8">
+              <h3 class="text-xl font-title font-bold text-primary-200 mb-4 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                </svg>
+                ¿Por qué se produce?
+              </h3>
+              <p class="mb-6 text-gray-700">
+                La vagina está formada por tejido muscular y conectivo que le da elasticidad y capacidad de sostén. Diversos factores pueden debilitar o estirar estos tejidos, afectando su tono y firmeza natural:
+              </p>
+              <ul class="space-y-6 mb-8">
+                <li class="flex items-start bg-primary-50/50 p-4 rounded-xl hover:bg-primary-50 transition-colors duration-300">
+                  <span class="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center text-primary-200 font-bold mr-4 flex-shrink-0">1</span>
+                  <div>
+                    <span class="font-semibold text-primary-200 block mb-2">Partos vaginales</span>
+                    <p class="text-gray-600">Especialmente si fueron múltiples, prolongados o con bebés de gran peso. El proceso de parto puede estirar y debilitar los tejidos vaginales. La recuperación postparto es crucial para mantener la salud del suelo pélvico.</p>
+                  </div>
+                </li>
+                <li class="flex items-start bg-primary-50/50 p-4 rounded-xl hover:bg-primary-50 transition-colors duration-300">
+                  <span class="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center text-primary-200 font-bold mr-4 flex-shrink-0">2</span>
+                  <div>
+                    <span class="font-semibold text-primary-200 block mb-2">Envejecimiento</span>
+                    <p class="text-gray-600">Los cambios naturales en el colágeno y la pérdida de tono muscular que ocurren con la edad pueden afectar la firmeza de los tejidos vaginales. La producción de estrógenos disminuye, lo que puede afectar la elasticidad y lubricación.</p>
+                  </div>
+                </li>
+                <li class="flex items-start bg-primary-50/50 p-4 rounded-xl hover:bg-primary-50 transition-colors duration-300">
+                  <span class="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center text-primary-200 font-bold mr-4 flex-shrink-0">3</span>
+                  <div>
+                    <span class="font-semibold text-primary-200 block mb-2">Cambios hormonales</span>
+                    <p class="text-gray-600">La menopausia y otros cambios hormonales pueden afectar la elasticidad y lubricación de los tejidos vaginales. Los niveles fluctuantes de estrógenos impactan directamente en la salud del tejido vaginal.</p>
+                  </div>
+                </li>
+                <li class="flex items-start bg-primary-50/50 p-4 rounded-xl hover:bg-primary-50 transition-colors duration-300">
+                  <span class="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center text-primary-200 font-bold mr-4 flex-shrink-0">4</span>
+                  <div>
+                    <span class="font-semibold text-primary-200 block mb-2">Factores genéticos</span>
+                    <p class="text-gray-600">Algunas mujeres tienen una predisposición natural a tener tejidos más laxos o débiles. La composición del colágeno y la estructura del tejido conectivo pueden variar según la genética individual.</p>
+                  </div>
+                </li>
+                <li class="flex items-start bg-primary-50/50 p-4 rounded-xl hover:bg-primary-50 transition-colors duration-300">
+                  <span class="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center text-primary-200 font-bold mr-4 flex-shrink-0">5</span>
+                  <div>
+                    <span class="font-semibold text-primary-200 block mb-2">Actividades físicas</span>
+                    <p class="text-gray-600">Deportes de alto impacto o esfuerzos físicos sin protección adecuada del suelo pélvico pueden contribuir al debilitamiento de los tejidos. Es importante mantener una buena técnica y fortalecimiento del suelo pélvico.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="border-t border-gray-200 pt-8">
+              <h3 class="text-xl font-title font-bold text-primary-200 mb-4 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                ¿Qué consecuencias puede tener?
+              </h3>
+              <p class="mb-6 text-gray-700">
+                La hiperlaxitud puede manifestarse de diferentes maneras y afectar varios aspectos de la vida de la mujer, tanto a nivel físico como emocional:
+              </p>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-primary-50 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <h4 class="font-semibold text-primary-200 mb-4 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Efectos Físicos
+                  </h4>
+                  <ul class="space-y-3">
+                    <li class="flex items-start group">
+                      <span class="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2 mt-2 group-hover:bg-primary-300 transition-colors duration-300"></span>
+                      <div>
+                        <span class="font-medium">Sensación de amplitud vaginal</span>
+                        <p class="text-gray-600 text-sm mt-1">Cambios en la percepción del canal vaginal y su capacidad de ajuste</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start group">
+                      <span class="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2 mt-2 group-hover:bg-primary-300 transition-colors duration-300"></span>
+                      <div>
+                        <span class="font-medium">Alteraciones en la función sexual</span>
+                        <p class="text-gray-600 text-sm mt-1">Disminución de la fricción y sensibilidad durante las relaciones</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start group">
+                      <span class="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2 mt-2 group-hover:bg-primary-300 transition-colors duration-300"></span>
+                      <div>
+                        <span class="font-medium">Problemas de suelo pélvico</span>
+                        <p class="text-gray-600 text-sm mt-1">Posible incontinencia urinaria leve y sensación de peso pélvico</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start group">
+                      <span class="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2 mt-2 group-hover:bg-primary-300 transition-colors duration-300"></span>
+                      <div>
+                        <span class="font-medium">Cambios en la lubricación</span>
+                        <p class="text-gray-600 text-sm mt-1">Posible sequedad vaginal y molestias durante la actividad sexual</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="bg-primary-50 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <h4 class="font-semibold text-primary-200 mb-4 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Impacto Emocional
+                  </h4>
+                  <ul class="space-y-3">
+                    <li class="flex items-start group">
+                      <span class="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2 mt-2 group-hover:bg-primary-300 transition-colors duration-300"></span>
+                      <div>
+                        <span class="font-medium">Inseguridad personal</span>
+                        <p class="text-gray-600 text-sm mt-1">Preocupación por los cambios físicos y su impacto en la intimidad</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start group">
+                      <span class="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2 mt-2 group-hover:bg-primary-300 transition-colors duration-300"></span>
+                      <div>
+                        <span class="font-medium">Ansiedad sexual</span>
+                        <p class="text-gray-600 text-sm mt-1">Preocupación por la satisfacción sexual propia y de la pareja</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start group">
+                      <span class="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2 mt-2 group-hover:bg-primary-300 transition-colors duration-300"></span>
+                      <div>
+                        <span class="font-medium">Cambios en la autoestima</span>
+                        <p class="text-gray-600 text-sm mt-1">Impacto en la percepción de la imagen corporal y confianza personal</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start group">
+                      <span class="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2 mt-2 group-hover:bg-primary-300 transition-colors duration-300"></span>
+                      <div>
+                        <span class="font-medium">Estrés emocional</span>
+                        <p class="text-gray-600 text-sm mt-1">Preocupación por el impacto en las relaciones y la vida cotidiana</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Treatments />
+    <Contact />
+  </main>
+</Layout> 

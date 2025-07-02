@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+
+@font-face {
+  font-family: "Marcellus-Regular";
+  src: url("/fonts/Marcell/Marcellus-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alexandria-Regular";
+  src: url("/fonts/Alexandra/Alexandria-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  font-size: 14px;
+  margin: 0;
+}
+
+@theme {
+  --font-display: "Alexandria-Regular", sans-serif;
+  --font-title: "Marcellus-Regular", sans-serif;
+  --color-primary-100: #ebcada;
+  --color-primary-200: #e63b86;
+  --color-title-100: #5c1c42;
+  --color-title-25: #dca1b6;
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* @layer components {
+  .btn {
+    background-color: var(--color-primary-200);
+    color: var(--color-white);
+    border-radius: var(--radius-4xl);
+    padding: var(--spacing-6);
+    box-shadow: var(--shadow-2xl);
+  }
+} */

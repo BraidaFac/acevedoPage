@@ -1,0 +1,84 @@
+---
+import { Image } from 'astro:assets'
+import doctora from '../assets/fotos/ceci.jpg'
+---
+
+<section id="about" class="py-16  bg-gradient-to-b from-white to-pink-50">
+  <div class="container mx-auto px-4 md:px-8">
+    <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+      <!-- Contenido textual -->
+      <div class="w-full lg:w-3/5  text-justify">
+        <h2 class="text-2xl lg:text-3xl text-title-100 mb-4 font-bold font-title">
+          Dra. CECILIA ACEVEDO
+        </h2>
+        <h3 class="text-xl text-primary-200 mb-6">MÉDICA, ESPECIALISTA EN GINECOLOGÍA Y OBSTETRICIA</h3>
+        <p class="mb-4 leading-relaxed">
+          Me dedico a brindar atención medica integral y personalizada, para mujeres en todas las etapas de su vida, desde consultas ginecológicas de rutina, asesoramiento en fertilidad, hasta tratamientos especializado. 
+        </p>
+        <p class="mb-4 leading-relaxed">
+          Mi compromiso es ofrecerte un ambiente seguro y de confianza donde puedas expresar tus preocupaciones y recibir la mejor atención medica basada en la evidencia científica más actualizada. 
+        </p>
+          <h2 class="text-xl text-primary-200 mb-6">
+            Atención obstétrica personalizada 
+          </h2>
+          
+          <p class=" mb-4 leading-relaxed">
+            Desde la obstetricia mi objetivo es brindarte una experiencia medica diferente, donde te sientas escuchada, acompañada y contenida, durante todo el proceso del embarazo y la recuperación posparto. Priorizando tu salud y bienestar con máxima dedicación y profesionalismo.
+          </p>
+          
+          <p class=" mb-4 leading-relaxed">
+            Mi formación además incluye el training full immersion en ginecología regenerativa, estética y funcional. Para abordar aspectos funcionales y estéticos de la zona intima femenina. Con un enfoque cálido, respetuoso, centrado en tus necesidades individuales. Utilizando tecnologías de vanguardia. 
+          </p>
+        <div class="flex gap-4">
+          <a 
+            href="#contact" 
+            class="inline-block text-white py-2 px-3 rounded-full bg-primary-200 hover:bg-pink-400 transition duration-500 hover:shadow-2xl"
+          >
+            Agenda tu consulta
+          </a>
+          
+          <a 
+            href="#treatments" 
+            class="border-2 border-pink-600 text-pink-600 py-2 px-6 rounded-full hover:bg-primary-50  transition shadow-md hover:shadow-lg"
+          >
+            Ver tratamientos
+          </a>
+        </div>
+      </div>
+      
+      <!-- Imagen de la doctora -->
+      <div class="w-full lg:w-2/5 mt-8 lg:mt-0">
+        <div class="relative">
+          <!-- Elemento decorativo -->
+          <div class="absolute -top-6 -left-6 w-20 h-20 bg-primary-100 rounded-full opacity-50 hidden md:block"></div>
+          
+          <!-- Imagen principal -->
+          <Image 
+            src={doctora} 
+            alt="Dra. Cecilia Acevedo" 
+            class="w-full h-auto rounded-lg shadow-lg relative z-10"
+          />
+          
+          <!-- Elemento decorativo -->
+          <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary-50 rounded-full opacity-60 hidden md:block"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
+<!-- <section class="py-12 bg-gradient-to-b from-white to-pink-50">
+  <div class="container mx-auto px-4 lg:px-8">
+    <div class="flex flex-col lg:flex-row lg:items-start items-center gap-8">
+     
+      
+      <div class="w-full lg:w-2/5">
+        <img 
+          src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1036&q=80" 
+          alt="Consultorio médico moderno" 
+          class="w-full h-auto rounded-lg shadow-md"
+        />
+      </div>
+    </div>
+  </div>
+</section>  -->

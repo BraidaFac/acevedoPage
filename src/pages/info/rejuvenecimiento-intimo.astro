@@ -1,0 +1,313 @@
+---
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+import rejuvenecimientoIntimo from '../../assets/fotos/reju.jpg';
+import Contact from '../../components/Contact.astro';
+import Treatments from '../../components/Treatments.tsx';
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Rejuvenecimiento Íntimo | Información Médica";
+const description = "Información completa sobre el rejuvenecimiento íntimo femenino, causas del envejecimiento y tratamientos disponibles para mejorar su calidad de vida.";
+
+// Datos estructurados para las causas del envejecimiento íntimo
+const causasEnvejecimiento = [
+  {
+    icono: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+    titulo: "Disminución de Colágeno",
+    descripcion: "Con el paso de los años, la producción de colágeno disminuye, afectando la firmeza y elasticidad de los tejidos íntimos."
+  },
+  {
+    icono: "M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z",
+    titulo: "Cambios Hormonales",
+    descripcion: "La disminución de estrógenos afecta directamente la salud del tejido vulvovaginal, reduciendo grosor, elasticidad y lubricación."
+  },
+  {
+    icono: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+    titulo: "Reducción del Flujo Sanguíneo",
+    descripcion: "La disminución en el flujo sanguíneo afecta la irrigación de los tejidos, acelerando el proceso de atrofia."
+  },
+  {
+    icono: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
+    titulo: "Cambios en el pH Vaginal",
+    descripcion: "El aumento del pH vaginal altera el equilibrio de la flora bacteriana normal, aumentando la susceptibilidad a infecciones."
+  },
+  {
+    icono: "M13 10V3L4 14h7v7l9-11h-7z",
+    titulo: "Pérdida de Inervación",
+    descripcion: "La reducción de la inervación vascular y nerviosa genera alteraciones de la flora normal y predisposición a complicaciones."
+  },
+  {
+    icono: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+    titulo: "Factores del Estilo de Vida",
+    descripcion: "El estrés, la falta de ejercicio, el tabaquismo y una nutrición inadecuada pueden acelerar el proceso de envejecimiento íntimo."
+  }
+];
+
+// Datos para los síntomas por etapas
+const sintomasPorEtapas = [
+  {
+    titulo: "Perimenopausia (40-50 años)",
+    descripcion: "Los primeros cambios hormonales comienzan a manifestarse:",
+    sintomas: [
+      "Ligera sequedad vaginal ocasional",
+      "Pequeños cambios en la lubricación",
+      "Mayor sensibilidad a infecciones",
+      "Leves cambios en la elasticidad"
+    ],
+    icono: "M10 21h7a2 2 0 002-2v-2M14 8v12M5 3v16M19 16v1a2 2 0 01-2 2H7a2 2 0 01-2-2v-1"
+  },
+  {
+    titulo: "Menopausia (50-60 años)",
+    descripcion: "Los síntomas se intensifican debido a la caída significativa de estrógenos:",
+    sintomas: [
+      "Sequedad vaginal persistente",
+      "Dolor o molestias durante las relaciones sexuales",
+      "Infecciones urinarias recurrentes",
+      "Pérdida de elasticidad y firmeza",
+      "Cambios en la apariencia de los tejidos externos"
+    ],
+    icono: "M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+  },
+  {
+    titulo: "Postmenopausia (60+ años)",
+    descripcion: "Los efectos a largo plazo requieren atención especializada:",
+    sintomas: [
+      "Atrofia vulvovaginal severa",
+      "Incontinencia urinaria",
+      "Mayor riesgo de prolapsos",
+      "Disminución significativa de la sensibilidad",
+      "Alteraciones importantes en la anatomía externa"
+    ],
+    icono: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+  }
+];
+
+// Datos para tratamientos
+const tratamientos = [
+  {
+    nombre: "Radiofrecuencia Orbital Enygma",
+    descripcion: "Tratamiento no invasivo que estimula la producción de colágeno utilizando ondas de radiofrecuencia",
+    beneficios: ["Estimulación de colágeno", "Mejora de elasticidad", "No invasivo"],
+    link: "/tratamientos/enygma"
+  },
+  {
+    nombre: "Terapia Láser Vaginal",
+    descripcion: "Tecnología láser que regenera los tejidos y mejora la vascularización de la zona íntima",
+    beneficios: ["Regeneración tisular", "Mejora vascularización", "Resultados duraderos"],
+    link: "/tratamientos/laser-vaginal"
+  },
+  {
+    nombre: "Tratamientos Hormonales",
+    descripcion: "Terapias específicas para equilibrar los niveles hormonales y aliviar síntomas",
+    beneficios: ["Equilibrio hormonal", "Alivio de síntomas", "Mejora de lubricación"],
+    link: "/tratamientos/tratamientos-hormonales"
+  },
+  {
+    nombre: "Hidratación Íntima",
+    descripcion: "Tratamientos y productos especializados para mejorar la lubricación y el confort",
+    beneficios: ["Hidratación profunda", "Confort inmediato", "Uso seguro"],
+    link: "/tratamientos/hidratacion-intima"
+  }
+];
+---
+
+<Layout title={title} description={description}>
+  <main class="mt-16">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-white to-pink-100 py-20 overflow-hidden">
+      <div class="container mx-auto px-4 md:px-8 relative z-10">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-title-100 text-center font-title">
+          <span class="inline-block transform hover:scale-105 transition-transform duration-300">Rejuvenecimiento</span> 
+          <span class="inline-block transform hover:scale-105 transition-transform duration-300">Íntimo</span>
+        </h1>
+        <p class="text-primary-200 text-center mt-4 max-w-xl mx-auto text-lg">
+          Comprenda los cambios naturales y las soluciones disponibles para mejorar su bienestar íntimo
+        </p>
+      </div>
+    </section>
+
+    <!-- Introducción -->
+    <section class="py-16 bg-white bg-gradient-to-b from-pink-100 to-white relative">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="flex flex-col lg:flex-row items-start gap-8 text-justify">
+          <div class="lg:w-1/2">
+            <h2 class="text-2xl font-title font-bold text-primary-200 mb-4 relative inline-block">
+              ¿Qué es el rejuvenecimiento íntimo?
+              <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-primary-100"></span>
+            </h2>
+            <p class="text-black mb-4 leading-relaxed">
+              El rejuvenecimiento íntimo femenino aborda los cambios naturales que ocurren en la zona genital a lo largo del tiempo. Con el paso de los años perdemos la cantidad y calidad de síntesis de colágeno, esto también afecta la zona genital.
+            </p>
+            <p class="text-black mb-4 leading-relaxed">
+              Este deterioro no solo se manifiesta como una pérdida del sostén y la turgencia de la zona, sino una atrofia interna de la irrigación generando dos grandes grupos de patologías: la atrofia vulvovaginal y la hiperlaxitud vulvovaginal.
+            </p>
+            <p class="text-black mb-4 leading-relaxed">
+              Cuando analizamos los efectos de la falta de inervación vascular y/o nerviosa de la zona, nos encontramos con alteraciones de la flora normal y la predisposición a sufrir diversas complicaciones que pueden limitarla calidad de vida de las pacientes.
+            </p>
+          </div>
+          <div class="lg:w-1/2 relative">
+            <div class="rounded-lg overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-102 hover:shadow-2xl">
+              <Image 
+                src={rejuvenecimientoIntimo}
+                transition:name={rejuvenecimientoIntimo.src}
+                alt="Consulta médica especializada en salud femenina" 
+                class="w-full h-auto object-cover aspect-4/3"
+              />
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Causas del envejecimiento íntimo -->
+    <section class="py-16 bg-primary-50 bg-gradient-to-b from-white to-pink-100">
+      <div class="container mx-auto px-4 md:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-title-100 mb-12 font-title">
+          Factores que contribuyen al envejecimiento íntimo
+        </h2>
+        
+        <div class="max-w-4xl mx-auto">
+          <!-- Timeline vertical -->
+          <div class="relative">
+            <!-- Línea central -->
+            <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-primary-200"></div>
+            
+            <div class="space-y-8">
+              {causasEnvejecimiento.map((causa, index) => (
+                <div class="relative flex items-start">
+                  <!-- Punto en la línea -->
+                  <div class="flex-shrink-0 w-16 h-16 bg-white border-4 border-primary-200 rounded-full flex items-center justify-center z-10 shadow-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={causa.icono} />
+                    </svg>
+                  </div>
+                  
+                  <!-- Contenido -->
+                  <div class="ml-8 bg-white rounded-lg shadow-md p-6 flex-1 transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <h3 class="text-xl font-title font-semibold text-primary-600 mb-3">{causa.titulo}</h3>
+                    <p class="text-black leading-relaxed">{causa.descripcion}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Síntomas por etapas de vida -->
+    <section class="py-16 bg-white bg-gradient-to-b from-pink-100 to-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-title-100 mb-12 font-title">
+          Síntomas según la etapa de vida
+        </h2>
+        
+        <div class="max-w-5xl mx-auto" id="accordion-collapse" data-accordion="collapse">
+          <div class="space-y-4">
+            {sintomasPorEtapas.map((etapa, index) => (
+              <div class="bg-white rounded-2xl shadow-lg border border-gray-100">
+                <h2 id={`accordion-collapse-heading-${index}`}>
+                  <button 
+                    type="button" 
+                    class="flex items-center justify-between w-full px-8 py-6 font-medium text-left bg-gradient-to-r from-pink-50 to-white hover:from-pink-100 hover:to-pink-50 transition-all duration-300 rounded-t-2xl"
+                    data-accordion-target={`#accordion-collapse-body-${index}`} 
+                    aria-expanded="false" 
+                    aria-controls={`accordion-collapse-body-${index}`}
+                  >
+                    <div class="flex items-center space-x-4">
+                      <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={etapa.icono} />
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-title font-semibold text-primary-600">{etapa.titulo}</h3>
+                        <p class="text-black text-sm mt-1">Principales manifestaciones en esta etapa</p>
+                      </div>
+                    </div>
+                    <svg data-accordion-icon class="w-6 h-6 text-primary-400 shrink-0 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                  </button>
+                </h2>
+                <div 
+                  id={`accordion-collapse-body-${index}`} 
+                  class="hidden" 
+                  aria-labelledby={`accordion-collapse-heading-${index}`}
+                >
+                  <div class="px-8 py-6 border-t border-gray-100">
+                    <p class="text-black mb-6 leading-relaxed">{etapa.descripcion}</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                      {etapa.sintomas.map(sintoma => (
+                        <div class="flex items-start bg-gradient-to-r from-red-50 to-pink-50 p-4 rounded-lg">
+                          <div class="flex-shrink-0 w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                            </svg>
+                          </div>
+                          <span class="text-black text-sm font-medium">{sintoma}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tratamientos disponibles -->
+    <section class=" bg-gray-50 bg-gradient-to-b from-white to-pink-100">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="mt-12 bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold text-primary-200 mb-4">¿Cuándo consultar con un especialista?</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 h-10 w-10 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+                <Icon name="mdi:water-off" class="h-6 w-6 text-primary-600" />
+              </div>
+              <div>
+                <h4 class="font-medium text-primary-600">Sequedad persistente</h4>
+                <p class="text-black text-sm">Sensación constante de sequedad que no mejora con hidratantes comunes</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 h-10 w-10 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+                <Icon name="mdi:heart-broken" class="h-6 w-6 text-primary-600" />
+              </div>
+              <div>
+                <h4 class="font-medium text-primary-600">Molestias sexuales</h4>
+                <p class="text-black text-sm">Dolor, ardor o incomodidad durante las relaciones íntimas</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 h-10 w-10 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+                <Icon name="mdi:bacteria" class="h-6 w-6 text-primary-600" />
+              </div>
+              <div>
+                <h4 class="font-medium text-primary-600">Infecciones recurrentes</h4>
+                <p class="text-black text-sm">Episodios frecuentes de infecciones vaginales o urinarias</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 h-10 w-10 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+                <Icon name="mdi:calendar-clock" class="h-6 w-6 text-primary-600" />
+              </div>
+              <div>
+                <h4 class="font-medium text-primary-600">Pérdida de sensibilidad</h4>
+                  <p class="text-black text-sm">Disminución de las sensaciones durante la estimulación</p>
+              </div>
+            </div>
+          </div>
+        </div>
+     <Treatments client:load category='rejuvenecimiento-intimo' layout='carousel'/>
+    </section>
+    <Contact />
+  </main>
+</Layout>
+
+ 

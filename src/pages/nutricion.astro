@@ -1,0 +1,598 @@
+---
+import Contact from '../components/Contact.astro';
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import nutriImagen from '../assets/fotos/nutri1.jpg';
+
+// Datos estructurados para los beneficios
+const beneficios = [
+  {
+    icono: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+    titulo: "Equilibrio Hormonal",
+    descripcion: "Ciertos alimentos ayudan a regular los niveles hormonales, reduciendo síntomas como cambios de humor, dolor menstrual e irregularidades en el ciclo."
+  },
+  {
+    icono: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
+    titulo: "Fertilidad Optimizada",
+    descripcion: "Una dieta rica en antioxidantes, grasas saludables y proteínas de calidad puede mejorar significativamente la calidad de los óvulos y crear un ambiente uterino favorable."
+  },
+  {
+    icono: "M13 10V3L4 14h7v7l9-11h-7z",
+    titulo: "Síndrome Premenstrual",
+    descripcion: "Alimentos ricos en calcio, magnesio, vitamina B6, triptófano y ácidos grasos omega-3 . Reducir el consumo de sal, cafeína y alcohol, así como mantener una hidratación adecuada, pueden reducir significativamente el síndrome premenstrual."
+  },
+  {
+    icono: "M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4",
+    titulo: "Salud Ósea",
+    descripcion: "El calcio, la vitamina D y el magnesio son esenciales para mantener la densidad ósea, especialmente durante la perimenopausia y menopausia."
+  },
+  {
+    icono: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+    titulo: "Reducción de Inflamación",
+    descripcion: "Una dieta antiinflamatoria puede aliviar condiciones como la endometriosis, los quistes ováricos y el síndrome de ovario poliquístico."
+  },
+  {
+    icono: "M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+    titulo: "Tránsito Menopáusico",
+    descripcion: "Alimentos de origen vegetal ricos en fitoestrógenos, hormonas naturales parecidas a los estrógenos, como las isoflavonas de soja.  Suplementos que contengan vitamina D, vitamina K 2, resveratrol, magnesio, vitamina C, zinc, selenio, ayudan a reducir los sofocos y otros síntomas de la menopausia."
+  }
+];
+
+// Datos para las etapas de vida
+const etapasVida = [
+  {
+    titulo: "Adolescencia",
+    descripcion: "En esta etapa de rápido crecimiento y desarrollo hormonal, es crucial:",
+    recomendaciones: [
+      "Consumir suficiente hierro para compensar las pérdidas menstruales",
+      "Asegurar un adecuado aporte de calcio para la formación ósea",
+      "Incluir zinc para el desarrollo y la función inmune",
+      "Limitar alimentos ultraprocesados que pueden alterar el equilibrio hormonal"
+    ],
+    icono: "M10 21h7a2 2 0 002-2v-2M14 8v12M5 3v16M19 16v1a2 2 0 01-2 2H7a2 2 0 01-2-2v-1"
+  },
+  {
+    titulo: "Edad reproductiva",
+    descripcion: "Para mantener ciclos regulares y salud hormonal:",
+    recomendaciones: [
+      "Priorizar proteínas de alta calidad en cada comida",
+      "Incluir grasas saludables como aguacate, frutos secos y aceite de oliva",
+      "Consumir alimentos ricos en B6, B12 y folatos para regular los niveles hormonales",
+      "Mantener una hidratación adecuada para la salud urinaria y vaginal"
+    ],
+    icono: "M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+  },
+  {
+    titulo: "Embarazo y lactancia",
+    descripcion: "Nutrición fundamental para el desarrollo fetal y la producción de leche:",
+    recomendaciones: [
+      "Ácido fólico para prevenir defectos del tubo neural",
+      "DHA para el desarrollo cerebral y ocular del bebé",
+      "Hierro para prevenir la anemia gestacional",
+      "Calcio y vitamina D para el desarrollo óseo del feto",
+      "Proteínas adicionales para la formación de tejidos"
+    ],
+    icono: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+  },
+  {
+    titulo: "Perimenopausia y menopausia",
+    descripcion: "Para navegar los cambios hormonales con bienestar:",
+    recomendaciones: [
+      "Fitoestrógenos de soja, semillas de lino y legumbres",
+      "Alimentos ricos en calcio y vitamina K para prevenir la osteoporosis",
+      "Antioxidantes para proteger la salud cardiovascular",
+      "Control de carbohidratos refinados para mantener peso saludable",
+      "Ácidos grasos omega-3 para reducir la inflamación"
+    ],
+    icono: "M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
+  }
+];
+
+// Datos para superalimentos
+const superalimentos = [
+  {
+    imagen: "https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=796&q=80",
+    nombre: "Semillas de lino",
+    descripcion: "Ricas en lignanos, fitoestrógenos que ayudan a equilibrar los niveles hormonales y reducir los síntomas menopáusicos.",
+    beneficios: ["Equilibrio hormonal", "Reducción de síntomas menopáusicos", "Salud digestiva"]
+  },
+  {
+    imagen: "https://images.unsplash.com/photo-1563636619-e9143da7973b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=872&q=80",
+    nombre: "Pescados grasos",
+    descripcion: "El salmón, las sardinas y otros pescados azules son excelentes fuentes de ácidos grasos omega-3, que reducen la inflamación y regulan los ciclos menstruales.",
+    beneficios: ["Reducción de inflamación", "Salud cerebral", "Regulación hormonal"]
+  },
+  {
+    imagen: "https://images.unsplash.com/photo-1610123172289-3f3808211884?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80",
+    nombre: "Frutos rojos",
+    descripcion: "Ricos en antioxidantes, ayudan a combatir el estrés oxidativo en los óvulos y mejoran la salud de todo el sistema reproductivo.",
+    beneficios: ["Protección antioxidante", "Salud ovárica", "Sistema inmunológico"]
+  },
+  {
+    imagen: "https://images.unsplash.com/photo-1515543904379-3d757afe72e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+    nombre: "Verduras crucíferas",
+    descripcion: "El brócoli, la col rizada y la coliflor contienen compuestos que favorecen la desintoxicación de estrógenos, lo que previene desequilibrios hormonales.",
+    beneficios: ["Desintoxicación hormonal", "Prevención de cáncer", "Salud digestiva"]
+  }
+];
+
+---
+
+<Layout>
+  <main class="mt-16">
+    <!-- Hero Section Mejorado-->
+    <section class="relative bg-gradient-to-b from-white to-pink-100 py-20 overflow-hidden">
+      <div class="container mx-auto px-4 md:px-8 relative z-10">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-title-100 text-center text-title">
+          <span class="inline-block transform hover:scale-105 transition-transform duration-300">Nutrición</span> y 
+          <span class="inline-block transform hover:scale-105 transition-transform duration-300">Salud Femenina</span>
+        </h1>
+        <p class="text-primary-200 text-center mt-4 max-w-xl mx-auto text-lg">
+          Una alimentación adecuada es fundamental para tu bienestar hormonal, reproductivo y general
+        </p>
+      </div>
+    </section>
+
+    <!-- Introducción Mejorada -->
+    <section class="py-16 bg-white bg-gradient-to-b from-pink-100 to-white relative">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="flex flex-col lg:flex-row items-start gap-8 text-justify">
+          <div class="lg:w-1/2">
+            <h2 class="text-2xl font-bold text-primary-200 mb-4 text-title relative inline-block">
+              La conexión entre nutrición y salud ginecológica
+              <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-primary-100"></span>
+            </h2>
+            <p class="text-black mb-4 leading-relaxed">
+              La alimentación influye directamente en nuestro equilibrio hormonal, ciclo menstrual, fertilidad y en muchos aspectos de la salud femenina que a menudo pasan desapercibidos. Cada etapa de la vida de una mujer desde la adolescencia hasta la menopausia requiere atención nutricional específica. Por eso es necesario una alimentación  saludable, que proporcione la ingesta de una variedad de alimentos que brinden nutrientes necesarios para mantener tu salud y mejorar tu bienestar.
+            </p>
+            <p class="text-black mb-4 leading-relaxed">
+              Los minerales como el magnesio, zinc y selenio son fundamentales para el equilibrio hormonal femenino. El magnesio ayuda a regular los niveles de estrógeno y alivia síntomas premenstruales como calambres y cambios de humor. Los fitoestrógenos, presentes en alimentos como la soja, semillas de lino y legumbres, son compuestos vegetales que pueden imitar suavemente la acción del estrógeno en el cuerpo, siendo especialmente beneficiosos durante la menopausia. Además, el consumo adecuado de yodo es esencial para mantener un equilibrio saludable entre los diferentes tipos de estrógeno (estradiol, estrona y estriol), previniendo problemas como la dominancia estrogénica que puede llevar a condiciones como endometriosis y miomas.
+            </p>
+            <p class="text-black mb-4 leading-relaxed">
+              La vitamina D también juega un papel crucial en la salud hormonal femenina, ya que participa en la síntesis de hormonas esteroideas como el estrógeno y la progesterona. Los estudios muestran que niveles óptimos de vitamina D pueden ayudar a reducir los niveles excesivos de estrógeno en sangre, potencialmente disminuyendo el riesgo de cáncer de mama, especialmente en mujeres con sobrepeso. Para lograr un equilibrio hormonal adecuado, es importante también mantener una hidratación óptima y limitar el consumo de alimentos ultraprocesados, azúcares refinados y alcohol, que pueden alterar el metabolismo hormonal.
+            </p>
+           
+            <!-- <div class="mt-6 p-4 border-l-4 border-primary-200 bg-pink-50 rounded-r-lg shadow-sm">
+              <p class="text-title-100 italic text-center ">"La nutrición adecuada es el pilar fundamental para el equilibrio hormonal y la salud ginecológica integral"</p>
+            </div> -->
+          </div>
+          <div class="lg:w-1/2 relative">
+            <!-- Imagen con efecto de hover y sombra mejorada -->
+            <div class="rounded-lg overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-102 hover:shadow-2xl">
+              <Image 
+                src={nutriImagen}
+                alt="Alimentos saludables para mujeres" 
+                class="w-full h-auto"
+              />
+            </div>
+            
+            <!-- Badges flotantes -->
+            <div class="absolute -top-4 -left-4 bg-primary-100 text-black rounded-full px-4 py-2 text-sm font-bold shadow-lg">
+              Salud integral
+            </div>
+            <div class="absolute -bottom-4 -right-4 bg-primary-100 text-primary-600 rounded-full px-4 py-2 text-sm font-bold shadow-lg">
+              Bienestar femenino
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios de la buena nutrición - Con animación al scroll -->
+    <section class="py-16 bg-primary-50 bg-gradient-to-b from-white to-pink-100">
+      <div class="container mx-auto px-4 md:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-title-100 mb-12 text-title">
+          Beneficios de una alimentación equilibrada
+        </h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {beneficios.map((beneficio, index) => (
+            <div class="bg-white p-6 rounded-lg shadow-md transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay={100 * index}>
+              <div class="flex flex-row  justify-start gap-x-6   items-center">
+                <div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={beneficio.icono} />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-title-100 mb-2 text-title">{beneficio.titulo}</h3>
+              </div>
+              <p class="text-gray-600 text-left">
+                {beneficio.descripcion}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Recomendaciones nutricionales - NUEVO DISEÑO CON TABS en vez de acordeón -->
+    <section class="py-16 bg-white bg-gradient-to-b from-pink-100 to-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-title-100 mb-10 text-title">
+          Recomendaciones nutricionales por etapas
+        </h2>
+        <div class="tabs-container">
+          <!-- Tabs Buttons -->
+          <div class="flex flex-wrap justify-center mb-8 border-b border-gray-200">
+            {etapasVida.map((etapa, index) => (
+              <button 
+                class={`md:w-60 tab-button px-5 py-2.5 text-sm font-medium rounded-t-lg transition-all duration-100 mx-1 text-title-100 ${index === 0 ? 'active-tab bg-primary-100 ' : 'bg-gray-50 hover:bg-pink-50'}`}
+                data-index={index}
+                aria-selected={index === 0 ? 'true' : 'false'}
+              >
+                <div class="flex items-center space-x-2">
+                  <div class="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={etapa.icono} />
+                    </svg>
+                  </div>
+                    <span>{etapa.titulo}</span>
+                </div>
+              </button>
+            ))}
+          </div>
+          
+          <div class="tab-content-container ">
+            {etapasVida.map((etapa, index) => (
+              <div class={`tab-content mx-auto w-11/12 bg-white p-6 rounded-lg shadow-md ${index === 0 ? 'block' : 'hidden'}`} data-index={index}>
+                <h3 class="md:text-2xl text-lg font-semibold text-title-100 mb-4">{etapa.titulo}</h3>
+                  <div>
+                    <h4 class="font-medium text-gray-800 mb-3">Recomendaciones principales</h4>
+                    <ul class="space-y-3">
+                      {etapa.recomendaciones.map(rec => (
+                        <li class="flex items-start">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-200 mt-0.5 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                          </svg>
+                          <span class="text-gray-600">{rec}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+              </div>
+            ))}
+          </div>
+  
+      </div>
+    </section>
+
+    <!-- Superalimentos - Ahora con tarjetas interactivas flip -->
+    <section class="py-16 bg-gray-50 bg-gradient-to-b from-white to-pink-100">
+      <div class="container mx-auto px-4 md:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-title-100 mb-12 text-title">
+          Suplementos Multivitamínicos y Colágeno
+        </h2>
+        
+        <div class="max-w-5xl mx-auto mb-12">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="flex flex-col md:flex-row">
+              <div class="md:w-2/5 bg-primary-50">
+                <img 
+                  src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                  alt="Suplementos multivitamínicos" 
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="md:w-3/5 p-6 md:p-8 text-justify">
+                <h3 class="text-xl font-semibold text-primary-200 mb-3">Beneficios para la salud femenina</h3>
+                <p class="text-black mb-4">
+                  Los suplementos multivitamínicos pueden ser beneficiosos para mujeres en la menopausia. Estos pueden ayudar a disminuir los síntomas como los sofocos, la irritabilidad y el insomnio, además de promover la estimulación del cabello, las uñas y la salud ósea en general.
+                </p>
+                <p class="text-black mb-4">
+                  Los complejos multivitamínicos no reemplazan una dieta saludable, pero no dejan de ser una buena opción en aquellas mujeres que sienten que el cuerpo necesita un apoyo adicional.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <h3 class="text-xl md:text-2xl font-semibold text-center text-title-100 mb-8">Tipos de Colágeno para la Salud Femenina</h3>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Colágeno Tipo I -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            <div class="h-32 bg-gradient-to-r from-pink-200 to-pink-100 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-primary-600 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+              </svg>
+            </div>
+            <div class="p-5">
+              <h4 class="font-bold text-primary-600 mb-2">Colágeno Tipo I</h4>
+              <p class="text-gray-600 text-sm">El más abundante en el cuerpo, ideal para piel, cabello, uñas y huesos. Ayuda a reducir líneas finas y arrugas mientras fortalece las articulaciones.</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="bg-pink-50 text-pink-600 text-xs px-2 py-1 rounded-full">Piel</span>
+                <span class="bg-pink-50 text-pink-600 text-xs px-2 py-1 rounded-full">Cabello</span>
+                <span class="bg-pink-50 text-pink-600 text-xs px-2 py-1 rounded-full">Huesos</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Colágeno Tipo II -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            <div class="h-32 bg-gradient-to-r from-pink-200 to-pink-100 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-primary-600 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+              </svg>
+            </div>
+            <div class="p-5">
+              <h4 class="font-bold text-primary-600 mb-2">Colágeno Tipo II</h4>
+              <p class="text-gray-600 text-sm">Específico para la salud articular, ayuda a mantener la flexibilidad y reducir molestias en articulaciones, especialmente importante durante la menopausia.</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="bg-pink-50 text-pink-600 text-xs px-2 py-1 rounded-full">Articulaciones</span>
+                <span class="bg-pink-50 text-pink-600 text-xs px-2 py-1 rounded-full">Cartílago</span>
+                <span class="bg-pink-50 text-pink-600 text-xs px-2 py-1 rounded-full">Flexibilidad</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Colágeno Hidrolizado -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            <div class="h-32 bg-gradient-to-r from-pink-200 to-pink-100 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-primary-600 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+            </div>
+            <div class="p-5">
+              <h4 class="font-bold text-primary-600 mb-2">Colágeno Hidrolizado</h4>
+              <p class="text-gray-600 text-sm">De fácil absorción, descompuesto en péptidos más pequeños que el cuerpo puede utilizar de manera más eficiente para mejorar la elasticidad de la piel.</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="bg-pink-50 text-pink-600 text-xs px-2 py-1 rounded-full">Absorción</span>
+                <span class="bg-pink-50 text-pink-600 text-xs px-2 py-1 rounded-full">Elasticidad</span>
+                <span class="bg-pink-50 text-pink-600 text-xs px-2 py-1 rounded-full">Eficiencia</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Colágeno Marino -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            <div class="h-32 bg-gradient-to-r from-pink-200 to-pink-100 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-primary-600 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+              </svg>
+            </div>
+            <div class="p-5">
+              <h4 class="font-bold text-primary-600 mb-2">Colágeno Marino</h4>
+              <p class="text-gray-600 text-sm">Extraído de peces, es una excelente alternativa para quienes no consumen productos bovinos. Altamente biodisponible y especialmente efectivo para la piel.</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="bg-pink-50 text-pink-600 text-xs px-2 py-1 rounded-full">Biodisponible</span>
+                <span class="bg-pink-50 text-pink-600 text-xs px-2 py-1 rounded-full">Piel</span>
+                <span class="bg-pink-50 text-pink-600 text-xs px-2 py-1 rounded-full">Vegano</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-12 bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold text-primary-200 mb-4">Beneficios adicionales del colágeno</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 h-10 w-10 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-medium text-primary-600">Salud ósea</h4>
+                <p class="text-gray-600 text-sm">Ayuda a mantener la densidad ósea, especialmente importante durante la menopausia</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 h-10 w-10 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-medium text-primary-600">Cabello y uñas</h4>
+                <p class="text-gray-600 text-sm">Fortalece el cabello y las uñas, contrarrestando la fragilidad asociada con cambios hormonales</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 h-10 w-10 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-medium text-primary-600">Elasticidad de la piel</h4>
+                <p class="text-gray-600 text-sm">Mejora la elasticidad de la piel, reduciendo la sequedad y flacidez típica de esta etapa</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 h-10 w-10 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-medium text-primary-600">Salud digestiva</h4>
+                <p class="text-gray-600 text-sm">Contribuye a la salud digestiva, un aspecto que suele verse afectado durante la menopausia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="py-16 bg-primary-600 text-white">
+      <div class="container mx-auto px-4 md:px-8 text-center">
+        <h2 class="text-2xl lg:text-3xl font-title font-bold mb-4 text-title-100">
+          Transforma tu salud ginecológica a través de la alimentación
+        </h2>
+        <p class="max-w-3xl mx-auto mb-8 leading-relaxed text-primary-200">
+          En mi consultorio te ofrezco un abordaje integral que combina atención ginecológica especializada 
+          con asesoramiento nutricional personalizado para optimizar tu bienestar.
+        </p>
+       
+      </div>
+    </section>
+  </main>
+  <Contact />
+
+  <!-- Estilos adicionales -->
+  <style>
+    /* Tabs system */
+    .active-tab {
+      border-bottom: 3px solid #be185d;
+    }
+    
+    /* Flip cards - con mejor compatibilidad entre navegadores */
+    .flip-card {
+      perspective: 1000px;
+      position: relative;
+    }
+    
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+    
+    .flip-card:hover .flip-card-inner,
+    .flip-card:focus .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    
+    .flip-card-front, 
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+    }
+    
+    .flip-card-back {
+      transform: rotateY(180deg);
+    }
+    
+    /* Carousel */
+    .carousel-container {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    
+    .carousel-container::-webkit-scrollbar {
+      display: none;
+    }
+    
+    /* Animaciones adicionales */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    .pulse-on-hover:hover {
+      animation: pulse 2s infinite;
+    }
+
+    /* Estilos para asegurar que las tarjetas flip funcionen bien */
+    @media (hover: none) {
+      .flip-card-back {
+        opacity: 0.9;
+        position: relative;
+        transform: none;
+        margin-top: 0.5rem;
+      }
+      
+      .flip-card {
+        height: auto;
+      }
+      
+      .flip-card-front {
+        position: relative;
+      }
+      
+      .flip-card-inner {
+        transform: none !important;
+      }
+    }
+  </style>
+  
+  <!-- Script mejorado para las pestañas y para asegurar funcionamiento -->
+  <script is:inline>
+    // Función para inicializar las funcionalidades
+    function initializeNutricionPage() {
+      // Sistema de pestañas
+      const tabButtons = document.querySelectorAll('.tab-button');
+      const tabContents = document.querySelectorAll('.tab-content');
+      
+      if (tabButtons.length > 0 && tabContents.length > 0) {
+        // Remover listeners existentes para evitar duplicados
+        tabButtons.forEach(function(button) {
+          // Clonar el elemento para remover todos los event listeners
+          const newButton = button.cloneNode(true);
+          button.parentNode.replaceChild(newButton, button);
+        });
+        
+        // Obtener los botones nuevamente después del clonado
+        const newTabButtons = document.querySelectorAll('.tab-button');
+        
+        newTabButtons.forEach(function(button) {
+          button.addEventListener('click', function() {
+            const index = this.getAttribute('data-index');
+            
+            // Actualizar botones
+            newTabButtons.forEach(function(btn) {
+              btn.classList.remove('active-tab', 'bg-primary-100', 'text-primary-800');
+              btn.classList.add('bg-gray-50', 'text-gray-600');
+              btn.setAttribute('aria-selected', 'false');
+            });
+            
+            button.classList.add('active-tab', 'bg-primary-100', 'text-primary-800');
+            button.classList.remove('bg-gray-50', 'text-gray-600');
+            button.setAttribute('aria-selected', 'true');
+            
+            // Actualizar contenido
+            tabContents.forEach(function(content) {
+              content.classList.add('hidden');
+              if (content.getAttribute('data-index') === index) {
+                content.classList.remove('hidden');
+              }
+            });
+          });
+        });
+      }
+      
+      // Detectar soporte para hover
+      const hasHoverSupport = window.matchMedia('(hover: hover)').matches;
+      if (!hasHoverSupport) {
+        document.querySelectorAll('.flip-card').forEach(function(card) {
+          card.addEventListener('click', function() {
+            this.classList.toggle('flipped');
+          });
+        });
+      }
+      
+      // Asegurar que los enlaces de contacto funcionen
+      document.querySelectorAll('a[href="#contact"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const contactElement = document.getElementById('contact');
+          if (contactElement) {
+            contactElement.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    }
+    
+    // Ejecutar en carga inicial
+    document.addEventListener('DOMContentLoaded', initializeNutricionPage);
+    
+    // Ejecutar cuando Astro hace client-side navigation
+    document.addEventListener('astro:page-load', initializeNutricionPage);
+    
+    // Fallback: ejecutar inmediatamente si el DOM ya está listo
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initializeNutricionPage);
+    } else {
+      initializeNutricionPage();
+    }
+  </script>
+</Layout>
+

@@ -1,0 +1,172 @@
+---
+import { Image } from 'astro:assets';
+import adiposidadLocalizada2 from '../../assets/fotos/adiposidad-localizada.jpg';
+import adiposidadLocalizada from '../../assets/fotos/adiposidad.jpg';
+import Contact from '../../components/Contact.astro';
+import Treatments from '../../components/Treatments';
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Adiposidad Localizada | Información y Tratamientos";
+const description = "Información completa sobre la adiposidad localizada, sus causas y los tratamientos disponibles para eliminarla de manera efectiva.";
+
+
+---
+
+<Layout title={title} description={description}>
+  <main class="mt-16">
+    <section class="relative bg-gradient-to-b from-white to-pink-100 py-20 overflow-hidden">
+      <div class="container mx-auto px-4 md:px-8 relative z-10">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-title-100 text-center font-title">
+          <span class="inline-block transform hover:scale-105 transition-transform duration-300">Adiposidad</span> 
+          <span class="inline-block transform hover:scale-105 transition-transform duration-300">Localizada</span>
+        </h1>
+        <p class="text-primary-200 text-center mt-4 max-w-xl mx-auto text-lg">
+          ¿Que es y cómo eliminarla de manera efectiva?
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white bg-gradient-to-b from-pink-100 to-white relative text-justify">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="flex flex-col lg:flex-row items-start gap-8 text-justify">
+          <div class="lg:w-1/2">
+            <h2 class="text-2xl font-title font-bold text-primary-200 mb-6 relative inline-block">
+              ¿Qué es la Adiposidad Localizada?
+              <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-primary-100"></span>
+            </h2>
+            <div class="space-y-4 text-black leading-relaxed">
+              <p>
+                Se trata de depósitos de grasa que se acumulan en zonas específicas del cuerpo, ubicándose en la parte subcutánea de la piel, Esta suele ser muy resistente y difícil de eliminar, requiriendo un gran esfuerzo y dedicación para lograr resultados efectivos.
+              </p>
+              <p>
+                Es importante entender que no existe una manera de distribuir la grasa de modo selectivo. Cuando perdemos peso, el cuerpo decide de dónde eliminar la grasa primero, y generalmente comienza por las zonas con menor acumulación, independientemente de si estamos trabajando específicamente esa área. 
+              </p>
+              
+            </div>
+          </div>
+          <div class="lg:w-1/2">
+            <div class="rounded-lg overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-102 hover:shadow-2xl">
+                <Image 
+                src={adiposidadLocalizada}
+                transition:name={adiposidadLocalizada.src}
+                alt="Consulta médica especializada en adiposidad localizada" 
+                class="w-full h-full object-cover aspect-4/3"
+                />
+            </div>
+        </div>
+        </div>
+        <div class="flex flex-col lg:flex-row items-start gap-8 text-justify mt-12">
+            <div class="lg:w-1/2">
+                <div class="rounded-lg overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-102 hover:shadow-2xl">
+                    <Image 
+                    src={adiposidadLocalizada2}
+                    alt="Consulta médica especializada en adiposidad localizada" 
+                    class="w-full h-full object-cover aspect-4/3"
+                    />
+                </div>
+             </div>
+            <div class="lg:w-1/2">
+                <h2 class="text-2xl font-title font-bold text-primary-200 mb-6 relative inline-block">
+                    Zonas más comunes de acumulación
+                    <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-primary-100"></span>
+                  </h2>
+                <div class="space-y-6 text-black leading-relaxed">
+                    <p>
+                      La adiposidad localizada se manifiesta principalmente en cuatro zonas del cuerpo:
+                    </p>
+                    <ul class="list-disc space-y-4 pl-3">
+                      <li>
+                        <span class="font-bold">Abdomen:</span> Una de las más comunes, especialmente en la parte inferior. Esta área suele ser particularmente resistente a los tratamientos convencionales.
+                      </li>
+                      <li>
+                        <span class="font-bold">Caderas:</span> Zona donde la grasa tiende a acumularse de manera persistente, afectando significativamente la silueta y la forma del cuerpo.
+                      </li>
+                      <li>
+                        <span class="font-bold">Glúteos:</span>Área donde la grasa puede ser más resistente y difícil de eliminar, requiriendo tratamientos específicos y constantes.
+                      </li>
+                      <li>
+                        <span class="font-bold">Pantalón de Montar:</span> Esta zona lateral de los muslos es donde se acumula la grasa que afecta la forma de las piernas, creando el conocido efecto "pantalón de montar".
+                    </ul>
+                    <p>
+                      Es importante destacar que estas zonas suelen ser las más difíciles de tratar con ejercicio y dieta convencional, Y ES una DE LAS preocupaciones MAS  común tanto en mujeres como en hombres.
+
+                    </p>
+                    <p>
+                      Por lo que requieren un enfoque específico y profesional para su tratamiento efectivo.
+                    </p>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solución -->
+    <section class="py-16 bg-gradient-to-b from-white to-pink-100">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-2xl md:text-3xl font-bold text-center text-title-100 mb-8 font-title  ">
+            ¿Cómo eliminar la grasa localizada?
+          </h2>
+          
+          <div class="space-y-12 flex flex-col gap-8">
+            <!-- Paso 1 -->
+            <div class="flex gap-6">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
+                <span class="text-xl font-bold text-primary-600">1</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-primary-600 mb-2 ">Tratamiento Específico</h3>
+                <p class="text-black leading-relaxed">
+                  Procedimientos reductores personalizados para cada zona, diseñados para eliminar la grasa localizada de manera efectiva. Estos tratamientos son la base para comenzar el proceso de reducción.
+                </p>
+              </div>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="flex gap-6">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
+                <span class="text-xl font-bold text-primary-600">2</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-primary-600 mb-2">Alimentación Balanceada</h3>
+                <p class="text-black leading-relaxed">
+                  Un plan nutricional adaptado a tus necesidades, enfocado en mantener un déficit calórico saludable y una dieta equilibrada. La alimentación es clave para prevenir la acumulación de nueva grasa.
+                </p>
+              </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="flex gap-6">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
+                <span class="text-xl font-bold text-primary-600">3</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-primary-600 mb-2">Ejercicio Regular</h3>
+                <p class="text-black leading-relaxed">
+                  Rutina de ejercicios específica para cada zona, combinando cardio y ejercicios de tonificación para maximizar resultados. El ejercicio ayuda a tonificar y mantener los resultados obtenidos.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-12 bg-primary-100 rounded-xl  shadow-2xl p-4">
+            <p class="text-black leading-relaxed text-center">
+              La combinación de estos tres aspectos es crucial para lograr resultados efectivos y duraderos. Cada uno cumple un rol específico en el proceso de eliminación de la grasa localizada.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tratamientos disponibles -->
+    <section class="bg-gray-50 bg-gradient-to-b from-pink-100 to-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <Treatments client:load showAll={false} layout='carousel' category='adiposidad-localizada'/>
+      </div>
+    </section>
+
+    <!-- Componente de contacto -->
+    <Contact />
+  </main>
+</Layout> 

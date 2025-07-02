@@ -1,0 +1,225 @@
+---
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+import menopausiaImagen from '../assets/fotos/menopausia.jpg';
+import Contact from '../components/Contact.astro';
+import Treatments from '../components/Treatments';
+import Layout from '../layouts/Layout.astro';
+
+const title = "Menopausia | Información Médica";
+const description = "Información completa sobre la menopausia y el climaterio, síntomas, cambios asociados y tratamientos disponibles para esta nueva etapa de la vida.";
+
+// Datos estructurados para los síntomas y cambios de la menopausia
+const sintomasMenopausia = [
+  {
+    icono: "M13 10V3L4 14h7v7l9-11h-7z",
+    titulo: "Sofocos y Calores",
+    descripcion: "Del 70 al 80% de las mujeres los presentan. Sensación brusca de calor que comienza en el cuello, nuca y cara, con enrojecimiento y sudoración."
+  },
+  {
+    icono: "M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z",
+    titulo: "Alteraciones del Sueño",
+    descripcion: "Insomnio vinculado a la disminución de estrógenos y sofocos nocturnos que provocan un sueño entrecortado y alterado."
+  },
+  {
+    icono: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+    titulo: "Cambios Genitourinarios",
+    descripcion: "Sequedad vaginal, disminución de lubricación y elasticidad. Posible incontinencia urinaria e infecciones recurrentes."
+  },
+  {
+    icono: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
+    titulo: "Cambios Psicológicos",
+    descripcion: "Cambios de humor, labilidad emocional, ansiedad, irritabilidad, nerviosismo e incluso episodios de depresión."
+  },
+  {
+    icono: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+    titulo: "Riesgos a Largo Plazo",
+    descripcion: "Descalcificación ósea (osteopenia) y mayor riesgo cardiovascular debido al déficit hormonal y disminución de estrógenos."
+  }
+];
+
+// Datos para tratamientos
+const tratamientos = [
+  {
+    nombre: "Terapia Hormonal de Reemplazo",
+    descripcion: "Tratamiento con estrógenos para aliviar síntomas y prevenir complicaciones a largo plazo",
+    beneficios: ["Reduce sofocos", "Mejora sequedad vaginal", "Protege huesos"],
+    link: "/tratamientos/terapia-hormonal"
+  },
+  {
+    nombre: "Tratamientos para Sequedad Vaginal",
+    descripcion: "Hidratantes y lubricantes vaginales específicos para mejorar la lubricación y elasticidad",
+    beneficios: ["Mejora lubricación", "Reduce molestias", "Mejora vida sexual"],
+    link: "/tratamientos/hidratacion-intima"
+  },
+  {
+    nombre: "Manejo Integral de Síntomas",
+    descripcion: "Enfoque multidisciplinario para abordar los cambios físicos y emocionales del climaterio",
+    beneficios: ["Atención integral", "Mejora calidad de vida", "Seguimiento personalizado"],
+    link: "/tratamientos/manejo-menopausia"
+  }
+];
+---
+
+<Layout title={title} description={description}>
+  <main class="mt-16">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-white to-pink-100 py-20 overflow-hidden">
+      <div class="container mx-auto px-4 md:px-8 relative z-10">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-title-100 text-center">
+          <span class="inline-block transform hover:scale-105 transition-transform duration-300">Menopausia</span> 
+          <span class="inline-block transform hover:scale-105 transition-transform duration-300">y</span> 
+          <span class="inline-block transform hover:scale-105 transition-transform duration-300">Climaterio</span>
+        </h1>
+        <p class="text-primary-200 text-center mt-4 max-w-xl mx-auto text-lg">
+          Una nueva etapa de la vida: comprenda los cambios y encuentre las soluciones adecuadas
+        </p>
+      </div>
+    </section>
+
+    <!-- Introducción con imagen al lado -->
+    <section class="py-16 bg-white bg-gradient-to-b from-pink-100 to-white relative">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="flex flex-col lg:flex-row items-start gap-8 text-justify">
+          <div class="lg:w-1/2">
+            <h2 class="text-2xl font-bold text-primary-200 mb-6 relative inline-block">
+              ¿Qué es la menopausia?
+              <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-primary-100"></span>
+            </h2>
+            <div class="space-y-4 text-blackleading-relaxed">
+              <p>
+                La menopausia se refiere al cese de la menstruación. Para considerar que una mujer está en menopausia deben pasar al menos un año sin menstruar, lo que ocurre aproximadamente a los 50 años.
+              </p>
+              <p>
+                Este evento divide al climaterio en dos etapas: una etapa previa llamada premenopáusica y una etapa posterior, la postmenopáusica.
+              </p>
+              
+              <div class="bg-gradient-to-r from-pink-50 to-rose-50 p-6 rounded-xl mt-8">
+                <h3 class="text-xl font-semibold text-primary-200 mb-4">El Climaterio: Una etapa de transición</h3>
+                <p class="mb-4">
+                  El climaterio es una larga etapa en la vida de la mujer que comienza aproximadamente alrededor de los 45 años, cuando empiezan a presentarse los primeros cambios en el ciclo menstrual.
+                </p>
+                <p class="mb-4">
+                  Estos cambios son inicialmente aislados y esporádicos, e implican el paso de la vida reproductiva a la no reproductiva por desaparición de la ovulación.
+                </p>
+                <p>
+                  Representa la pérdida de la fertilidad debido al agotamiento total de la función ovárica.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="lg:w-1/2 relative">
+            <div class="rounded-lg overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-102 hover:shadow-2xl">
+              <Image 
+                src={menopausiaImagen}
+                alt="Mujer en consulta médica sobre menopausia" 
+                class="w-full h-auto object-cover aspect-4/3"
+              />
+            </div>
+            
+            <!-- Badge flotante -->
+            <div class="absolute -bottom-4 -right-4 bg-primary-100 text-primary-600 rounded-full px-4 py-2 text-sm font-bold shadow-lg">
+              Nueva etapa positiva
+            </div>
+          </div>
+        </div>
+        
+        <!-- Sección adicional debajo -->
+        <div class="mt-12 max-w-4xl mx-auto">
+          <div class="bg-gradient-to-r from-pink-50 to-white p-6 rounded-xl">
+            <h3 class="text-xl font-semibold text-primary-200 mb-4">¿Qué cambios puede traer la menopausia?</h3>
+            <p class="mb-4 text-black">
+              Los cambios asociados al climaterio son muy diversos y no sólo se relacionan con el aparato genital femenino, sino que pueden influir en otros órganos como la piel, los huesos, las arterias y el corazón.
+            </p>
+            <p class="font-medium text-primary-200">
+              Es importante comprender que estos cambios son naturales y que existen tratamientos efectivos para manejar los síntomas y mejorar la calidad de vida.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Síntomas y cambios principales - Lista Vertical Elegante -->
+    <section class="py-16 bg-primary-50 bg-gradient-to-b from-white to-pink-100">
+      <div class="container mx-auto px-4 md:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-title-100 mb-12">
+          Principales síntomas y cambios
+        </h2>
+        
+        <div class="max-w-4xl mx-auto">
+          <div class="space-y-6">
+            {sintomasMenopausia.map((sintoma, index) => (
+              <div class="group relative">
+                <div class="bg-white rounded-2xl p-6 shadow-lg transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-gray-100 hover:border-primary-200">
+                  <div class="flex items-start gap-6">
+                    <!-- Número e Icono -->
+                    <div class="flex-shrink-0 relative">
+                      <div class="w-16 h-16 bg-gradient-to-br from-pink-100 to-rose-100 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={sintoma.icono} />
+                        </svg>
+                      </div>
+                      <!-- Número del síntoma -->
+                      <div class="absolute -top-2 -left-2 w-8 h-8 bg-primary-200 text-white rounded-full flex items-center justify-center text-sm font-bold shadow-md">
+                        {index + 1}
+                      </div>
+                    </div>
+                    
+                    <!-- Contenido -->
+                    <div class="flex-1 min-w-0">
+                      <h3 class="text-xl font-bold text-primary-600 mb-3 group-hover:text-primary-700 transition-colors">
+                        {sintoma.titulo}
+                      </h3>
+                      <p class="text-black leading-relaxed">
+                        {sintoma.descripcion}
+                      </p>
+                    </div>
+                    
+                    <!-- Indicador visual -->
+                    <div class="flex-shrink-0 hidden md:block">
+                      <div class="w-1 h-16 bg-gradient-to-b from-pink-200 to-rose-200 rounded-full transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <!-- Mensaje informativo -->
+          <div class="mt-12 bg-white p-6 rounded-xl shadow-md text-center">
+            <div class="flex items-center justify-center mb-4">
+              <Icon name="mdi:information" class="h-8 w-8 text-primary-600 mr-3" />
+              <h3 class="text-lg font-semibold text-primary-200">Importante recordar</h3>
+            </div>
+            <p class="text-black">
+              No todas las mujeres experimentan todos estos síntomas, y la intensidad puede variar considerablemente. 
+              Cada mujer vive la menopausia de manera única.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tratamientos disponibles -->
+    <section class="bg-gradient-to-b  from-pink-100 to-white">
+      <Treatments client:load  layout='carousel' showAll={true}/>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-primary-200 to-pink-300 relative overflow-hidden">
+      <div class="absolute inset-0 bg-[url('/images/bg-pattern.svg')] opacity-10"></div>
+      <div class="container mx-auto px-4 md:px-8 relative z-10 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+          Acompañamos cada etapa de su vida
+        </h2>
+        <p class="text-white/90 mb-8 max-w-2xl mx-auto">
+          La menopausia es una transición natural. Estoy aquí para ayudarle a vivirla de la mejor manera posible.
+        </p>
+       
+      </div>
+    </section>
+
+    <!-- Componente de contacto -->
+    <Contact />
+  </main>
+</Layout> 

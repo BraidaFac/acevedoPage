@@ -1,0 +1,188 @@
+---
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+import cicatrizCesarea from '../../assets/fotos/cicatriz-cesarea.jpg';
+import Contact from '../../components/Contact.astro';
+import Treatments from '../../components/Treatments';
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Cicatriz de Cesárea | Información y Tratamientos";
+const description = "Información completa sobre las cicatrices de cesárea, causas de cicatrices hundidas y tratamientos disponibles para mejorar su apariencia.";
+
+// Datos estructurados para los factores que afectan la cicatrización
+const factoresCicatrizacion = [
+  {
+    icono: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
+    titulo: "Técnica Quirúrgica",
+    descripcion: "La forma en que se realiza la incisión y el cierre influye significativamente en el resultado final de la cicatriz."
+  },
+  {
+    icono: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+    titulo: "Tipo de Piel",
+    descripcion: "Las características individuales de la piel afectan cómo se forma y evoluciona la cicatriz."
+  },
+  {
+    icono: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+    titulo: "Genética",
+    descripcion: "La predisposición genética juega un papel importante en el proceso de cicatrización."
+  },
+  {
+    icono: "M13 10V3L4 14h7v7l9-11h-7z",
+    titulo: "Cuidado Postoperatorio",
+    descripcion: "El seguimiento adecuado después de la cirugía es crucial para una buena cicatrización."
+  }
+];
+
+// Datos para tratamientos
+const tratamientos = [
+  {
+    nombre: "Terapias Tópicas",
+    descripcion: "Uso de cremas y geles especializados con ingredientes como silicona y vitamina E para mejorar la apariencia de la cicatriz",
+    beneficios: ["No invasivo", "Fácil aplicación", "Resultados progresivos"],
+    link: "/tratamientos/terapias-topicas"
+  },
+  {
+    nombre: "Terapia de Masaje",
+    descripcion: "Técnicas especializadas de masaje para mejorar la flexibilidad y apariencia de la cicatriz",
+    beneficios: ["Mejora la circulación", "Reduce la rigidez", "Natural"],
+    link: "/tratamientos/terapia-masaje"
+  },
+  {
+    nombre: "Liberación de Cicatriz",
+    descripcion: "Procedimiento para remover la cicatriz existente y optimizar la formación de una nueva",
+    beneficios: ["Resultados permanentes", "Mejora significativa", "Procedimiento seguro"],
+    link: "/tratamientos/liberacion-cicatriz"
+  },
+  {
+    nombre: "Radiofrecuencia",
+    descripcion: "Tratamiento que utiliza energía electromagnética para estimular la regeneración celular y la producción de colágeno",
+    beneficios: ["No invasivo", "Estimula colágeno", "Mejora la elasticidad"],
+    link: "/tratamientos/radiofrecuencia"
+  }
+];
+---
+
+<Layout title={title} description={description}>
+  <main class="mt-16">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-white to-pink-100 py-20 overflow-hidden">
+      <div class="container mx-auto px-4 md:px-8 relative z-10">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-title-100 text-center font-title">
+          <span class="inline-block transform hover:scale-105 transition-transform duration-300">Cicatriz</span> 
+          <span class="inline-block transform hover:scale-105 transition-transform duration-300">de</span> 
+          <span class="inline-block transform hover:scale-105 transition-transform duration-300">Cesárea</span>
+        </h1>
+        <p class="text-primary-200 text-center mt-4 max-w-xl mx-auto text-lg">
+          Comprenda los factores que afectan su cicatriz y descubra las opciones de tratamiento disponibles
+        </p>
+      </div>
+    </section>
+
+    <!-- Introducción -->
+    <section class="py-16 bg-white bg-gradient-to-b from-pink-100 to-white relative">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="flex flex-col lg:flex-row items-start gap-8 text-justify">
+          <div class="lg:w-1/2">
+            <h2 class="text-2xl font-title font-bold text-primary-200 mb-6 relative inline-block">
+              ¿Por qué se hunden algunas cicatrices?
+              <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-primary-100"></span>
+            </h2>
+            <div class="space-y-4 text-black leading-relaxed">
+              <p>
+                La cicatriz de una cesárea puede variar significativamente de una mujer a otra. Mientras algunas cicatrices se desvanecen con el tiempo, otras pueden tornarse más notorias o incluso hundirse, creando no sólo preocupaciones estéticas sino también incómodas sensaciones.
+              </p>
+              <p>
+                La cicatrización es un proceso complejo influenciado por múltiples factores, incluyendo la técnica quirúrgica, el tipo de piel, la genética, y el cuidado postoperatorio.
+              </p>
+              <p>
+                Una cicatriz hundida, también conocida como cicatriz atrófica, puede originarse por una pérdida de tejido subyacente o de una contracción excesiva de la piel durante el proceso de curación.
+              </p>
+            </div>
+          </div>
+          
+          <div class="lg:w-1/2 relative">
+            <div class="rounded-lg overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-102 hover:shadow-2xl">
+              <Image 
+                src={cicatrizCesarea}
+                alt="Consulta médica especializada en cicatrices de cesárea" 
+                class="w-full h-auto object-cover aspect-4/3"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Factores que afectan la cicatrización -->
+    <section class="py-16 bg-primary-50 bg-gradient-to-b from-white to-pink-100">
+      <div class="container mx-auto px-4 md:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-title-100 mb-12 font-title">
+          Factores que influyen en la cicatrización
+        </h2>
+        <div class="max-w-5xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-6">
+            {factoresCicatrizacion.map((factor, index) => (
+              <div class="bg-gradient-to-br from-white to-pink-50 rounded-xl p-6 shadow-md">
+                <div class="h-2 w-20 bg-primary-200 rounded-full mb-4"></div>
+                <h3 class="text-xl font-title font-semibold text-primary-600 mb-3">{factor.titulo}</h3>
+                <p class="text-black leading-relaxed">{factor.descripcion}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      
+        <div class="mt-12 lg:w-full lg:mx-auto w-full bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-lg font-semibold text-primary-200 mb-4">¿Cuándo consultar con un especialista?</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="flex items-start">
+            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+              <Icon name="mdi:emoticon-sad" class="h-6 w-6 text-primary-600" />
+            </div>
+            <div>
+              <h4 class="font-medium text-primary-600">Cicatriz hundida</h4>
+              <p class="text-black text-sm">Si su cicatriz se ha hundido o está causando molestias</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+              <Icon name="mdi:bandage" class="h-6 w-6 text-primary-600" />
+            </div>
+            <div>
+              <h4 class="font-medium text-primary-600">Molestias físicas</h4>
+              <p class="text-black text-sm">Si la cicatriz causa dolor o sensibilidad</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+              <Icon name="mdi:emoticon-cry" class="h-6 w-6 text-primary-600" />
+            </div>
+            <div>
+              <h4 class="font-medium text-primary-600">Preocupación estética</h4>
+              <p class="text-black text-sm">Si la apariencia de la cicatriz le causa malestar emocional</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+              <Icon name="mdi:calendar-clock" class="h-6 w-6 text-primary-600" />
+            </div>
+            <div>
+              <h4 class="font-medium text-primary-600">Cicatriz reciente</h4>
+                <p class="text-black text-sm">Si desea prevenir problemas futuros con su cicatriz</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tratamientos disponibles -->
+    <section class=" bg-gray-50 bg-gradient-to-b from-pink-100 to-white">
+      <div class="container mx-auto px-4 md:px-8">
+		    <Treatments client:load showAll={true} layout='carousel'/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Componente de contacto -->
+    <Contact />
+  </main>
+</Layout> 

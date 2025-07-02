@@ -1,0 +1,149 @@
+---
+import Contact from '../../components/Contact.astro';
+import Treatments from '../../components/Treatments';
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Atrofia Genital | Información y Tratamientos";
+const description = "Información completa sobre la atrofia genital, sus síntomas y tratamientos disponibles. Descubra cómo mejorar su salud íntima y calidad de vida.";
+
+---
+
+<Layout title={title} description={description}>
+  <main class="mt-16">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-white to-pink-100 py-20 overflow-hidden">
+      <div class="container mx-auto px-4 md:px-8 relative z-10">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-title-100 text-center font-title">
+          <span class="inline-block transform hover:scale-105 transition-transform duration-300">Atrofia Genital</span>
+        </h1>
+        <p class="text-primary-200 text-center mt-4 max-w-xl mx-auto text-lg">
+          Una condición común que afecta la salud íntima de la mujer y que tiene solución.
+        </p>
+      </div>
+    </section>
+
+    <!-- Introducción -->
+    <section class="py-16 bg-white bg-gradient-to-b from-pink-100 to-white relative">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="flex flex-col lg:flex-row items-start gap-8 text-justify">
+          <div class="lg:w-1/2">
+            <h2 class="text-2xl font-title font-bold text-primary-200 mb-6 relative inline-block">
+              ¿Qué es la Atrofia Genital?
+              <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-primary-100"></span>
+            </h2>
+            <div class="space-y-4 text-black leading-relaxed">
+              <p>
+                La atrofia genital es una condición frecuente en mujeres, especialmente después de la menopausia, aunque también  puede manifestarse en diferentes etapas de la vida de la. Hoy se la conoce más ampliamente como síndrome genitourinario de la menopausia, ya que no solo afecta la zona genital, sino también el tracto urinario.
+              </p>
+              <p>
+                Se trata de un conjunto de síntomas y signos causados por la disminución de estrógenos, una hormona clave para la salud de los tejidos genitales y urinarios. Cuando los niveles de estrógenos bajan, como ocurre naturalmente en la menopausia, los tejidos de la vulva, vagina, uretra y vejiga sufren cambios:
+              </p>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>Adelgazamiento de la piel</li>
+                <li>Pérdida de elasticidad</li>
+                <li>Incontinencia urinaria</li>
+                <li>Menor lubricación natural</li>
+                <li>Cambios en el pH y la flora vaginal</li>
+              </ul>
+            </div>
+          </div>
+          <div class="lg:w-1/2 mt-12    ">
+              <h2 class="text-2xl font-title font-bold text-primary-200 mb-6 relative inline-block">
+                ¿A quiénes puede afectar?
+                <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-primary-100"></span>
+              </h2>
+              <div class="space-y-4 text-black leading-relaxed">
+                <ul class="list-disc pl-6 space-y-2">
+                  <li>Mujeres en menopausia natural o quirúrgica</li>
+                  <li>Mujeres en lactancia</li>
+                  <li>Mujeres con tratamientos oncológicos que reducen las hormonas</li>
+                  <li>Mujeres jóvenes con trastornos hormonales o uso prolongado de anticonceptivos</li>
+                </ul>
+                <p>
+                  Es importante destacar que la detección temprana y el tratamiento adecuado. Mejora  significativamente la calidad de vida y la salud sexual de las mujeres afectadas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Síntomas -->
+    <section class="py-16 bg-primary-50 bg-gradient-to-b from-white to-pink-100">
+      <div class="container mx-auto px-4 md:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-title-100 mb-12 font-title">
+          Síntomas Comunes
+        </h2>
+        
+        <div class="max-w-4xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Columna Izquierda -->
+            <div class="space-y-8">
+              <div class="relative">
+                <div class="absolute -left-4 top-0 w-2 h-full bg-primary-200 rounded-full"></div>
+                <div class="bg-white p-6 rounded-r-xl shadow-md">
+                  <h3 class="text-xl font-semibold text-primary-200 mb-2">Sequedad vaginal</h3>
+                  <p class="text-gray-600">Falta de lubricación natural que puede causar muchas molestias, al utilizar ropa ajusada, realizar actividad física o durante la actividad sexual.</p>
+                </div>
+              </div>
+
+              <div class="relative">
+                <div class="absolute -left-4 top-0 w-2 h-full bg-primary-200 rounded-full"></div>
+                <div class="bg-white p-6 rounded-r-xl shadow-md">
+                  <h3 class="text-xl font-semibold text-primary-200 mb-2">Picazón o ardor</h3>
+                  <p class="text-gray-600">Molestias persistentes en la zona íntima que afectan el bienestar diario.</p>
+                </div>
+              </div>
+
+              <div class="relative">
+                <div class="absolute -left-4 top-0 w-2 h-full bg-primary-200 rounded-full"></div>
+                <div class="bg-white p-6 rounded-r-xl shadow-md">
+                  <h3 class="text-xl font-semibold text-primary-200 mb-2">Dolor en relaciones</h3>
+                  <p class="text-gray-600">Molestias durante la actividad sexual que pueden afectar la intimidad y el bienestar emocional.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Columna Derecha -->
+            <div class="space-y-8">
+              <div class="relative">
+                <div class="absolute -right-4 top-0 w-2 h-full bg-primary-200 rounded-full"></div>
+                <div class="bg-white p-6 rounded-l-xl shadow-md">
+                  <h3 class="text-xl font-semibold text-primary-200 mb-2">Disminución del deseo</h3>
+                  <p class="text-gray-600">Reducción del interés sexual que puede afectar la relación y la autoestima.</p>
+                </div>
+              </div>
+
+              <div class="relative">
+                <div class="absolute -right-4 top-0 w-2 h-full bg-primary-200 rounded-full"></div>
+                <div class="bg-white p-6 rounded-l-xl shadow-md">
+                  <h3 class="text-xl font-semibold text-primary-200 mb-2">Molestias urinarias</h3>
+                  <p class="text-gray-600">Infecciones urinarias frecuentes y molestias al orinar que requieren atención médica.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Importancia de la Consulta -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-2xl md:text-3xl font-bold text-title-100 mb-6 font-title">
+            ¿Por qué es importante consultar?
+          </h2>
+          <p class="text-lg text-black leading-relaxed">
+            Muchas mujeres no consultan porque piensan que es "normal" con la edad o sienten vergüenza. Sin embargo, la atrofia genital puede tratarse de manera segura y mejorar significativamente la calidad de vida, la salud íntima y el bienestar general.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-gradient-to-b from-pink-100 to-white">
+        <Treatments client:load showAll={true} layout='carousel'/>
+    </section>
+    <Contact />
+  </main>
+</Layout> 

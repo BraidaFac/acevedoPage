@@ -1,0 +1,297 @@
+---
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+import postPartoImagen from '../assets/fotos/postParto1.jpg';
+import postPartoImagen2 from '../assets/fotos/postParto2.jpg';
+import Layout from '../layouts/Layout.astro';
+
+
+
+const fasesPosparto = [
+  {
+    titulo: "Fase inmediata (0-6 semanas)",
+    descripcion: "Periodo crítico de recuperación física y adaptación",
+    recomendaciones: [
+      "Descanso prioritario y recuperación física",
+      "Cuidado de la herida (cesárea) o episiotomía",
+      "Inicio gradual de ejercicios de suelo pélvico",
+      "Establecimiento de la lactancia materna",
+      "Vigilancia y control del sangrado posparto"
+    ],
+    icono: "mdi:clock-start"
+  },
+  {
+    titulo: "Fase intermedia (6 semanas-6 meses)",
+    descripcion: "Etapa de consolidación y regreso gradual a la actividad",
+    recomendaciones: [
+      "Valoración ginecológica completa",
+      "Introducción de ejercicios específicos posparto",
+      "Normalización de la vida sexual",
+      "Atención al equilibrio emocional",
+      "Manejo de la fatiga y el descanso interrumpido"
+    ],
+    icono: "mdi:clock-outline"
+  },
+  {
+    titulo: "Fase tardía (6-12 meses)",
+    descripcion: "Recuperación completa y adaptación a largo plazo",
+    recomendaciones: [
+      "Evaluación de la recuperación muscular y del suelo pélvico",
+      "Revisión de métodos anticonceptivos compatibles",
+      "Balance de la nutrición y recuperación del peso",
+      "Atención a la salud ósea durante la lactancia",
+      "Establecimiento de rutinas sostenibles"
+    ],
+    icono: "mdi:clock-end"
+  }
+];
+
+// Datos para testimonios
+const testimonios = [
+  {
+    nombre: "Laura M.",
+    avatar: "L",
+    tipo: "Parto vaginal, 3 meses posparto",
+    contenido: "La atención que recibí durante mi recuperación posparto fue fundamental. No solo cuidaron de mi salud física, sino que también me brindaron el apoyo emocional que tanto necesitaba en esos momentos de adaptación."
+  },
+  {
+    nombre: "Claudia R.",
+    avatar: "C",
+    tipo: "Cesárea, 6 meses posparto",
+    contenido: "Los ejercicios personalizados para mi recuperación después de la cesárea y el seguimiento constante me permitieron recuperarme mucho más rápido de lo que esperaba. La asesoría en lactancia fue crucial para poder mantenerla a pesar de las dificultades iniciales."
+  }
+];
+
+// Datos para estadísticas de recuperación
+const estadisticas = [
+  {
+    porcentaje: 85,
+    categoria: "Recuperación física",
+    descripcion: "de las madres logra una recuperación física completa con apoyo especializado"
+  },
+  {
+    porcentaje: 92,
+    categoria: "Lactancia exitosa",
+    descripcion: "de éxito en establecer lactancia materna con asesoramiento adecuado"
+  },
+  {
+    porcentaje: 76,
+    categoria: "Bienestar emocional",
+    descripcion: "de reducción en síntomas de ansiedad y depresión con apoyo temprano"
+  },
+  {
+    porcentaje: 89,
+    categoria: "Suelo pélvico",
+    descripcion: "de las madres recupera la función normal con rehabilitación especializada"
+  }
+];
+
+// Datos para recursos y autoayuda
+const recursos = [
+  {
+    icono: "mdi:book-open-page-variant",
+    titulo: "Guía de cuidados posparto",
+    descripcion: "Manual completo con información práctica para cada fase de tu recuperación"
+  },
+  {
+    icono: "mdi:podcast",
+    titulo: "Podcast de maternidad",
+    descripcion: "Episodios semanales con especialistas y madres compartiendo experiencias"
+  },
+  {
+    icono: "mdi:video",
+    titulo: "Videoteca de ejercicios",
+    descripcion: "Rutinas adaptadas a cada fase de recuperación que puedes hacer en casa"
+  },
+  {
+    icono: "mdi:account-group",
+    titulo: "Comunidad de apoyo",
+    descripcion: "Grupo moderado por profesionales donde conectar con otras madres en tu misma etapa"
+  }
+];
+---
+
+<Layout>
+  <main class="mt-16">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-white to-pink-100 py-20">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-8">
+          <div class="lg:w-1/2 text-center lg:text-left">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-title-100 mb-4">
+              Cuidado Integral en el Posparto
+            </h1>
+            <p class="text-primary-200 max-w-xl mx-auto lg:mx-0 mb-8">
+              Acompañamiento especializado para una recuperación completa física y emocional tras el nacimiento de tu bebé.
+            </p>
+            <a 
+              href="#contact" 
+              class="inline-flex items-center px-6 py-3 text-white bg-primary-200 rounded-full hover:bg-primary-200/90 shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <span class="mr-2">Agenda tu consulta especializada</span>
+              <Icon name="mdi:arrow-right" class="w-5 h-5" />
+            </a>
+          </div>          
+          <div class="rounded-lg overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-102  hover:shadow-2xl lg:w-1/2 max-h-[500px]">
+            <Image 
+                  src={postPartoImagen}
+                  alt="Sesión de recuperación posparto" 
+                  class="w-full h-auto object-cover max-h-[500px]" 
+          />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introducción -->
+    <section class="py-16 bg-gradient-to-b from-pink-100 to-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="flex flex-col lg:flex-row items-start gap-8">
+          <div class="rounded-lg overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-102 hover:shadow-2xl lg:w-1/2 max-h-[500px]">
+            <Image 
+                  src={postPartoImagen2}
+                  alt="Sesión de recuperación posparto" 
+                  class="w-full h-auto object-cover max-h-[500px]" 
+          />
+          </div>
+          <div class="lg:w-1/2">
+            <h2 class="text-2xl font-bold text-primary-200 mb-4 text-title">
+              La importancia del cuidado posparto
+            </h2>
+            <p class="text-black mb-4 leading-relaxed text-justify">
+              La recuperación postparto, o puerperio, es el periodo después del parto durante el cual el cuerpo de la mujer regresa a su estado pregestacional. Generalmente, este periodo dura unas 6 semanas, pero puede extenderse. Durante este tiempo, es crucial que la mujer se enfoque en la recuperación física, emocional y mental, así como en el cuidado del bebé.
+              El periodo de postparto es una etapa de transformaciones profunda para la mujer, tanto a nivel físico como emocional. Durante este tiempo, es esencial recordar que no existe ninguna obligación de apresurar la recuperación y es crucial que cada mujer se dé el permiso de vivir este proceso a su propio ritmo, respetando su cuerpo y su evolución natural.  Priorizando el bienestar emocional y mental. 
+              Sin sentirte presionada por cumplir con expectativas externas ajenas.
+              Cada etapa trae consigo nuevos desafíos y aprendizajes, y es esencial permitirse vivirlos plenamente.
+              Desde Ginecología estética y funcional se pueden ofrecer  una amplia gama de tratamientos y procedimientos que puede ayudar a las mujeres a recuperar su salud y bienestar después del parto. Desde tratamientos para la atrofia genital e hiperlaxitud vaginal,  lo que lleva a una mejoría de la apariencia de la zona vaginal así como corrección de cicatrices, incontinencia urinaria e inetesticimos a nivel corporal entre otros.  
+              Con los avances en la tecnología y los enfoques de tratamientos cada día hay más mujeres que pueden elegir opciones de tratamientos y  adecuarlo a sus necesidades para así mejorar su calidad de vida.
+            </p>
+           
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <!-- Fases del Posparto -->
+    <section class="py-16 bg-gradient-to-b  from-white to-pink-100 ">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-2xl md:text-3xl font-bold text-primary-200 mb-4 text-title">
+            Las tres fases de la recuperación posparto
+          </h2>
+          <p class="text-black max-w-3xl mx-auto">
+            Cada etapa del posparto tiene necesidades específicas que requieren cuidados adaptados para asegurar una recuperación completa.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {fasesPosparto.map((fase, index) => (
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div class="p-1 bg-gradient-to-r from-primary-100 to-primary-200"></div>
+              <div class="p-6">
+                
+                <h3 class="text-xl font-semibold text-title-100 mb-3 text-title">{fase.titulo}</h3>
+                <p class="text-black mb-4 lg:text-sm ">{fase.descripcion}</p>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <h4 class="font-medium text-primary-200 mb-2">Recomendaciones clave</h4>
+                  <ul class="space-y-2">
+                    {fase.recomendaciones.map(r => (
+                      <li class="flex items-start">
+                        <Icon name="mdi:check-circle" class="h-5 w-5 text-primary-200 mr-2 mt-0.5" />
+                        <span class="text-black text-sm">{r}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- Testimonios -->
+    <section class="py-16 bg-gradient-to-b from-pink-100 to-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-primary-200 mb-12 text-title">
+          Lo que dicen nuestras pacientes
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {testimonios.map(testimonio => (
+            <div class="bg-white rounded-2xl shadow-md p-6 relative hover:shadow-lg transition-shadow duration-300">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 rounded-full bg-primary-100 text-primary-200 flex items-center justify-center font-bold text-lg mr-4">
+                  {testimonio.avatar}
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-800">{testimonio.nombre}</h3>
+                  <p class="text-sm text-gray-500">{testimonio.tipo}</p>
+                </div>
+              </div>
+              <div class="ml-16">
+                <Icon name="mdi:format-quote-open" class="h-6 w-6 text-primary-100 absolute top-6 left-6" />
+                <p class="text-gray-600 italic">
+                  {testimonio.contenido}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+ <!--  -->
+
+    <!-- Recursos -->
+    <section class="py-16 bg-gradient-to-b from-white to-pink-100">
+      <div class="container mx-auto px-4 md:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-primary-200 mb-12 text-title">
+          Recursos para tu recuperación
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {recursos.map(recurso => (
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+              <div class="h-2 bg-gradient-to-r from-primary-100 to-primary-200 group-hover:h-3 transition-all duration-300"></div>
+              <div class="p-6">
+                <div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary-200 transition-colors duration-300">
+                  <Icon name={recurso.icono} class="h-7 w-7 text-primary-200 group-hover:text-white" />
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-3 text-title">{recurso.titulo}</h3>
+                <p class="text-gray-600 text-sm">{recurso.descripcion}</p>
+                <button type="button" class="mt-4 text-primary-200 hover:text-primary-200/80 font-medium flex items-center text-sm transition-colors duration-300">
+                  Acceder al recurso
+                  <Icon name="mdi:arrow-right" class="ml-1 h-4 w-4" />
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="py-16 bg-white text-black">
+      <div class="container mx-auto px-4 md:px-8 text-center">
+        <h2 class="text-2xl lg:text-3xl font-title font-bold mb-4 text-title-100">
+          Cuida de ti para cuidar mejor de tu bebé
+        </h2>
+        <p class="max-w-3xl mx-auto mb-8 leading-relaxed text-black">
+         
+        </p>
+        <a 
+          href="#contact" 
+          class="hover:bg-primary-200 hover:text-white inline-flex items-center px-6 py-3 text-primary-200 bg-white rounded-full font-medium hover:bg-primary-50 transition-colors duration-300 shadow-lg hover:shadow-xl"
+        >
+          <span class="mr-2">Agenda tu consulta especializada</span>
+          <Icon name="mdi:arrow-right" class="h-5 w-5" />
+        </a>
+      </div>
+    </section>
+  </main>
+ 
+</Layout>

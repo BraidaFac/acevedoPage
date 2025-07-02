@@ -1,0 +1,138 @@
+---
+import rejuvenecimientoIntimo from '../assets/fotos/reju.jpg'
+import incontinencia from '../assets/fotos/incontinencia.jpg'
+import flacidez from '../assets/fotos/flacidez.jpg'
+import celulitis from '../assets/fotos/celulitis.jpg'
+import adiposidadLocalizada from '../assets/fotos/adiposidad.jpg'
+import cicatrizCesarea from '../assets/fotos/cicatrize.jpg'
+import estrias from '../assets/fotos/estrias.jpg'
+import hiperlaxitudVaginal from '../assets/fotos/hiperlaxitud.jpeg'
+import atrofiaGenital from '../assets/fotos/atrofia.jpeg'
+import { Image } from 'astro:assets'
+
+interface Problem {
+  id: string;
+  name: string;
+  description: string;
+  image: ImageMetadata;
+  icon: string;
+  url: string;
+}
+
+// Definición de problemas
+const problems: Problem[] = [
+  {
+    id: 'rejuvenecimiento-intimo',
+    name: 'Rejuvenecimiento íntimo',
+    description: 'Recupera la vitalidad y salud de la zona íntima con tratamientos no invasivos y efectivos.',
+    image: rejuvenecimientoIntimo,
+    icon: 'mdi:flower',
+    url: '/info/rejuvenecimiento-intimo'
+  },
+  {
+    id: 'atrofia-genital',
+    name: 'Atrofia genital',
+    description: 'Tratamientos específicos para revertir los síntomas de la atrofia y mejorar la calidad de vida.',
+    image: atrofiaGenital,
+    icon: 'mdi:medical-bag',
+    url: '/info/atrofia-genital'
+  },
+  {
+    id: 'incontinencia-urinaria',
+    name: 'Incontinencia urinaria',
+    description: 'Soluciones efectivas para recuperar el control y la confianza en tu día a día.',
+    image: incontinencia,
+    icon: 'mdi:water',
+    url: '/info/incontinencia-urinaria'
+  },
+  {
+    id: 'hiperlaxitud-vaginal',
+    name: 'Hiperlaxitud vaginal',
+    description: 'Técnicas avanzadas para restaurar la firmeza y funcionalidad del tejido vaginal.',
+    image: hiperlaxitudVaginal,
+    icon: 'mdi:meditation',
+    url: '/info/hiperlaxitud-vaginal'
+  },
+  {
+    id: 'cicatriz-cesarea',
+    name: 'Cicatriz de cesárea',
+    description: 'Mejora la apariencia y elasticidad de la cicatriz con tecnologías no invasivas.',
+    image: cicatrizCesarea,
+    icon: 'mdi:needle',
+    url: '/info/cicatriz-cesarea'
+  },
+  {
+    id: 'cicatriz-episiotomia',
+    name: 'Cicatriz episiotomía',
+    description: 'Tratamientos especializados para la recuperación y mejora de las cicatrices del parto.',
+    image: estrias,
+    icon: 'mdi:bandage',
+    url: '/info/cicatriz-episiotomia'
+  },
+  {
+    id: 'flacidez',
+    name: 'Flacidez',
+    description: 'Tecnologías de vanguardia para reafirmar la piel y mejorar su tonicidad.',
+    image: flacidez,
+    icon: 'mdi:arm-flex',
+    url: '/info/flacidez'
+  },
+  {
+    id: 'celulitis',
+    name: 'Celulitis',
+    description: 'Combate eficazmente la celulitis con nuestros protocolos especializados.',
+    image: celulitis,
+    icon: 'mdi:texture-box',
+    url: '/info/celulitis'
+  },
+  {
+    id: 'adiposidad-localizada',
+    name: 'Adiposidad localizada',
+    description: 'Reduce acumulaciones de grasa en zonas específicas con tratamientos de precisión.',
+    image: adiposidadLocalizada,
+    icon: 'mdi:stomach',
+    url: '/info/adiposidad-localizada'
+  }
+];
+---
+
+<section id="problems" class="py-16 bg-gradient-to-b from-pink-50 to-white">
+  <div class="container mx-auto px-4 max-w-7xl">
+    <div class="text-center mb-12">
+      <h2 class="text-2xl lg:text-3xl font-title text-title-100 mb-4 font-bold">¿Qué necesitas tratar?</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">Soluciones especializadas para cada necesidad. Descubre cómo podemos ayudarte con los siguientes problemas.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {problems.map((problem: Problem) => (
+        <a 
+          href={problem.url} 
+          class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group cursor-pointer"
+        >
+          <div class="relative h-56 overflow-hidden">
+            <Image
+              transition:name={problem.image.src}
+              alt={`Problema: ${problem.name}`}
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              src={problem.image}
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-200/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+             
+            </div>
+          </div>
+          <div class="p-5">
+            <div class="flex items-center mb-3">
+              
+              <h3 class="text-xl font-semibold text-title-100 font-title">{problem.name}</h3>
+            </div>
+            <p class="text-gray-600 mb-4">{problem.description}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  // Añadir interactividad
+</script>
