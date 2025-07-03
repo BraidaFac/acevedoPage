@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import logoNav from "../assets/logoNav.svg";
 // Definición de tipos para TypeScript (opcional)
 type NavItem = {
   label: string;
@@ -133,7 +133,7 @@ const Navbar = () => {
         {/* Logo */}
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img
-            src={"/src/assets/logoNav.svg"}
+            src={logoNav.src}
             alt="Logo Dra. Cecilia Acevedo"
             className="h-10 lg:h-14 w-auto"
           />
