@@ -68,7 +68,7 @@ const TreatmentsCarousel = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
               <div className="container ml-15 px-4 lg:px-8 relative z-10">
-                <div className="max-w-xl absolute lg:buttom-10 top-40">
+                <div className="max-w-xl absolute lg:buttom-40 top-10">
                   <h2 className="text-2xl lg:text-3xl  text-white mb-4">
                     {slide.title}
                   </h2>
