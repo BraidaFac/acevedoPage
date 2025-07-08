@@ -75,7 +75,7 @@ const Navbar = () => {
     },
     {
       label: "Contacto",
-      href: "#contact",
+      href: "/#contact",
     },
   ];
 

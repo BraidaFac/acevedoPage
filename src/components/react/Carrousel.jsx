@@ -3,36 +3,36 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import { Autoplay, EffectFade, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import celulitis from "../../assets/fotos/celulitis.jpg";
+import consultaginecologica from "../../assets/fotos/consultaginecologica.jpg";
+import controlembarazo from "../../assets/fotos/control-de-embarazo.jpg";
+import postparto from "../../assets/fotos/postparto1.jpg";
 
 // Array completo con la información de los slides
 const slides = [
   {
-    image:
-      "https://www.imel-esteticalaser.com.ar/wp-content/uploads/2023/03/animacion-05.jpg",
+    image: celulitis,
     title: "Radiofrecuencia",
     description:
       "Tratamiento no invasivo para zona corporal, incontinencia urinaria y rejuvenecimiento vaginal",
     url: "/tratamiento",
   },
   {
-    image:
-      "https://www.imel-esteticalaser.com.ar/wp-content/uploads/2023/03/animacion-01-1.jpg",
+    image: consultaginecologica,
     title: "Consulta Ginecologica",
     description:
       "Ambiente seguro y de confianza donde puedas expresar tus preocupaciones y recibir la mejor atención medica",
     url: "/tratamiento",
   },
   {
-    image:
-      "https://www.imel-esteticalaser.com.ar/wp-content/uploads/2023/03/animacion-02.jpg",
+    image: postparto,
     title: "Consulas de Fertilidad",
     description:
       "Asesoramiento personalizado para ayudarte a cumplir tu sueño de ser madre",
     url: "/tratamiento",
   },
   {
-    image:
-      "https://www.imel-esteticalaser.com.ar/wp-content/uploads/2023/03/animacion-06.jpg",
+    image: controlembarazo,
     title: "Control de Embarazo",
     description:
       "Acompañamiento integral durante tu embarazo con atención cálida y profesional",
@@ -46,8 +46,9 @@ const TreatmentsCarousel = () => {
       <Swiper
         modules={[Navigation, Autoplay, EffectFade]}
         slidesPerView={1}
+        loop={true}
         effect="fade"
-        speed={2500}
+        speed={1000}
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
@@ -61,9 +62,12 @@ const TreatmentsCarousel = () => {
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div
-              className="relative w-full h-full flex items-center bg-cover bg-center lg:bg-[center_top]"
+              className="relative w-full h-full flex items-center bg-cover bg-center"
               style={{
-                backgroundImage: `url('${slide.image}')`,
+                backgroundImage: `url('${slide.image.src}')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
               }}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>

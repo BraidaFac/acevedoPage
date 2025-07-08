@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { Image } from 'astro:assets';
-import cicatrizCesarea from '../../assets/fotos/cicatriz-cesarea.jpg';
+import cicatrizCesarea from '../../assets/fotos/cesarea.jpg';
 import Contact from '../../components/Contact.astro';
 import Treatments from '../../components/Treatments';
 import Layout from '../../layouts/Layout.astro';
@@ -33,33 +33,7 @@ const factoresCicatrizacion = [
   }
 ];
 
-// Datos para tratamientos
-const tratamientos = [
-  {
-    nombre: "Terapias Tópicas",
-    descripcion: "Uso de cremas y geles especializados con ingredientes como silicona y vitamina E para mejorar la apariencia de la cicatriz",
-    beneficios: ["No invasivo", "Fácil aplicación", "Resultados progresivos"],
-    link: "/tratamientos/terapias-topicas"
-  },
-  {
-    nombre: "Terapia de Masaje",
-    descripcion: "Técnicas especializadas de masaje para mejorar la flexibilidad y apariencia de la cicatriz",
-    beneficios: ["Mejora la circulación", "Reduce la rigidez", "Natural"],
-    link: "/tratamientos/terapia-masaje"
-  },
-  {
-    nombre: "Liberación de Cicatriz",
-    descripcion: "Procedimiento para remover la cicatriz existente y optimizar la formación de una nueva",
-    beneficios: ["Resultados permanentes", "Mejora significativa", "Procedimiento seguro"],
-    link: "/tratamientos/liberacion-cicatriz"
-  },
-  {
-    nombre: "Radiofrecuencia",
-    descripcion: "Tratamiento que utiliza energía electromagnética para estimular la regeneración celular y la producción de colágeno",
-    beneficios: ["No invasivo", "Estimula colágeno", "Mejora la elasticidad"],
-    link: "/tratamientos/radiofrecuencia"
-  }
-];
+
 ---
 
 <Layout title={title} description={description}>
@@ -104,6 +78,7 @@ const tratamientos = [
             <div class="rounded-lg overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-102 hover:shadow-2xl">
               <Image 
                 src={cicatrizCesarea}
+                transition:name={cicatrizCesarea.src}
                 alt="Consulta médica especializada en cicatrices de cesárea" 
                 class="w-full h-auto object-cover aspect-4/3"
               />
