@@ -1,13 +1,14 @@
 // @ts-check
 import react from "@astrojs/react";
-import vercel from "@astrojs/vercel/static";
+import vercelStatic from "@astrojs/vercel/static";
 import tailwindcss from "@tailwindcss/vite";
 import icon from "astro-icon";
 import { defineConfig } from "astro/config";
+
 // https://astro.build/config
 export default defineConfig({
   output: "static",
-  adapter: vercel({
+  adapter: vercelStatic({
     webAnalytics: {
       enabled: true,
     },
