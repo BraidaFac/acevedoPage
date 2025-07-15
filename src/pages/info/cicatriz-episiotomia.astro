@@ -1,0 +1,165 @@
+---
+import { Image } from 'astro:assets';
+import postpartoImagen from '../../assets/fotos/postparto1.jpg';
+import Contact from '../../components/Contact.astro';
+import SymptomCard from '../../components/SymptomCard.astro';
+import Treatments from '../../components/Treatments';
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Episiotomía | Información y Tratamientos";
+const description = "Información completa sobre la episiotomía, sus secuelas y los tratamientos disponibles para mejorar la calidad de vida después del parto.";
+
+// Datos de secuelas
+const secuelas = [
+  {
+    title: "Dolor durante las relaciones sexuales",
+    description: "La episiotomía puede causar dolor y molestias durante las relaciones íntimas, afectando la calidad de vida sexual."
+  },
+  {
+    title: "Aumento del diámetro vaginal",
+    description: "Puede ocasionar un aumento del diámetro vaginal y pérdida de sensibilidad en la zona genital."
+  },
+  {
+    title: "Debilidad en músculos del suelo pélvico",
+    description: "La episiotomía puede debilitar los músculos del suelo pélvico, afectando la función de sostén."
+  },
+  {
+    title: "Incontinencia urinaria y prolapsos",
+    description: "En muchos casos puede llevar a incontinencia urinaria y prolapsos de órganos pélvicos."
+  }
+];
+
+// Datos de tratamientos
+const tratamientos = [
+  {
+    title: "Rehabilitación del suelo pélvico",
+    description: "Ejercicios específicos para fortalecer los músculos del suelo pélvico y mejorar la función.",
+    icon: "💪"
+  },
+  {
+    title: "Radiofrecuencia vaginal",
+    description: "Tratamientos con radiofrecuencia para mejorar la firmeza y sensibilidad vaginal.",
+    icon: "⚡"
+  },
+  {
+    title: "Láser vaginal",
+    description: "Tratamientos con láser para rejuvenecimiento y mejora de la calidad del tejido vaginal.",
+    icon: "🔬"
+  },
+  {
+    title: "Terapia física especializada",
+    description: "Sesiones de fisioterapia especializada en suelo pélvico para recuperar la función.",
+    icon: "🏥"
+  },
+  {
+    title: "Tratamiento de cicatrices",
+    description: "Técnicas específicas para mejorar la elasticidad y apariencia de las cicatrices.",
+    icon: "✨"
+  },
+  {
+    title: "Consulta especializada",
+    description: "Evaluación personalizada para determinar el mejor tratamiento según cada caso.",
+    icon: "👩‍⚕️"
+  }
+];
+
+---
+
+<Layout title={title} description={description}>
+  <main class="mt-16">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-white to-pink-100 py-20 overflow-hidden">
+      <div class="container mx-auto px-4 md:px-8 relative z-10 mb-20">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-title-100 text-center font-title">
+          <span class="inline-block transform hover:scale-105 transition-transform duration-300">Episiotomía</span>
+        </h1>
+        <p class="text-primary-200 text-center mt-4 max-w-xl mx-auto text-lg">
+          Secuelas y tratamientos para mejorar la calidad de vida
+        </p>
+      </div>
+  
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="flex flex-col lg:flex-row items-start gap-8 text-justify">
+          <div class="lg:w-1/2 ">
+            <h2 class="text-2xl font-title font-bold text-primary-200 mb-6 relative inline-block">
+              ¿Qué es la episiotomía?
+              <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-primary-100"></span>
+            </h2>
+            <div class="space-y-4 text-black leading-relaxed">
+              <p>
+                La episiotomía es una incisión que se realiza en periné femenino, para ampliar el canal de parto en el periodo expulsivo, es decir facilitar el paso del bebé hacia el exterior.
+              </p>
+              <p>
+                Se practica casi indiscriminadamente a muchas mujeres para prevenir desgarros durante el parto vaginal.
+              </p>
+              <p>
+                La episiotomía puede ocasionar secuelas y cambios en la zona genital femenina después de un parto vaginal y afectar la calidad de vida de las mujeres que la sufren.
+              </p>
+            </div>
+            <div class="container mx-auto  mt-10">
+              <div class="max-w-6xl mx-auto">
+                <div class="mb-4">
+                  <h2 class="text-2xl font-bold  font-title text-left text-primary-200">
+                    Secuelas de la episiotomía
+                  </h2>
+                  <p class="text-lg text-black max-w-2xl ">
+                    Las principales secuelas que pueden afectar la calidad de vida incluyen:
+                  </p>
+                </div>
+                
+                <div class="space-y-6">
+                  {secuelas.map((secuela, index) => (
+                    <SymptomCard title={secuela.title} description={secuela.description} index={index + 1} showIndex={false} />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/2">
+            <div class="rounded-lg overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-102 hover:shadow-2xl">
+              <Image 
+                src={postpartoImagen}
+                transition:name={postpartoImagen.src}
+                alt="Consulta médica especializada en episiotomía" 
+                class="w-full h-full object-cover aspect-4/3"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+
+    <!-- Información importante -->
+    <section class="py-16 bg-gradient-to-b from-pink-100 to-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="border-l-4 border-primary-200 pl-8 py-6 bg-white shadow-2xl rounded-lg">
+            <h3 class="text-xl font-semibold text-title-100 mb-4">
+              Información Importante
+            </h3>
+            <div class="space-y-4 text-gray-700 leading-relaxed">
+              <p>
+                Si te encuentras en esta situación y experimentas alguna de estas secuelas, es importante que solicites consulta especializada.
+              </p>
+              <p>
+                Un tratamiento adecuado puede mejorar significativamente tu calidad de vida y ayudarte a recuperar la función normal de la zona genital.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tratamientos disponibles -->
+    <section class="bg-gradient-to-b from-white to-pink-100">
+      <div class="container mx-auto px-4 md:px-8">
+        <Treatments client:load showAll={false} layout='carousel' category='episiotomia'/>
+      </div>
+    </section>
+
+    <!-- Componente de contacto -->
+    <Contact />
+  </main>
+</Layout> 

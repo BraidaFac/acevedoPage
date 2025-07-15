@@ -3,6 +3,7 @@ import { Icon } from 'astro-icon/components';
 import { Image } from 'astro:assets';
 import postPartoImagen from '../assets/fotos/postparto1.jpg';
 import postPartoImagen2 from '../assets/fotos/postparto2.jpg';
+import Contact from '../components/Contact.astro';
 import Layout from '../layouts/Layout.astro';
 
 
@@ -128,7 +129,7 @@ const recursos = [
               href="#contact" 
               class="inline-flex items-center px-6 py-3 text-white bg-primary-200 rounded-full hover:bg-primary-200/90 shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <span class="mr-2">Agenda tu consulta especializada</span>
+              <span class="mr-2">Agenda tu consulta </span>
               <Icon name="mdi:arrow-right" class="w-5 h-5" />
             </a>
           </div>          
@@ -287,11 +288,12 @@ const recursos = [
           href="#contact" 
           class="hover:bg-primary-200 hover:text-white inline-flex items-center px-6 py-3 text-primary-200 bg-white rounded-full font-medium hover:bg-primary-50 transition-colors duration-300 shadow-lg hover:shadow-xl"
         >
-          <span class="mr-2">Agenda tu consulta especializada</span>
-          <Icon name="mdi:arrow-right" class="h-5 w-5" />
+          <span class="mr-2">Agenda tu consulta</span>
+          <Icon name="mdi:arrow-down" class="h-5 w-5" />
         </a>
       </div>
     </section>
   </main>
+  <Contact />
  
 </Layout>

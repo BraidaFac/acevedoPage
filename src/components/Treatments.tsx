@@ -37,8 +37,9 @@ const Treatments: React.FC<TreatmentsProps> = ({
           className="w-full h-full"
           style={{
             backgroundImage: `url(${treatment.image.src})`,
-            backgroundSize: "cover",
+            backgroundSize: "contain",
             backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary-200/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end" />

@@ -3,40 +3,40 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import { Autoplay, EffectFade, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import celulitis from "../../assets/fotos/celulitis.jpg";
 import consultaginecologica from "../../assets/fotos/consultaginecologica.jpg";
 import controlembarazo from "../../assets/fotos/control-de-embarazo.jpg";
-import postparto from "../../assets/fotos/postparto1.jpg";
+import fertilidad from "../../assets/fotos/fertilidad.jpg";
+import rafrecuencia from "../../assets/fotos/radiofrecuenciaAparato.jpg";
 
 // Array completo con la información de los slides
 const slides = [
   {
-    image: celulitis,
+    image: rafrecuencia,
     title: "Radiofrecuencia",
     description:
       "Tratamiento no invasivo para zona corporal, incontinencia urinaria y rejuvenecimiento vaginal",
-    url: "/tratamiento",
+    url: "/#contact",
   },
   {
     image: consultaginecologica,
     title: "Consulta Ginecologica",
     description:
       "Ambiente seguro y de confianza donde puedas expresar tus preocupaciones y recibir la mejor atención medica",
-    url: "/tratamiento",
+    url: "/#contact",
   },
   {
-    image: postparto,
-    title: "Consulas de Fertilidad",
+    image: fertilidad,
+    title: "Consultas de Fertilidad",
     description:
       "Asesoramiento personalizado para ayudarte a cumplir tu sueño de ser madre",
-    url: "/tratamiento",
+    url: "/#contact",
   },
   {
     image: controlembarazo,
     title: "Control de Embarazo",
     description:
       "Acompañamiento integral durante tu embarazo con atención cálida y profesional",
-    url: "/tratamiento",
+    url: "/#contact",
   },
 ];
 
@@ -62,15 +62,20 @@ const TreatmentsCarousel = () => {
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div
-              className="relative w-full h-full flex items-center bg-cover bg-center"
+              className="relative w-full h-full flex items-center "
               style={{
                 backgroundImage: `url('${slide.image.src}')`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundSize: `${
+                  slide.title.startsWith("Radiofrecuencia")
+                    ? "contain"
+                    : "cover"
+                }`,
                 backgroundRepeat: "no-repeat",
+                backgroundColor: "white",
+                backgroundPosition: "center",
               }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
               <div className="container ml-15 px-4 lg:px-8 relative z-10">
                 <div className="max-w-xl absolute lg:buttom-40 top-10">
                   <h2 className="text-2xl lg:text-3xl  text-white mb-4">

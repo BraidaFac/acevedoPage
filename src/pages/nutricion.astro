@@ -3,6 +3,7 @@ import Contact from '../components/Contact.astro';
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import nutriImagen from '../assets/fotos/nutri1.jpg';
+import colageno from '../assets/fotos/colageno.jpg';
 
 // Datos estructurados para los beneficios
 const beneficios = [
@@ -257,7 +258,7 @@ const superalimentos = [
     </section>
 
     <!-- Superalimentos - Ahora con tarjetas interactivas flip -->
-    <section class="py-16 bg-gray-50 bg-gradient-to-b from-white to-pink-100">
+    <section class="py-16  bg-gradient-to-b from-white to-pink-100">
       <div class="container mx-auto px-4 md:px-8">
         <h2 class="text-2xl md:text-3xl font-bold text-center text-title-100 mb-12 text-title">
           Suplementos Multivitamínicos y Colágeno
@@ -268,7 +269,7 @@ const superalimentos = [
             <div class="flex flex-col md:flex-row">
               <div class="md:w-2/5 bg-primary-50">
                 <Image 
-                  src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                  src={colageno}
                   alt="Suplementos multivitamínicos" 
                   class="w-full h-full object-cover"
                   width={1170}

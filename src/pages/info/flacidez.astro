@@ -1,0 +1,191 @@
+---
+import { Image } from 'astro:assets';
+import flacidezImagen from '../../assets/fotos/flacidez.jpg';
+import CauseCard from '../../components/CauseCard.astro';
+import Contact from '../../components/Contact.astro';
+import SymptomCard from '../../components/SymptomCard.astro';
+import Treatments from '../../components/Treatments';
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Flacidez Corporal | Información y Tratamientos";
+const description = "Información completa sobre la flacidez corporal, sus causas, síntomas y los tratamientos disponibles para mejorar la firmeza de la piel.";
+
+// Datos de síntomas
+const sintomas = [
+  {
+    title: "Pérdida de firmeza",
+    description: "La piel se siente más suelta y menos elástica, perdiendo su tono natural y firmeza característica."
+  },
+  {
+    title: "Pliegues y arrugas",
+    description: "Se forman pliegues y arrugas visibles, especialmente en áreas donde la piel es más delgada y sensible."
+  },
+  {
+    title: "Piel caída",
+    description: "La piel puede comenzar a colgar, particularmente en los brazos y la zona abdominal, creando un efecto de \"piel suelta\"."
+  },
+  {
+    title: "Pérdida de tono muscular",
+    description: "En algunos casos, la flacidez también puede estar acompañada por una reducción significativa del tono muscular."
+  }
+];
+
+// Datos de causas
+const causas = [
+  {
+    title: "Envejecimiento",
+    description: "Con el paso del tiempo, la producción de colágeno y elastina disminuye, lo que contribuye a la pérdida de firmeza natural.",
+    icon: "⏰"
+  },
+  {
+    title: "Pérdida de peso",
+    description: "Adelgazar rápidamente puede dejar la piel suelta y sin tono, especialmente cuando la pérdida es significativa.",
+    icon: "⚖️"
+  },
+  {
+    title: "Exposición al sol",
+    description: "Los rayos UV dañan las fibras de colágeno y elastina, acelerando el envejecimiento de la piel.",
+    icon: "☀️"
+  },
+  {
+    title: "Falta de ejercicio",
+    description: "La inactividad física puede contribuir a la pérdida de tono muscular y, en consecuencia, a la flacidez.",
+    icon: "🏃‍♀️"
+  },
+  {
+    title: "Factores genéticos",
+    description: "La predisposición genética puede influir significativamente en la elasticidad de la piel.",
+    icon: "🧬"
+  },
+  {
+    title: "Hábitos poco saludables",
+    description: "El tabaquismo, una dieta desequilibrada y la falta de hidratación pueden acelerar la aparición de flacidez.",
+    icon: "🚬"
+  }
+];
+
+---
+
+<Layout title={title} description={description}>
+  <main class="mt-16">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-white to-pink-100 py-20 overflow-hidden">
+      <div class="container mx-auto px-4 md:px-8 relative z-10 mb-20">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-title-100 text-center font-title">
+          <span class="inline-block transform hover:scale-105 transition-transform duration-300">Flacidez</span> 
+          <span class="inline-block transform hover:scale-105 transition-transform duration-300">Corporal</span>
+        </h1>
+        <p class="text-primary-200 text-center mt-4 max-w-xl mx-auto text-lg">
+          ¿Qué es y cómo mejorar la firmeza de la piel?
+        </p>
+      </div>
+  
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="flex flex-col lg:flex-row items-start gap-8 text-justify">
+          <div class="lg:w-1/2 ">
+            <h2 class="text-2xl font-title font-bold text-primary-200 mb-6 relative inline-block">
+              ¿Qué es la flacidez corporal?
+              <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-primary-100"></span>
+            </h2>
+            <div class="space-y-4 text-black leading-relaxed">
+              <p>
+                La flacidez corporal es una condición estética caracterizada por la pérdida de firmeza y elasticidad de la piel.
+              </p>
+              <p>
+                Este problema se manifiesta cuando las fibras de colágeno y elastina, responsables de mantener la piel tersa y firme, se debilitan o disminuyen.
+              </p>
+              <p>
+                La flacidez puede afectar diversas áreas del cuerpo, incluyendo el abdomen, los brazos, los muslos y los glúteos.
+              </p>
+            </div>
+          </div>
+          <div class="lg:w-1/2">
+            <div class="rounded-lg overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-102 hover:shadow-2xl">
+              <Image 
+                src={flacidezImagen}
+                transition:name={flacidezImagen.src}
+                alt="Consulta médica especializada en flacidez corporal" 
+                class="w-full h-full object-cover aspect-4/3"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Síntomas -->
+    <section class="py-20 bg-gradient-to-b from-pink-100 to-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-title-100 mb-6 font-title">
+              Síntomas de la flacidez corporal
+            </h2>
+            <p class="text-lg text-primary-200 max-w-2xl mx-auto">
+              Los principales síntomas que caracterizan la flacidez corporal incluyen:
+            </p>
+          </div>
+          
+          <div class="space-y-6">
+            {sintomas.map((sintoma, index) => (
+              <SymptomCard title={sintoma.title} description={sintoma.description} index={index + 1} showIndex={true} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Causas -->
+    <section class="py-20  bg-gradient-to-b from-white to-pink-100">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-title-100 mb-6 font-title">
+              Causas de la flacidez corporal
+            </h2>
+            <p class="text-lg text-primary-200 max-w-2xl mx-auto">
+              La flacidez corporal puede ser resultado de diversos factores, entre los cuales se encuentran:
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {causas.map((causa) => (
+              <CauseCard title={causa.title} description={causa.description} icon={causa.icon} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Información importante -->
+    <section class="py-16 bg-gradient-to-b from-pink-100 to-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="border-l-4 border-primary-200 pl-8 py-6  bg-white shadow-2xl rounded-lg">
+            <h3 class="text-xl font-semibold text-title-100 mb-4">
+              Información Importante
+            </h3>
+            <div class="space-y-4 text-gray-700 leading-relaxed">
+              <p>
+                La flacidez corporal no representa un riesgo para la salud, pero puede tener un impacto significativo en la autoestima y la calidad de vida de quienes la padecen.
+              </p>
+              <p>
+                Con un tratamiento adecuado y cambios en el estilo de vida, es posible mejorar considerablemente la apariencia de la piel y reducir la flacidez.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tratamientos disponibles -->
+    <section class="bg-gradient-to-b from-white to-pink-100">
+      <div class="container mx-auto px-4 md:px-8">
+        <Treatments client:load showAll={false} layout='carousel' category='flacidez'/>
+      </div>
+    </section>
+
+    <!-- Componente de contacto -->
+    <Contact />
+  </main>
+</Layout> 
