@@ -73,7 +73,7 @@ const TreatmentsCarousel = () => {
                   style={{ backgroundImage: `url(${slide.image.src})` }}
                 >
                   <div className="absolute inset-0 bg-black/40"></div>
-                  <div className="absolute bottom-10 left-5 z-10 text-white">
+                  <div className="absolute bottom-30 left-5 z-10 text-white">
                     <h2 className="text-lg mb-4">{slide.title}</h2>
                     <p className="mb-6 text-sm">{slide.description}</p>
                     <a
