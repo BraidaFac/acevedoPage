@@ -1,0 +1,260 @@
+---
+import { Image } from 'astro:assets';
+import cryoRfMax from '../../assets/fotos/cryo-rf-max.jpg';
+import Contact from '../../components/Contact.astro';
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout>
+  <main class="mt-16">
+    <!-- Título y subtítulo -->
+    <section class="relative bg-gradient-to-b from-white to-pink-100 py-20 overflow-hidden">
+      <div class="container mx-auto px-4 md:px-8 relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-title-100 mb-6">
+            Cryo-RF MAX
+          </h1>
+          <h2 class="text-xl md:text-2xl text-primary-200 font-medium">
+            La potencia del frío y la tecnología de radiofrecuencia para transformar vidas
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 1: Introducción y Problema -->
+    <section class="py-16 bg-gradient-to-b from-pink-100 to-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-12 mb-12">
+            <div>
+              <Image
+                src={cryoRfMax}
+                class="rounded-lg shadow-md w-full h-auto"
+                alt="Cryo-RF MAX"
+                width={500}
+                height={500}
+              />
+            </div>
+            <div class="space-y-6 text-black">
+              <h3 class="text-xl font-bold text-title-100 mb-4">Terapia Segura y No Invasiva</h3>
+              <p class="text-justify leading-relaxed">
+                Cryo-RF MAX es una terapia revolucionaria que combina la transmisión de <strong>frío y radiofrecuencia</strong>, provocando un calentamiento interno de los tejidos corporales (más de 55°C) que nos permite tratar <strong>flacidez y adiposidad generalizada</strong>.
+              </p>
+              <p class="text-justify leading-relaxed">
+                La combinación de frío y calor causa un <strong>shock térmico</strong> que estimula la síntesis de nuevas fibras de colágeno y elastina produciendo un efecto lifting instantáneo, progresivo y de larga duración desde la primera sesión.
+              </p>
+              <p class="text-justify leading-relaxed">
+                Además, el modo monopolar nos permite generar un calentamiento intensivo de las células grasas en hipodermis activando la apoptosis del adiposito logrando reducir el pannículo adiposo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+              <!-- SECCIÓN 2: Indicaciones y Beneficios -->
+     <section class="py-16 bg-gradient-to-b from-white to-pink-100">
+       <div class="container px-4 mx-auto">
+         <div class="max-w-4xl mx-auto text-black">
+           <h2 class="text-2xl font-bold text-title-100 text-center mb-12">Tratamiento Cryo-RF MAX</h2>
+           
+           <!-- Indicaciones -->
+           <div class="mb-16">
+             <h3 class="text-xl font-bold text-title-100 mb-8 text-center">Indicado para</h3>
+             <div class="grid md:grid-cols-2 gap-8">
+               <div class="space-y-4">
+                 <div class="flex items-center space-x-3">
+                   <div class="w-2 h-2 bg-primary-200 rounded-full"></div>
+                   <span class="text-lg">Tensado de tejidos</span>
+                 </div>
+                 <div class="flex items-center space-x-3">
+                   <div class="w-2 h-2 bg-primary-200 rounded-full"></div>
+                   <span class="text-lg">Celulitis y piel de naranja</span>
+                 </div>
+                 <div class="flex items-center space-x-3">
+                   <div class="w-2 h-2 bg-primary-200 rounded-full"></div>
+                   <span class="text-lg">Modelado corporal</span>
+                 </div>
+               </div>
+               <div class="space-y-4">
+                 <div class="flex items-center space-x-3">
+                   <div class="w-2 h-2 bg-primary-200 rounded-full"></div>
+                   <span class="text-lg">Arrugas y líneas de expresión</span>
+                 </div>
+                 <div class="flex items-center space-x-3">
+                   <div class="w-2 h-2 bg-primary-200 rounded-full"></div>
+                   <span class="text-lg">Adiposidad localizada</span>
+                 </div>
+                 <div class="flex items-center space-x-3">
+                   <div class="w-2 h-2 bg-primary-200 rounded-full"></div>
+                   <span class="text-lg">Flacidez generalizada</span>
+                 </div>
+               </div>
+             </div>
+           </div>
+
+           <!-- Beneficios -->
+           <div>
+             <h3 class="text-xl font-bold text-title-100 mb-8 text-center">Beneficios</h3>
+             <div class="grid md:grid-cols-2 gap-8">
+               <div class="space-y-4">
+                 <div class="flex items-center space-x-3">
+                   <div class="w-2 h-2 bg-primary-200 rounded-full"></div>
+                   <span class="text-lg">Efecto progresivo y de larga duración</span>
+                 </div>
+                 <div class="flex items-center space-x-3">
+                   <div class="w-2 h-2 bg-primary-200 rounded-full"></div>
+                   <span class="text-lg">Aplicable en cualquier tipo de piel</span>
+                 </div>
+                 <div class="flex items-center space-x-3">
+                   <div class="w-2 h-2 bg-primary-200 rounded-full"></div>
+                   <span class="text-lg">Reduce el volumen y modela el cuerpo</span>
+                 </div>
+               </div>
+               <div class="space-y-4">
+                 <div class="flex items-center space-x-3">
+                   <div class="w-2 h-2 bg-primary-200 rounded-full"></div>
+                   <span class="text-lg">Sesiones indoloras y cómodas</span>
+                 </div>
+                 <div class="flex items-center space-x-3">
+                   <div class="w-2 h-2 bg-primary-200 rounded-full"></div>
+                   <span class="text-lg">Rápido y de fácil aplicación</span>
+                 </div>
+                 <div class="flex items-center space-x-3">
+                   <div class="w-2 h-2 bg-primary-200 rounded-full"></div>
+                   <span class="text-lg">Resultados visibles desde la primera sesión</span>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </section>
+
+    <!-- SECCIÓN 3: Información Práctica -->
+    <section class="py-16 bg-pink-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-2xl font-bold text-title-100 text-center mb-12">Información Práctica del Tratamiento</h2>
+          
+          <div class="grid md:grid-cols-2 gap-12">
+            <!-- Procedimiento y Cuidados -->
+            <div class="space-y-6 text-black">
+              <h3 class="text-xl font-bold text-title-100 mb-4">El Procedimiento</h3>
+              <div class="space-y-4">
+                <p class="text-justify leading-relaxed">
+                  <strong>¿Cómo se realiza?</strong> Es un procedimiento no invasivo que combina la aplicación de frío y radiofrecuencia de manera simultánea. Se aplica mediante un cabezal especial que transmite ambas energías, generando un shock térmico controlado en los tejidos.
+                </p>
+                <p class="text-justify leading-relaxed">
+                  <strong>Duración:</strong> Cada sesión tiene una duración aproximada de 30-45 minutos, dependiendo del área a tratar.
+                </p>
+                <p class="text-justify leading-relaxed">
+                  <strong>Anestesia:</strong> No es necesaria, ya que el tratamiento es indoloro y bien tolerado.
+                </p>
+                <p class="text-justify leading-relaxed">
+                  <strong>Recuperación:</strong> No requiere tiempo de recuperación. Puedes retomar tus actividades normales inmediatamente después del tratamiento.
+                </p>
+              </div>
+
+              <h3 class="text-xl font-bold text-title-100 mb-4 mt-8">Sesiones y Mantenimiento</h3>
+              <div class="space-y-4">
+                <p class="text-justify leading-relaxed">
+                  <strong>Número de sesiones:</strong> Se recomienda un protocolo inicial de 6-8 sesiones con intervalos de 2-3 semanas entre cada una, dependiendo de la respuesta individual.
+                </p>
+                <p class="text-justify leading-relaxed">
+                  <strong>Mantenimiento:</strong> Para mantener los resultados, se recomienda una sesión de mantenimiento cada 3-6 meses.
+                </p>
+                <p class="text-justify leading-relaxed">
+                  <strong>Resultados:</strong> Los resultados comienzan a ser visibles desde la primera sesión, con mejoras progresivas en la textura de la piel, reducción de volumen y tonificación muscular.
+                </p>
+              </div>
+            </div>
+
+            <!-- Cuidados y Contraindicaciones -->
+            <div class="space-y-6 text-black">
+              <h3 class="text-xl font-bold text-title-100 mb-4">Cuidados Previos</h3>
+              <p class="text-justify leading-relaxed">
+                Antes del tratamiento, es importante mantener una buena hidratación y evitar la exposición solar excesiva en las áreas a tratar. Se recomienda una consulta previa para evaluar la condición de la piel.
+              </p>
+
+              <h3 class="text-xl font-bold text-title-100 mb-4 mt-8">Cuidados Post-Tratamiento</h3>
+              <ul class="space-y-2 pl-6">
+                <li>• Mantener una buena hidratación</li>
+                <li>• Evitar exposición solar directa por 48 horas</li>
+                <li>• Usar protector solar diariamente</li>
+                <li>• Mantener una dieta equilibrada</li>
+                <li>• Realizar ejercicio físico regular</li>
+              </ul>
+
+              <h3 class="text-xl font-bold text-title-100 mb-4 mt-8">Contraindicaciones</h3>
+              <p class="text-justify leading-relaxed mb-4">
+                Es importante evaluar cada caso individualmente. Principales contraindicaciones:
+              </p>
+              <ul class="space-y-2 pl-6 text-sm">
+                <li>• Embarazo y lactancia</li>
+                <li>• Marcapasos o dispositivos electrónicos implantados</li>
+                <li>• Cáncer activo o en tratamiento</li>
+                <li>• Enfermedades autoinmunes activas</li>
+                <li>• Heridas abiertas en el área a tratar</li>
+                <li>• Infecciones cutáneas activas</li>
+                <li>• Trombosis venosa profunda</li>
+                <li>• Alteraciones de la coagulación</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: Tecnología y Ventajas -->
+    <section class="py-16 bg-gradient-to-b from-pink-100 to-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto text-black">
+          <h2 class="text-2xl font-bold text-title-100 text-center mb-8">Tecnología Avanzada</h2>
+          
+          <div class="space-y-6">
+            <h3 class="text-xl font-bold text-title-100 mb-4">¿Por qué elegir Cryo-RF MAX?</h3>
+            <p class="text-justify leading-relaxed">
+              Esta tecnología revolucionaria combina lo mejor de dos mundos: la eficacia del frío para reducir la inflamación y la potencia de la radiofrecuencia para estimular la producción de colágeno y elastina. El resultado es un tratamiento que no solo mejora la apariencia externa, sino que también fortalece la estructura interna de los tejidos.
+            </p>
+            
+                                      <h3 class="text-xl font-bold text-title-100 mb-8">Ventajas de la Tecnología</h3>
+             <div class="grid md:grid-cols-2 gap-8">
+               <div class="space-y-4">
+                 <div class="flex items-center space-x-3">
+                   <div class="w-2 h-2 bg-primary-200 rounded-full"></div>
+                   <span class="text-lg">Doble acción: frío y calor simultáneos</span>
+                 </div>
+                 <div class="flex items-center space-x-3">
+                   <div class="w-2 h-2 bg-primary-200 rounded-full"></div>
+                   <span class="text-lg">Tecnología probada y segura</span>
+                 </div>
+                 <div class="flex items-center space-x-3">
+                   <div class="w-2 h-2 bg-primary-200 rounded-full"></div>
+                   <span class="text-lg">Resultados desde la primera sesión</span>
+                 </div>
+               </div>
+               <div class="space-y-4">
+                 <div class="flex items-center space-x-3">
+                   <div class="w-2 h-2 bg-primary-200 rounded-full"></div>
+                   <span class="text-lg">Sin tiempo de recuperación</span>
+                 </div>
+                 <div class="flex items-center space-x-3">
+                   <div class="w-2 h-2 bg-primary-200 rounded-full"></div>
+                   <span class="text-lg">Aplicable en múltiples áreas</span>
+                 </div>
+                 <div class="flex items-center space-x-3">
+                   <div class="w-2 h-2 bg-primary-200 rounded-full"></div>
+                   <span class="text-lg">Resultados a largo plazo</span>
+                 </div>
+               </div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <Contact />
+  </main>
+</Layout>

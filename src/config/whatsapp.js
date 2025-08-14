@@ -1,11 +1,10 @@
 // Configuración del WhatsApp
 export const whatsappConfig = {
   // Número de teléfono (formato internacional sin +)
-  phoneNumber: "5491112345678", // Reemplaza con el número real
+  phoneNumber: "5493482253993", // Reemplaza con el número real
 
   // Mensaje predeterminado
-  message:
-    "Hola! Me gustaría obtener más información sobre sus servicios médicos.",
+  message: "Hola! Me gustaría obtener más información sobre sus tratamientos.",
 
   // Configuración del botón
   button: {

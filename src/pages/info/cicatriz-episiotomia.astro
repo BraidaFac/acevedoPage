@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import postpartoImagen from '../../assets/fotos/postparto1.jpg';
+import episitomia from '../../assets/fotos/episiotomia.jpg';
 import Contact from '../../components/Contact.astro';
 import SymptomCard from '../../components/SymptomCard.astro';
 import Treatments from '../../components/Treatments';
@@ -116,12 +116,12 @@ const tratamientos = [
             </div>
           </div>
           <div class="lg:w-1/2">
-            <div class="rounded-lg overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-102 hover:shadow-2xl">
+            <div class="rounded-lg overflow-hidden">
               <Image 
-                src={postpartoImagen}
-                transition:name={postpartoImagen.src}
+                src={episitomia}
+                transition:name={episitomia.src}
                 alt="Consulta médica especializada en episiotomía" 
-                class="w-full h-full object-cover aspect-4/3"
+                class="w-full h-full object-cover aspect-square"
               />
             </div>
           </div>

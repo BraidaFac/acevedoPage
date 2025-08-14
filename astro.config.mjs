@@ -19,6 +19,12 @@ export default defineConfig({
     server: {
       allowedHosts: ["62d2-181-110-151-174.ngrok-free.app", "127.0.0.1"],
     },
+    assetsInclude: ["**/*.heic", "**/*.HEIC"],
+  },
+  image: {
+    service: {
+      entrypoint: "astro/assets/services/sharp",
+    },
   },
   integrations: [react(), icon()],
 });

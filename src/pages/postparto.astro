@@ -90,26 +90,18 @@ const estadisticas = [
 // Datos para recursos y autoayuda
 const recursos = [
   {
-    icono: "mdi:book-open-page-variant",
-    titulo: "Guía de cuidados posparto",
-    descripcion: "Manual completo con información práctica para cada fase de tu recuperación"
+    icono: "mdi:podcast",
+    titulo: "MADRE en construcción",
+    descripcion: "Con algo de analisis critico y ese chiste en medio del llanto inevitble, hablamos de verdad sobre maternidad, querés?",
+    link: "https://open.spotify.com/show/4ZeKcxN6HUqnPIQ6mGBVr7?si=dcd53d61a61c4d8f"
   },
   {
     icono: "mdi:podcast",
-    titulo: "Podcast de maternidad",
-    descripcion: "Episodios semanales con especialistas y madres compartiendo experiencias"
-  },
-  {
-    icono: "mdi:video",
-    titulo: "Videoteca de ejercicios",
-    descripcion: "Rutinas adaptadas a cada fase de recuperación que puedes hacer en casa"
-  },
-  {
-    icono: "mdi:account-group",
-    titulo: "Comunidad de apoyo",
-    descripcion: "Grupo moderado por profesionales donde conectar con otras madres en tu misma etapa"
+    titulo: "Nadie nos aviso",
+    descripcion: "Un podcast de maternidad donde hablamos sin filtro, pero sobretodo sin juicios. Por Mila Fermani y Luchi Viggiano",
+    link: "https://open.spotify.com/show/7DpboMpCXC8FHF9De0GRHI?si=249d234af14d400f"
   }
-];
+  ];
 ---
 
 <Layout>
@@ -214,38 +206,6 @@ const recursos = [
     </section>
 
     
-    <!-- Testimonios -->
-    <section class="py-16 bg-gradient-to-b from-pink-100 to-white">
-      <div class="container mx-auto px-4 md:px-8">
-        <h2 class="text-2xl md:text-3xl font-bold text-center text-primary-200 mb-12 text-title">
-          Lo que dicen nuestras pacientes
-        </h2>
-
-        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {testimonios.map(testimonio => (
-            <div class="bg-white rounded-2xl shadow-md p-6 relative hover:shadow-lg transition-shadow duration-300">
-              <div class="flex items-center mb-4">
-                <div class="w-12 h-12 rounded-full bg-primary-100 text-primary-200 flex items-center justify-center font-bold text-lg mr-4">
-                  {testimonio.avatar}
-                </div>
-                <div>
-                  <h3 class="font-semibold text-gray-800">{testimonio.nombre}</h3>
-                  <p class="text-sm text-gray-500">{testimonio.tipo}</p>
-                </div>
-              </div>
-              <div class="ml-16">
-                <Icon name="mdi:format-quote-open" class="h-6 w-6 text-primary-100 absolute top-6 left-6" />
-                <p class="text-gray-600 italic">
-                  {testimonio.contenido}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
- <!--  -->
 
     <!-- Recursos -->
     <section class="py-16 bg-gradient-to-b from-white to-pink-100">
@@ -254,7 +214,7 @@ const recursos = [
           Recursos para tu recuperación
         </h2>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid md:grid-cols-2  gap-8">
           {recursos.map(recurso => (
             <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
               <div class="h-2 bg-gradient-to-r from-primary-100 to-primary-200 group-hover:h-3 transition-all duration-300"></div>

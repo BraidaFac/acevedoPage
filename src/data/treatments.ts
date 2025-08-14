@@ -23,7 +23,7 @@ export const treatments: Treatment[] = [
     shortDescription: "Rejuvenecimiento íntimo no invasivo",
     image: enygma,
     url: "/tratamientos/enygma",
-    categories: [""],
+    categories: ["menopausia", "incontinencia-urinaria"],
     benefits: [
       "No invasivo",
       "Sin tiempo de recuperación",

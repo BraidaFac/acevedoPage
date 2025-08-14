@@ -24,11 +24,7 @@ const Treatments: React.FC<TreatmentsProps> = ({
   description = "Descubre tratamientos especializados diseñados para ayudarte a alcanzar tus objetivos de salud y bienestar.",
 }) => {
   // Filtrar tratamientos según la categoría o mostrar todos
-  const filteredTreatments = showAll
-    ? treatments
-    : treatments.filter((treatment) =>
-        treatment.categories.includes(category || "")
-      );
+  const filteredTreatments = treatments;
 
   const renderTreatmentCard = (treatment: Treatment) => (
     <div className="bg-white rounded-lg shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 h-full">
@@ -117,7 +113,9 @@ const Treatments: React.FC<TreatmentsProps> = ({
             >
               {filteredTreatments.map((treatment) => (
                 <SwiperSlide key={treatment.id}>
-                  <div className="group">{renderTreatmentCard(treatment)}</div>
+                  <div className="group mb-10">
+                    {renderTreatmentCard(treatment)}
+                  </div>
                 </SwiperSlide>
               ))}
             </Swiper>
