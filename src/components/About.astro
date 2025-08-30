@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets'
-import doctora from '../assets/fotos/doc.jpg'
+import doctora from '../assets/fotos/doc1.jpg'
 ---
 
 <section id="about" class="py-16  bg-gradient-to-b from-white to-pink-50">
@@ -8,7 +8,7 @@ import doctora from '../assets/fotos/doc.jpg'
     <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
       <!-- Contenido textual -->
       <div class="w-full lg:w-3/5  text-justify">
-        <h2 class="text-2xl lg:text-3xl text-title-100 mb-4 font-bold font-title">
+        <h2 class="text-3xl lg:text-4xl text-title-100 mb-4 font-bold font-title">
           Dra. Cecilia Acevedo
         </h2>
         <h3 class="text-xl text-primary-200 mb-6">Médica, Especialista en Ginecología y Obstetricia</h3>
@@ -20,6 +20,23 @@ import doctora from '../assets/fotos/doc.jpg'
         <p class="mb-4 leading-relaxed">
           Mi compromiso es ofrecerte un ambiente seguro y de confianza donde puedas expresar tus preocupaciones y recibir la mejor atención medica basada en la evidencia científica más actualizada. 
         </p>
+        <div class="block md:hidden mb-10 w-full lg:w-2/5 mt-8 lg:mt-0">
+          <div class="relative">
+            <!-- Elemento decorativo -->
+            <div class="absolute -top-6 -left-6 w-20 h-20 bg-primary-100 rounded-full opacity-50 hidden md:block"></div>
+            
+            <!-- Imagen principal -->
+            <Image 
+              src={doctora} 
+              alt="Dra. Cecilia Acevedo" 
+              class="w-full h-3/4 rounded-lg shadow-lg relative z-10"
+            />
+            
+            <!-- Elemento decorativo -->
+            <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary-50 rounded-full opacity-60 hidden md:block"></div>
+          </div>
+        </div>
+        
           <h2 class="text-xl text-primary-200 mb-6">
             Atención obstétrica personalizada 
           </h2>
@@ -31,7 +48,7 @@ import doctora from '../assets/fotos/doc.jpg'
           <p class=" mb-4 leading-relaxed">
             Mi formación además incluye el training full immersion en ginecología regenerativa, estética y funcional. Para abordar aspectos funcionales y estéticos de la zona intima femenina. Con un enfoque cálido, respetuoso, centrado en tus necesidades individuales. Utilizando tecnologías de vanguardia. 
           </p>
-        <div class="flex gap-4">
+        <div class="flex justify-center gap-4">
           <a 
             href="#contact" 
             class="inline-block text-white py-2 px-3 rounded-full bg-primary-200 hover:bg-pink-400 transition duration-500 hover:shadow-2xl"
@@ -49,7 +66,7 @@ import doctora from '../assets/fotos/doc.jpg'
       </div>
       
       <!-- Imagen de la doctora -->
-      <div class="w-full lg:w-2/5 mt-8 lg:mt-0">
+      <div class="hidden md:block w-full lg:w-2/5 mt-8 lg:mt-0">
         <div class="relative">
           <!-- Elemento decorativo -->
           <div class="absolute -top-6 -left-6 w-20 h-20 bg-primary-100 rounded-full opacity-50 hidden md:block"></div>
@@ -58,7 +75,7 @@ import doctora from '../assets/fotos/doc.jpg'
           <Image 
             src={doctora} 
             alt="Dra. Cecilia Acevedo" 
-            class="w-full h-3/4 rounded-lg shadow-lg relative z-10"
+            class="w-full  rounded-lg shadow-lg relative z-10"
           />
           
           <!-- Elemento decorativo -->

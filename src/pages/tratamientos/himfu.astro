@@ -1,0 +1,468 @@
+---
+import { Image } from 'astro:assets';
+import himfu from '../../assets/fotos/himfu.jpg';
+import Contact from '../../components/Contact.astro';
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout>
+  <main class="mt-16">
+    <!-- Hero Section con diseño moderno -->
+    <section class="relative bg-gradient-to-b from-pink-100 to-white py-10 md:py-24 lg:py-32 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-r from-pink-100/30 to-pink-100/30"></div>
+      <div class="container mx-auto px-4 md:px-8 relative z-10">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="text-center lg:text-left">
+              <div class="hidden md:inline-block bg-gradient-to-r from-pink-400 to-pink-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-6">
+                Tecnología Avanzada
+              </div>
+              <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-title-100 mb-6 leading-tight">
+                HImFU
+              </h1>
+              <h2 class="text-xl md:text-2xl text-primary-200 font-medium mb-8">
+                Combatir la adiposidad localizada jamás fue tan fácil
+              </h2>
+              <div class="flex flex-wrap gap-3 justify-center lg:justify-start">
+                <span class="px-4 py-2 bg-pink-200 text-pink-800 rounded-full text-sm font-medium">Ultrasonido Multifocal</span>
+                <span class="px-4 py-2 bg-pink-300 text-white rounded-full text-sm font-medium">No invasivo</span>
+                <span class="px-4 py-2 bg-pink-400 text-white rounded-full text-sm font-medium">Resultados inmediatos</span>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="relative z-10">
+                <Image
+                  src={himfu}
+                  class="rounded-3xl shadow-2xl w-full h-auto transform -rotate-2 hover:rotate-0 transition-transform duration-500"
+                  alt="HImFU - Ultrasonido Multifocal"
+                  width={600}
+                  height={600}
+                />
+              </div>
+              <div class="absolute -inset-6 bg-gradient-to-r from-pink-200 to-pink-300 rounded-3xl opacity-30 blur-2xl"></div>
+              <div class="absolute top-4 right-4 bg-white p-4 rounded-2xl shadow-lg">
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-pink-600">2.9</div>
+                  <div class="text-sm text-gray-600">MHz</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 1: Introducción y Tecnología -->
+    <section class="py-20 bg-gradient-to-b from-white to-pink-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h3 class="text-3xl md:text-4xl font-bold text-title-100 mb-6">Tecnología Avanzada de Ultrasonido Multifocal</h3>
+            <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-pink-600 mx-auto rounded-full"></div>
+          </div>
+          
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8 text-black">
+              <div class="bg-gradient-to-br from-pink-50 to-pink-100 p-8 rounded-3xl border-l-4 border-pink-400 shadow-lg">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-2xl">🎯</span>
+                  </div>
+                  <h4 class="text-xl font-bold text-title-100">Tecnología Única</h4>
+                </div>
+                <p class="text-justify leading-relaxed">
+                  HImFU es una terapia avanzada, innovadora y única para el tratamiento de la <strong>adiposidad localizada</strong>. Utiliza <strong>ondas de ultrasonido multifocal</strong> que provocan un efecto termomecánico en el tejido adiposo causando su destrucción.
+                </p>
+              </div>
+              
+              <div class="bg-gradient-to-br from-pink-100 to-pink-200 p-8 rounded-3xl border-l-4 border-pink-500 shadow-lg">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-2xl">📏</span>
+                  </div>
+                  <h4 class="text-xl font-bold text-title-100">Resultados Medibles</h4>
+                </div>
+                <p class="text-justify leading-relaxed">
+                  Los pacientes pueden reducir entre <strong>1 y 4 cm de contorno por sesión</strong> obteniendo un increíble efecto de <strong>modelado corporal</strong> de manera segura y eficaz.
+                </p>
+              </div>
+              
+              <div class="bg-gradient-to-br from-pink-200 to-pink-300 p-8 rounded-3xl border-l-4 border-pink-600 shadow-lg">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-pink-300 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-2xl">🔬</span>
+                  </div>
+                  <h4 class="text-xl font-bold text-title-100">Especificaciones Técnicas</h4>
+                </div>
+                <p class="text-justify leading-relaxed">
+                  La tecnología HImFU dispone de un transductor que trabaja a <strong>2.9 Mhz</strong> entregando una energía <strong>MULTIFOCAL</strong> a 2,5 cm de profundidad, preservando las capas más superficiales de la piel y mejorando la calidad de la misma.
+                </p>
+              </div>
+            </div>
+            
+            <div class="relative">
+              <div class="bg-gradient-to-br from-pink-100 to-pink-200 p-8 rounded-3xl">
+                <h4 class="text-2xl font-bold text-title-100 mb-6 text-center">Características Técnicas</h4>
+                <div class="space-y-6">
+                  <div class="flex items-center justify-between bg-white p-4 rounded-xl">
+                    <span class="font-medium text-gray-700">Frecuencia</span>
+                    <span class="font-bold text-pink-600">2.9 MHz</span>
+                  </div>
+                  <div class="flex items-center justify-between bg-white p-4 rounded-xl">
+                    <span class="font-medium text-gray-700">Profundidad</span>
+                    <span class="font-bold text-pink-600">2.5 cm</span>
+                  </div>
+                  <div class="flex items-center justify-between bg-white p-4 rounded-xl">
+                    <span class="font-medium text-gray-700">Tipo de Energía</span>
+                    <span class="font-bold text-pink-600">Multifocal</span>
+                  </div>
+                  <div class="flex items-center justify-between bg-white p-4 rounded-xl">
+                    <span class="font-medium text-gray-700">Efecto</span>
+                    <span class="font-bold text-pink-600">Termomecánico</span>
+                  </div>
+                  <div class="flex items-center justify-between bg-white p-4 rounded-xl">
+                    <span class="font-medium text-gray-700">Reducción</span>
+                    <span class="font-bold text-pink-600">1-4 cm/sesión</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: Indicaciones y Beneficios -->
+    <section class="md:py-20 py-2 bg-gradient-to-b from-pink-50 to-white">
+      <div class="container px-4 mx-auto">
+        <div class="max-w-6xl mx-auto text-black">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-title-100 mb-6">Tratamiento HImFU</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-pink-600 mx-auto rounded-full"></div>
+          </div>
+          
+          <div class="grid lg:grid-cols-2 gap-16">
+            <!-- Indicaciones -->
+            <div class="bg-white p-8 rounded-3xl shadow-lg">
+              <h3 class="text-2xl font-bold text-title-100 mb-8 text-center">Indicado para</h3>
+              <div class="space-y-4">
+                <div class="flex items-center space-x-4 p-4 bg-pink-50 rounded-xl hover:bg-pink-100 transition-colors">
+                  <div class="w-3 h-3 bg-pink-400 rounded-full"></div>
+                  <span class="text-lg font-medium">Adiposidad localizada</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-pink-100 rounded-xl hover:bg-pink-200 transition-colors">
+                  <div class="w-3 h-3 bg-pink-500 rounded-full"></div>
+                  <span class="text-lg font-medium">Modelado corporal</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-pink-200 rounded-xl hover:bg-pink-300 transition-colors">
+                  <div class="w-3 h-3 bg-pink-600 rounded-full"></div>
+                  <span class="text-lg font-medium">Reducción de volumen</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-pink-50 rounded-xl hover:bg-pink-100 transition-colors">
+                  <div class="w-3 h-3 bg-pink-400 rounded-full"></div>
+                  <span class="text-lg font-medium">Tratamiento de grasa localizada</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-pink-100 rounded-xl hover:bg-pink-200 transition-colors">
+                  <div class="w-3 h-3 bg-pink-500 rounded-full"></div>
+                  <span class="text-lg font-medium">Mejora de la calidad de la piel</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-pink-200 rounded-xl hover:bg-pink-300 transition-colors">
+                  <div class="w-3 h-3 bg-pink-600 rounded-full"></div>
+                  <span class="text-lg font-medium">Definición corporal</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Beneficios -->
+            <div class="bg-white p-8 rounded-3xl shadow-lg">
+              <h3 class="text-2xl font-bold text-title-100 mb-8 text-center">Beneficios</h3>
+              <div class="space-y-4">
+                <div class="flex items-center space-x-4 p-4 bg-gradient-to-r from-pink-50 to-pink-100 rounded-xl">
+                  <div class="w-10 h-10 bg-pink-400 rounded-full flex items-center justify-center">
+                    <span class="text-white text-lg">✓</span>
+                  </div>
+                  <span class="text-lg font-medium">No invasiva</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-gradient-to-r from-pink-100 to-pink-200 rounded-xl">
+                  <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center">
+                    <span class="text-white text-lg">✓</span>
+                  </div>
+                  <span class="text-lg font-medium">Sesiones indoloras</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-gradient-to-r from-pink-200 to-pink-300 rounded-xl">
+                  <div class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center">
+                    <span class="text-white text-lg">✓</span>
+                  </div>
+                  <span class="text-lg font-medium">Sin riesgo de quemaduras</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-gradient-to-r from-pink-50 to-pink-100 rounded-xl">
+                  <div class="w-10 h-10 bg-pink-400 rounded-full flex items-center justify-center">
+                    <span class="text-white text-lg">✓</span>
+                  </div>
+                  <span class="text-lg font-medium">Es seguro y eficaz</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-gradient-to-r from-pink-100 to-pink-200 rounded-xl">
+                  <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center">
+                    <span class="text-white text-lg">✓</span>
+                  </div>
+                  <span class="text-lg font-medium">Resultados visibles por sesión</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-gradient-to-r from-pink-200 to-pink-300 rounded-xl">
+                  <div class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center">
+                    <span class="text-white text-lg">✓</span>
+                  </div>
+                  <span class="text-lg font-medium">Preserva la piel superficial</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: Información Práctica -->
+    <section class="py-20 bg-gradient-to-b from-white to-pink-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-title-100 mb-6">Información Práctica del Tratamiento</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-pink-600 mx-auto rounded-full"></div>
+          </div>
+          
+          <div class="grid lg:grid-cols-2 gap-16">
+            <!-- Procedimiento y Cuidados -->
+            <div class="space-y-8">
+              <div class="bg-gradient-to-br from-pink-50 to-pink-100 p-8 rounded-3xl shadow-lg">
+                <h3 class="text-2xl font-bold text-title-100 mb-6">El Procedimiento</h3>
+                <div class="space-y-6">
+                  <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-pink-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span class="text-white text-sm font-bold">1</span>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-title-100 mb-2">¿Cómo se realiza?</h4>
+                      <p class="text-justify leading-relaxed text-gray-700">
+                        HImFU utiliza un transductor especial que emite ondas de ultrasonido multifocal a 2.9 Mhz, generando un efecto termomecánico que destruye las células grasas de manera selectiva y controlada.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span class="text-white text-sm font-bold">2</span>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-title-100 mb-2">Duración</h4>
+                      <p class="text-justify leading-relaxed text-gray-700">
+                        Cada sesión tiene una duración aproximada de 30-60 minutos, dependiendo del área a tratar y la cantidad de grasa localizada.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span class="text-white text-sm font-bold">3</span>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-title-100 mb-2">Anestesia</h4>
+                      <p class="text-justify leading-relaxed text-gray-700">
+                        No es necesaria, ya que el tratamiento es indoloro y bien tolerado por los pacientes.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-pink-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span class="text-white text-sm font-bold">4</span>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-title-100 mb-2">Recuperación</h4>
+                      <p class="text-justify leading-relaxed text-gray-700">
+                        No requiere tiempo de recuperación. Puedes retomar tus actividades normales inmediatamente después del tratamiento.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-pink-100 to-pink-200 p-8 rounded-3xl shadow-lg">
+                <h3 class="text-2xl font-bold text-title-100 mb-6">Sesiones y Resultados</h3>
+                <div class="space-y-6">
+                  <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h4 class="font-bold text-title-100 mb-2">Número de sesiones</h4>
+                    <p class="text-justify leading-relaxed text-gray-700">
+                      Se recomienda un protocolo inicial de 3-6 sesiones con intervalos de 4-6 semanas entre cada una, dependiendo de la respuesta individual y el área tratada.
+                    </p>
+                  </div>
+                  <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h4 class="font-bold text-title-100 mb-2">Resultados</h4>
+                    <p class="text-justify leading-relaxed text-gray-700">
+                      Los pacientes pueden reducir entre 1 y 4 cm de contorno por sesión, con resultados visibles desde la primera aplicación.
+                    </p>
+                  </div>
+                  <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h4 class="font-bold text-title-100 mb-2">Mantenimiento</h4>
+                    <p class="text-justify leading-relaxed text-gray-700">
+                      Para mantener los resultados óptimos, se recomienda una sesión de mantenimiento cada 6-12 meses.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cuidados y Contraindicaciones -->
+            <div class="space-y-8">
+              <div class="bg-gradient-to-br from-pink-200 to-pink-300 p-8 rounded-3xl shadow-lg">
+                <h3 class="text-2xl font-bold text-title-100 mb-6">Cuidados Previos</h3>
+                <p class="text-justify leading-relaxed text-gray-700 mb-6">
+                  Antes del tratamiento, es importante mantener una buena hidratación y una dieta equilibrada. Se recomienda una consulta previa para evaluar la condición de la piel y la cantidad de grasa localizada.
+                </p>
+                
+                <h4 class="font-bold text-title-100 mb-4">Cuidados Post-Tratamiento</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                    <span class="text-sm">Mantener hidratación</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
+                    <span class="text-sm">Ejercicio regular</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-pink-600 rounded-full"></div>
+                    <span class="text-sm">Dieta equilibrada</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                    <span class="text-sm">Protector solar</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
+                    <span class="text-sm">Evitar sol 48h</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-red-50 to-pink-50 p-8 rounded-3xl shadow-lg">
+                <h3 class="text-2xl font-bold text-title-100 mb-6">Contraindicaciones</h3>
+               
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Embarazo y lactancia</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Marcapasos</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Cáncer activo</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Enfermedades autoinmunes</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Heridas abiertas</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Infecciones cutáneas</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Trombosis venosa</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Alteraciones coagulación</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Implantes metálicos</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: Tecnología y Ventajas -->
+    <section class="md:py-20 py-2 bg-gradient-to-b from-pink-50 to-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto text-black">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-title-100 mb-6">Tecnología HImFU</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-pink-600 mx-auto rounded-full"></div>
+          </div>
+          
+          <div class="space-y-12">
+            <div class="text-center">
+              <h3 class="text-2xl font-bold text-title-100 mb-6">¿Por qué elegir HImFU?</h3>
+              <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                HImFU representa un avance significativo en el tratamiento de la adiposidad localizada. Su tecnología de ultrasonido multifocal permite un tratamiento preciso y efectivo que destruye las células grasas de manera selectiva, preservando los tejidos circundantes y mejorando la calidad de la piel.
+              </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div class="bg-white p-8 rounded-3xl shadow-lg text-center hover:shadow-xl transition-shadow hover:-translate-y-1 transition-transform">
+                <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span class="text-3xl">🎯</span>
+                </div>
+                <h4 class="text-xl font-bold text-title-100 mb-4">Alta precisión</h4>
+                <p class="text-gray-600">Ultrasonido multifocal de máxima precisión</p>
+              </div>
+              
+              <div class="bg-white p-8 rounded-3xl shadow-lg text-center hover:shadow-xl transition-shadow hover:-translate-y-1 transition-transform">
+                <div class="w-16 h-16 bg-pink-200 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span class="text-3xl">🛡️</span>
+                </div>
+                <h4 class="text-xl font-bold text-title-100 mb-4">No invasiva</h4>
+                <p class="text-gray-600">Tecnología segura y no invasiva</p>
+              </div>
+              
+              <div class="bg-white p-8 rounded-3xl shadow-lg text-center hover:shadow-xl transition-shadow hover:-translate-y-1 transition-transform">
+                <div class="w-16 h-16 bg-pink-300 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span class="text-3xl">⚡</span>
+                </div>
+                <h4 class="text-xl font-bold text-title-100 mb-4">Resultados inmediatos</h4>
+                <p class="text-gray-600">Efectos visibles desde la primera sesión</p>
+              </div>
+              
+              <div class="bg-white p-8 rounded-3xl shadow-lg text-center hover:shadow-xl transition-shadow hover:-translate-y-1 transition-transform">
+                <div class="w-16 h-16 bg-pink-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span class="text-3xl">🚀</span>
+                </div>
+                <h4 class="text-xl font-bold text-title-100 mb-4">Sin recuperación</h4>
+                <p class="text-gray-600">Retoma actividades inmediatamente</p>
+              </div>
+              
+              <div class="bg-white p-8 rounded-3xl shadow-lg text-center hover:shadow-xl transition-shadow hover:-translate-y-1 transition-transform">
+                <div class="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span class="text-3xl">🛡️</span>
+                </div>
+                <h4 class="text-xl font-bold text-title-100 mb-4">Preserva la piel</h4>
+                <p class="text-gray-600">Protege las capas superficiales</p>
+              </div>
+              
+              <div class="bg-white p-8 rounded-3xl shadow-lg text-center hover:shadow-xl transition-shadow hover:-translate-y-1 transition-transform">
+                <div class="w-16 h-16 bg-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span class="text-3xl">💪</span>
+                </div>
+                <h4 class="text-xl font-bold text-title-100 mb-4">Modelado corporal</h4>
+                <p class="text-gray-600">Efecto de modelado duradero</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <Contact />
+  </main>
+</Layout>

@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import adiposidadLocalizada2 from '../../assets/fotos/adiposidad-localizada.jpg';
+import adiposidadLocalizada2 from '../../assets/fotos/adipo.jpg';
 import adiposidadLocalizada from '../../assets/fotos/adiposidad.jpg';
 import Contact from '../../components/Contact.astro';
 import Treatments from '../../components/Treatments';
@@ -14,13 +14,13 @@ const description = "Información completa sobre la adiposidad localizada, sus c
 
 <Layout title={title} description={description}>
   <main class="mt-16">
-    <section class="relative bg-gradient-to-b from-white to-pink-100 py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-b from-white to-pink-100  pt-10 md:py-20 overflow-hidden">
       <div class="container mx-auto px-4 md:px-8 relative z-10">
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-title-100 text-center font-title">
+        <h1 class="text-3xl md:text-4xl  font-bold text-title-100 text-center font-title">
           <span class="inline-block transform hover:scale-105 transition-transform duration-300">Adiposidad</span> 
           <span class="inline-block transform hover:scale-105 transition-transform duration-300">Localizada</span>
         </h1>
-        <p class="text-primary-200 text-center mt-4 max-w-xl mx-auto text-lg">
+        <p class="text-primary-200 text-center mt-4 max-w-xl mx-auto text-lg hidden md:block">
           ¿Que es y cómo eliminarla de manera efectiva?
         </p>
       </div>
@@ -44,7 +44,7 @@ const description = "Información completa sobre la adiposidad localizada, sus c
               
             </div>
           </div>
-          <div class="lg:w-1/2">
+          <div class="lg:w-1/2 ">
             <div class="rounded-lg overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-102 hover:shadow-2xl">
                 <Image 
                 src={adiposidadLocalizada}
@@ -53,11 +53,11 @@ const description = "Información completa sobre la adiposidad localizada, sus c
                 class="w-full h-full object-cover aspect-4/3"
                 />
             </div>
-        </div>
+          </div>
         </div>
         <div class="flex flex-col lg:flex-row items-start gap-8 text-justify mt-12">
-            <div class="lg:w-1/2">
-                <div class="rounded-lg overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-102 hover:shadow-2xl">
+            <div class="lg:w-1/2 hidden md:block">
+                <div class="rounded-lg overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-102 hover:shadow-2xl md:mt-20">
                     <Image 
                     src={adiposidadLocalizada2}
                     alt="Consulta médica especializada en adiposidad localizada" 
@@ -65,8 +65,8 @@ const description = "Información completa sobre la adiposidad localizada, sus c
                     />
                 </div>
              </div>
-            <div class="lg:w-1/2">
-                <h2 class="text-2xl font-title font-bold text-primary-200 mb-6 relative inline-block">
+            <div class="lg:w-1/2 w-full">
+                <h2 class="text-xl font-title font-bold text-primary-200 mb-6 relative inline-block">
                     Zonas más comunes de acumulación
                     <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-primary-100"></span>
                   </h2>
@@ -74,38 +74,52 @@ const description = "Información completa sobre la adiposidad localizada, sus c
                     <p>
                       La adiposidad localizada se manifiesta principalmente en cuatro zonas del cuerpo:
                     </p>
-                    <ul class="list-disc space-y-4 pl-3">
-                      <li>
-                        <span class="font-bold">Abdomen:</span> Una de las más comunes, especialmente en la parte inferior. Esta área suele ser particularmente resistente a los tratamientos convencionales.
-                      </li>
-                      <li>
-                        <span class="font-bold">Caderas:</span> Zona donde la grasa tiende a acumularse de manera persistente, afectando significativamente la silueta y la forma del cuerpo.
-                      </li>
-                      <li>
-                        <span class="font-bold">Glúteos:</span>Área donde la grasa puede ser más resistente y difícil de eliminar, requiriendo tratamientos específicos y constantes.
-                      </li>
-                      <li>
-                        <span class="font-bold">Pantalón de Montar:</span> Esta zona lateral de los muslos es donde se acumula la grasa que afecta la forma de las piernas, creando el conocido efecto "pantalón de montar".
-                    </ul>
-                    <p>
-                      Es importante destacar que estas zonas suelen ser las más difíciles de tratar con ejercicio y dieta convencional, Y ES una DE LAS preocupaciones MAS  común tanto en mujeres como en hombres.
+                    <ul class="list-disc space-y-4 pl-3 ">
 
-                    </p>
-                    <p>
-                      Por lo que requieren un enfoque específico y profesional para su tratamiento efectivo.
-                    </p>
+                      <li>
+                        <span class="font-bold marker:bg-pink-400">Abdomen:</span> Una de las más comunes, especialmente en la parte inferior. Esta área suele ser particularmente resistente a los tratamientos convencionales.
+                      </li>
+                      <li>
+                        <span class="font-bold marker:text-pink-400">Caderas:</span> Zona donde la grasa tiende a acumularse de manera persistente, afectando significativamente la silueta y la forma del cuerpo.
+                      </li>
+                      <li>
+                        <span class="font-bold marker:text-pink-400">Glúteos:</span>Área donde la grasa puede ser más resistente y difícil de eliminar, requiriendo tratamientos específicos y constantes.
+                      </li>
+                      <li>
+                        <span class="font-bold marker:text-pink-400">Pantalón de Montar:</span> Esta zona lateral de los muslos es donde se acumula la grasa que afecta la forma de las piernas, creando el conocido efecto "pantalón de montar".
+                    </ul>
+                   
                   </div>
               </div>
             </div>
         </div>
+        <div class="lg:w-1/2 mt-5 md:mt-0 px-2 md:hidden">
+          <div class="rounded-lg overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-102 hover:shadow-2xl md:mt-20">
+              <Image 
+              src={adiposidadLocalizada2}
+              alt="Consulta médica especializada en adiposidad localizada" 
+              class="w-full h-full object-cover aspect-4/3"
+              />
+          </div>
+       </div>
+        <div class="mt-12 flex flex-col gap-2 w-full md:w-3/4 mx-auto px-4 md:px-0">
+         <p>
+          Es importante destacar que estas zonas suelen ser las más difíciles de tratar con ejercicio y dieta convencional, Y ES una DE LAS preocupaciones MAS  común tanto en mujeres como en hombres.
+
+        </p>
+        <p>
+          Por lo que requieren un enfoque específico y profesional para su tratamiento efectivo.
+        </p>
+        </div>
+        
       </div>
     </section>
 
     <!-- Solución -->
-    <section class="py-16 bg-gradient-to-b from-white to-pink-100">
+    <section class="py-0 md:py-16 bg-gradient-to-b from-white to-pink-100">
       <div class="container mx-auto px-4 md:px-8">
         <div class="max-w-3xl mx-auto">
-          <h2 class="text-2xl md:text-3xl font-bold text-center text-title-100 mb-8 font-title  ">
+          <h2 class="text-3xl md:text-4xl font-bold text-center text-title-100 mb-8 font-title  ">
             ¿Cómo eliminar la grasa localizada?
           </h2>
           

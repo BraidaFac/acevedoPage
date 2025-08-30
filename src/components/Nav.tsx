@@ -55,10 +55,6 @@ const Navbar = () => {
         { label: "HImFU", href: "/tratamientos/himfu" },
         { label: "Cryo-RF MAX", href: "/tratamientos/cryo-rf-max" },
         { label: "Refreeze", href: "/tratamientos/refreeze" },
-        {
-          label: "Radiofrecuencia en cicatriz",
-          href: "/tratamientos/radiofrecuencia-cicatriz",
-        },
       ],
     },
     {

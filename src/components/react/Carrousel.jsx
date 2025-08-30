@@ -5,14 +5,14 @@ import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import controlembarazo from "../../assets/fotos/carrousel1.jpeg";
+import fertilidad from "../../assets/fotos/consuFerti.jpg";
 import consultaginecologica from "../../assets/fotos/controlginecologico.jpeg";
-import fertilidad from "../../assets/fotos/fertilidad.jpeg";
-import rafrecuencia from "../../assets/fotos/radiofrecuenciaCarru.jpeg";
+import rafrecuencia from "../../assets/fotos/recuPostPartoRadioFrec.jpg";
 
 const slides = [
   {
     image: rafrecuencia,
-    title: "Radiofrecuencia",
+    title: "Radiofrecuencia PostParto",
     description:
       "Tratamiento no invasivo para zona corporal, incontinencia urinaria y rejuvenecimiento vaginal",
     url: "/#contact",

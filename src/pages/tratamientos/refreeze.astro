@@ -1,0 +1,494 @@
+---
+import { Image } from 'astro:assets';
+import refreeze from '../../assets/fotos/refreeze.jpg';
+import Contact from '../../components/Contact.astro';
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout>
+  <main class="mt-16">
+    <!-- Hero Section con diseño moderno -->
+    <section class="relative bg-gradient-to-b from-pink-100 to-white py-10 md:py-24 lg:py-32 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-r from-pink-100/30 to-pink-100/30"></div>
+      <div class="container mx-auto px-4 md:px-8 relative z-10">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="text-center lg:text-left">
+              <div class="hidden md:inline-block bg-gradient-to-r from-pink-400 to-pink-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-6">
+                Tecnología Combinada Única
+              </div>
+              <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-title-100 mb-6 leading-tight">
+                ReFreeze
+              </h1>
+              <h2 class="text-xl md:text-2xl text-primary-200 font-medium mb-8">
+                La única terapia en el mercado capaz de combinar CrioFrecuencia y Dermohealth en un solo manillar
+              </h2>
+              <div class="flex flex-wrap gap-3 justify-center lg:justify-start">
+                <span class="px-4 py-2 bg-pink-200 text-pink-800 rounded-full text-sm font-medium">CrioFrecuencia</span>
+                <span class="px-4 py-2 bg-pink-300 text-white rounded-full text-sm font-medium">Dermohealth</span>
+                <span class="px-4 py-2 bg-pink-400 text-white rounded-full text-sm font-medium">Succión</span>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="relative z-10">
+                <Image
+                  src={refreeze}
+                  class="rounded-3xl shadow-2xl w-full h-auto transform rotate-2 hover:rotate-0 transition-transform duration-500"
+                  alt="ReFreeze - CrioFrecuencia y Dermohealth"
+                  width={600}
+                  height={600}
+                />
+              </div>
+              <div class="absolute -inset-6 bg-gradient-to-r from-pink-200 to-pink-300 rounded-3xl opacity-30 blur-2xl"></div>
+              <div class="absolute top-4 left-4 bg-white p-4 rounded-2xl shadow-lg">
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-pink-600">2</div>
+                  <div class="text-sm text-gray-600">Tecnologías</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 1: Introducción y Tecnología -->
+    <section class="py-20 bg-gradient-to-b from-white to-pink-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h3 class="text-3xl md:text-4xl font-bold text-title-100 mb-6">Tecnología Combinada de Vanguardia</h3>
+            <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-pink-600 mx-auto rounded-full"></div>
+          </div>
+          
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8 text-black">
+              <div class="bg-gradient-to-br from-pink-50 to-pink-100 p-8 rounded-3xl border-l-4 border-pink-400 shadow-lg">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-2xl">⚡</span>
+                  </div>
+                  <h4 class="text-xl font-bold text-title-100">Tecnología Dual</h4>
+                </div>
+                <p class="text-justify leading-relaxed">
+                  ReFreeze es una terapia revolucionaria que combina dos tecnologías en un mismo manillar: <strong>CrioFrecuencia Monopolar + Multipolar</strong> junto con <strong>Succión simultánea y continua</strong>, que permiten que el calor penetre de forma más rápida y profunda en la zona a tratar.
+                </p>
+              </div>
+              
+              <div class="bg-gradient-to-br from-pink-100 to-pink-200 p-8 rounded-3xl border-l-4 border-pink-500 shadow-lg">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-2xl">🎯</span>
+                  </div>
+                  <h4 class="text-xl font-bold text-title-100">Tratamiento Integral</h4>
+                </div>
+                <p class="text-justify leading-relaxed">
+                  Está indicada para tratar zonas con <strong>adiposidad generalizada, celulitis y flacidez</strong> al mismo tiempo que se realiza un <strong>drenaje linfático</strong>. Elimina desechos, toxinas y sobrecarga de líquidos <strong>logrando efectos instantáneos y duraderos</strong>.
+                </p>
+              </div>
+              
+              <div class="bg-gradient-to-br from-pink-200 to-pink-300 p-8 rounded-3xl border-l-4 border-pink-600 shadow-lg">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-pink-300 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-2xl">❄️</span>
+                  </div>
+                  <h4 class="text-xl font-bold text-title-100">Sistema CryoCooling</h4>
+                </div>
+                <p class="text-justify leading-relaxed">
+                  Además del Body Contouring para el modelado corporal, se suma su sistema <strong>CryoCooling</strong>, que logra la emisión de frío sobre la piel logrando un efecto anestésico de fácil aplicación agradable a la experiencia del paciente.
+                </p>
+              </div>
+            </div>
+            
+            <div class="relative">
+              <div class="bg-gradient-to-br from-pink-100 to-pink-200 p-8 rounded-3xl">
+                <h4 class="text-2xl font-bold text-title-100 mb-6 text-center">Características Técnicas</h4>
+                <div class="space-y-6">
+                  <div class="flex items-center justify-between bg-white p-4 rounded-xl">
+                    <span class="font-medium text-gray-700">Tecnología</span>
+                    <span class="font-bold text-pink-600">CrioFrecuencia</span>
+                  </div>
+                  <div class="flex items-center justify-between bg-white p-4 rounded-xl">
+                    <span class="font-medium text-gray-700">Modo</span>
+                    <span class="font-bold text-pink-600">Monopolar + Multipolar</span>
+                  </div>
+                  <div class="flex items-center justify-between bg-white p-4 rounded-xl">
+                    <span class="font-medium text-gray-700">Sistema</span>
+                    <span class="font-bold text-pink-600">Succión continua</span>
+                  </div>
+                  <div class="flex items-center justify-between bg-white p-4 rounded-xl">
+                    <span class="font-medium text-gray-700">Efecto</span>
+                    <span class="font-bold text-pink-600">Penetración profunda</span>
+                  </div>
+                  <div class="flex items-center justify-between bg-white p-4 rounded-xl">
+                    <span class="font-medium text-gray-700">Drenaje</span>
+                    <span class="font-bold text-pink-600">Linfático integrado</span>
+                  </div>
+                  <div class="flex items-center justify-between bg-white p-4 rounded-xl">
+                    <span class="font-medium text-gray-700">Anestesia</span>
+                    <span class="font-bold text-pink-600">CryoCooling natural</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: Indicaciones y Beneficios -->
+    <section class="md:py-20 py-2 bg-gradient-to-b from-pink-50 to-white">
+      <div class="container px-4 mx-auto">
+        <div class="max-w-6xl mx-auto text-black">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-title-100 mb-6">Tratamiento ReFreeze</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-pink-600 mx-auto rounded-full"></div>
+          </div>
+          
+          <div class="grid lg:grid-cols-2 gap-16">
+            <!-- Indicaciones -->
+            <div class="bg-white p-8 rounded-3xl shadow-lg">
+              <h3 class="text-2xl font-bold text-title-100 mb-8 text-center">Indicado para</h3>
+              <div class="space-y-4">
+                <div class="flex items-center space-x-4 p-4 bg-pink-50 rounded-xl hover:bg-pink-100 transition-colors">
+                  <div class="w-3 h-3 bg-pink-400 rounded-full"></div>
+                  <span class="text-lg font-medium">Drenaje linfático</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-pink-100 rounded-xl hover:bg-pink-200 transition-colors">
+                  <div class="w-3 h-3 bg-pink-500 rounded-full"></div>
+                  <span class="text-lg font-medium">Celulitis</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-pink-200 rounded-xl hover:bg-pink-300 transition-colors">
+                  <div class="w-3 h-3 bg-pink-600 rounded-full"></div>
+                  <span class="text-lg font-medium">Tensado</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-pink-50 rounded-xl hover:bg-pink-100 transition-colors">
+                  <div class="w-3 h-3 bg-pink-400 rounded-full"></div>
+                  <span class="text-lg font-medium">Modelado Corporal</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-pink-100 rounded-xl hover:bg-pink-200 transition-colors">
+                  <div class="w-3 h-3 bg-pink-500 rounded-full"></div>
+                  <span class="text-lg font-medium">Adiposidad localizada</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-pink-200 rounded-xl hover:bg-pink-300 transition-colors">
+                  <div class="w-3 h-3 bg-pink-600 rounded-full"></div>
+                  <span class="text-lg font-medium">Adiposidad generalizada</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Beneficios -->
+            <div class="bg-white p-8 rounded-3xl shadow-lg">
+              <h3 class="text-2xl font-bold text-title-100 mb-8 text-center">Beneficios</h3>
+              <div class="space-y-4">
+                <div class="flex items-center space-x-4 p-4 bg-gradient-to-r from-pink-50 to-pink-100 rounded-xl">
+                  <div class="w-10 h-10 bg-pink-400 rounded-full flex items-center justify-center">
+                    <span class="text-white text-lg">✓</span>
+                  </div>
+                  <span class="text-lg font-medium">Efecto progresivo y de larga duración</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-gradient-to-r from-pink-100 to-pink-200 rounded-xl">
+                  <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center">
+                    <span class="text-white text-lg">✓</span>
+                  </div>
+                  <span class="text-lg font-medium">Aplicable en cualquier tipo de piel</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-gradient-to-r from-pink-200 to-pink-300 rounded-xl">
+                  <div class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center">
+                    <span class="text-white text-lg">✓</span>
+                  </div>
+                  <span class="text-lg font-medium">Aplicable en cualquier época del año</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-gradient-to-r from-pink-50 to-pink-100 rounded-xl">
+                  <div class="w-10 h-10 bg-pink-400 rounded-full flex items-center justify-center">
+                    <span class="text-white text-lg">✓</span>
+                  </div>
+                  <span class="text-lg font-medium">No requiere hospitalización</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-gradient-to-r from-pink-100 to-pink-200 rounded-xl">
+                  <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center">
+                    <span class="text-white text-lg">✓</span>
+                  </div>
+                  <span class="text-lg font-medium">No requiere período de recuperación</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-gradient-to-r from-pink-200 to-pink-300 rounded-xl">
+                  <div class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center">
+                    <span class="text-white text-lg">✓</span>
+                  </div>
+                  <span class="text-lg font-medium">Reduce el volumen y modela el cuerpo</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-gradient-to-r from-pink-50 to-pink-100 rounded-xl">
+                  <div class="w-10 h-10 bg-pink-400 rounded-full flex items-center justify-center">
+                    <span class="text-white text-lg">✓</span>
+                  </div>
+                  <span class="text-lg font-medium">Sesiones indoloras</span>
+                </div>
+                <div class="flex items-center space-x-4 p-4 bg-gradient-to-r from-pink-100 to-pink-200 rounded-xl">
+                  <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center">
+                    <span class="text-white text-lg">✓</span>
+                  </div>
+                  <span class="text-lg font-medium">Sin necesidad de anestesia</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: Información Práctica -->
+    <section class="md:py-20 py-10 bg-gradient-to-b from-white to-pink-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-title-100 mb-6">Información Práctica del Tratamiento</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-pink-600 mx-auto rounded-full"></div>
+          </div>
+          
+          <div class="grid lg:grid-cols-2 gap-16">
+            <!-- Procedimiento y Cuidados -->
+            <div class="space-y-8">
+              <div class="bg-gradient-to-br from-pink-50 to-pink-100 p-8 rounded-3xl shadow-lg">
+                <h3 class="text-2xl font-bold text-title-100 mb-6">El Procedimiento</h3>
+                <div class="space-y-6">
+                  <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-pink-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span class="text-white text-sm font-bold">1</span>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-title-100 mb-2">¿Cómo se realiza?</h4>
+                      <p class="text-justify leading-relaxed text-gray-700">
+                        ReFreeze utiliza un manillar especial que combina CrioFrecuencia Monopolar y Multipolar con succión simultánea y continua. Esta combinación permite que el calor penetre de forma más rápida y profunda en los tejidos.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span class="text-white text-sm font-bold">2</span>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-title-100 mb-2">Duración</h4>
+                      <p class="text-justify leading-relaxed text-gray-700">
+                        Cada sesión tiene una duración aproximada de 30-45 minutos, dependiendo del área a tratar y la cantidad de grasa localizada.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span class="text-white text-sm font-bold">3</span>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-title-100 mb-2">Anestesia</h4>
+                      <p class="text-justify leading-relaxed text-gray-700">
+                        No es necesaria, ya que el sistema CryoCooling proporciona un efecto anestésico natural durante el tratamiento.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-pink-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span class="text-white text-sm font-bold">4</span>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-title-100 mb-2">Recuperación</h4>
+                      <p class="text-justify leading-relaxed text-gray-700">
+                        No requiere tiempo de recuperación. Puedes retomar tus actividades normales inmediatamente después del tratamiento.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-pink-100 to-pink-200 p-8 rounded-3xl shadow-lg">
+                <h3 class="text-2xl font-bold text-title-100 mb-6">Sesiones y Resultados</h3>
+                <div class="space-y-6">
+                  <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h4 class="font-bold text-title-100 mb-2">Número de sesiones</h4>
+                    <p class="text-justify leading-relaxed text-gray-700">
+                      Se recomienda un protocolo inicial de 6-8 sesiones con intervalos de 1-2 semanas entre cada una, dependiendo de la respuesta individual.
+                    </p>
+                  </div>
+                  <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h4 class="font-bold text-title-100 mb-2">Resultados</h4>
+                    <p class="text-justify leading-relaxed text-gray-700">
+                      Los efectos son instantáneos y duraderos, con mejoras visibles desde la primera sesión en la reducción de volumen y modelado corporal.
+                    </p>
+                  </div>
+                  <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h4 class="font-bold text-title-100 mb-2">Mantenimiento</h4>
+                    <p class="text-justify leading-relaxed text-gray-700">
+                      Para mantener los resultados óptimos, se recomienda una sesión de mantenimiento cada 2-3 meses.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cuidados y Contraindicaciones -->
+            <div class="space-y-8">
+              <div class="bg-gradient-to-br from-pink-200 to-pink-300 p-8 rounded-3xl shadow-lg">
+                <h3 class="text-2xl font-bold text-title-100 mb-6">Cuidados Previos</h3>
+                <p class="text-justify leading-relaxed text-gray-700 mb-6">
+                  Antes del tratamiento, es importante mantener una buena hidratación y una dieta equilibrada. Se recomienda una consulta previa para evaluar la condición de la piel y las áreas a tratar.
+                </p>
+                
+                <h4 class="font-bold text-title-100 mb-4">Cuidados Post-Tratamiento</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                    <span class="text-sm">Mantener hidratación</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
+                    <span class="text-sm">Ejercicio regular</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-pink-600 rounded-full"></div>
+                    <span class="text-sm">Dieta equilibrada</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                    <span class="text-sm">Protector solar</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
+                    <span class="text-sm">Evitar sol 48h</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-pink-600 rounded-full"></div>
+                    <span class="text-sm">Drenaje linfático</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-red-50 to-pink-50 p-8 rounded-3xl shadow-lg">
+                <h3 class="text-2xl font-bold text-title-100 mb-6">Contraindicaciones</h3>
+                <p class="text-justify leading-relaxed text-gray-700 mb-6">
+                  Es importante evaluar cada caso individualmente. Principales contraindicaciones:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Embarazo y lactancia</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Marcapasos</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Cáncer activo</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Enfermedades autoinmunes</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Heridas abiertas</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Infecciones cutáneas</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Trombosis venosa</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Alteraciones coagulación</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Implantes metálicos</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Problemas cardíacos</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: Tecnología y Ventajas -->
+    <section class="py-20 bg-gradient-to-b from-pink-50 to-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto text-black">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-title-100 mb-6">Tecnología ReFreeze</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-pink-600 mx-auto rounded-full"></div>
+          </div>
+          
+          <div class="space-y-12">
+            <div class="text-center">
+              <h3 class="text-2xl font-bold text-title-100 mb-6">¿Por qué elegir ReFreeze?</h3>
+              <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                ReFreeze representa una innovación única en el mercado, siendo la única terapia capaz de combinar CrioFrecuencia y Dermohealth en un solo manillar. Esta tecnología combinada permite un tratamiento más eficaz y completo, abordando múltiples aspectos del modelado corporal en una sola sesión.
+              </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div class="bg-white p-8 rounded-3xl shadow-lg text-center hover:shadow-xl transition-shadow hover:-translate-y-1 transition-transform">
+                <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span class="text-3xl">⚡</span>
+                </div>
+                <h4 class="text-xl font-bold text-title-100 mb-4">Tecnología única</h4>
+                <p class="text-gray-600">Combinación única en el mercado</p>
+              </div>
+              
+              <div class="bg-white p-8 rounded-3xl shadow-lg text-center hover:shadow-xl transition-shadow hover:-translate-y-1 transition-transform">
+                <div class="w-16 h-16 bg-pink-200 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span class="text-3xl">❄️🔥</span>
+                </div>
+                <h4 class="text-xl font-bold text-title-100 mb-4">CrioFrecuencia</h4>
+                <p class="text-gray-600">Monopolar + Multipolar</p>
+              </div>
+              
+              <div class="bg-white p-8 rounded-3xl shadow-lg text-center hover:shadow-xl transition-shadow hover:-translate-y-1 transition-transform">
+                <div class="w-16 h-16 bg-pink-300 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span class="text-3xl">💨</span>
+                </div>
+                <h4 class="text-xl font-bold text-title-100 mb-4">Succión continua</h4>
+                <p class="text-gray-600">Simultánea y continua</p>
+              </div>
+              
+              <div class="bg-white p-8 rounded-3xl shadow-lg text-center hover:shadow-xl transition-shadow hover:-translate-y-1 transition-transform">
+                <div class="w-16 h-16 bg-pink-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span class="text-3xl">❄️</span>
+                </div>
+                <h4 class="text-xl font-bold text-title-100 mb-4">CryoCooling</h4>
+                <p class="text-gray-600">Sistema integrado</p>
+              </div>
+              
+              <div class="bg-white p-8 rounded-3xl shadow-lg text-center hover:shadow-xl transition-shadow hover:-translate-y-1 transition-transform">
+                <div class="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span class="text-3xl">⚡</span>
+                </div>
+                <h4 class="text-xl font-bold text-title-100 mb-4">Efectos instantáneos</h4>
+                <p class="text-gray-600">Y duraderos</p>
+              </div>
+              
+              <div class="bg-white p-8 rounded-3xl shadow-lg text-center hover:shadow-xl transition-shadow hover:-translate-y-1 transition-transform">
+                <div class="w-16 h-16 bg-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span class="text-3xl">💧</span>
+                </div>
+                <h4 class="text-xl font-bold text-title-100 mb-4">Drenaje linfático</h4>
+                <p class="text-gray-600">Integrado</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <Contact />
+  </main>
+</Layout>

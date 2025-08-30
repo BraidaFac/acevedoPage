@@ -1,167 +1,410 @@
 ---
 import { Image } from 'astro:assets';
-import enygma from '../../assets/fotos/enygma.jpg';
+import enygma from '../../assets/fotos/enygma1.jpg';
 import Contact from '../../components/Contact.astro';
 import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout>
   <main class="mt-16">
-    <!-- Título y subtítulo -->
-    <section class="relative bg-gradient-to-b from-white to-pink-100 py-20 overflow-hidden">
+    <!-- Hero Section con diseño moderno -->
+    <section class="relative bg-gradient-to-b from-pink-100 to-white py-10 md:py-24 lg:py-32 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-r from-pink-100/30 to-pink-100/30"></div>
       <div class="container mx-auto px-4 md:px-8 relative z-10">
-        <div class="text-center max-w-4xl mx-auto">
-          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-title-100 mb-6">
-            Enygma
-          </h1>
-          <h2 class="text-xl md:text-2xl text-primary-200 font-medium">
-            Radiofrecuencia Orbital para la Salud Íntima Femenina
-          </h2>
+        <div class="max-w-6xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="text-center lg:text-left">
+              <div class="hidden md:inline-block bg-gradient-to-r from-pink-400 to-pink-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-6">
+                Salud Íntima Femenina
+              </div>
+              <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-title-100 mb-6 leading-tight">
+                Enygma
+              </h1>
+              <h2 class="text-xl md:text-2xl text-primary-200 font-medium mb-8">
+                Radiofrecuencia Orbital para la salud íntima femenina
+              </h2>
+              <div class="flex flex-wrap gap-3 justify-center lg:justify-start">
+                <span class="px-4 py-2 bg-pink-200 text-pink-800 rounded-full text-sm font-medium">Radiofrecuencia</span>
+                <span class="px-4 py-2 bg-pink-300 text-white rounded-full text-sm font-medium">Salud Íntima</span>
+                <span class="px-4 py-2 bg-pink-400 text-white rounded-full text-sm font-medium">Bienestar</span>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="relative z-10">
+                <Image
+                  src={enygma}
+                  class="rounded-3xl shadow-2xl w-full h-auto transform -rotate-1 hover:rotate-0 transition-transform duration-500"
+                  alt="Enygma - Radiofrecuencia Orbital"
+                  width={600}
+                  height={600}
+                />
+              </div>
+              <div class="absolute -inset-6 bg-gradient-to-r from-pink-200 to-pink-300 rounded-3xl opacity-30 blur-2xl"></div>
+              <div class="absolute top-4 left-4 bg-white p-4 rounded-2xl shadow-lg">
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-pink-600">♀</div>
+                  <div class="text-sm text-gray-600">Salud</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- SECCIÓN 1: Introducción y Problema -->
-    <section class="py-16 bg-gradient-to-b from-pink-100 to-white">
+    <section class="py-20 bg-gradient-to-b from-white to-pink-50">
       <div class="container mx-auto px-4">
         <div class="max-w-6xl mx-auto">
-          <div class="grid md:grid-cols-2 gap-12 mb-12">
-            <div>
-              <Image
-                src={enygma}
-                class="rounded-lg shadow-md w-full h-auto"
-                alt="Enygma"
-                width={500}
-                height={500}
-              />
-            </div>
-          <!--   <div class="space-y-6 text-black">
-              <h3 class="text-xl font-bold text-title-100 mb-4">Ginecología Regenerativa y Funcional</h3>
-              <p class="text-justify leading-relaxed">
-                Desde la ginecología regenerativa, funcional y estética y la actualidad donde las mujeres contamos con una vida llena de retos, exigencias y nuevas posibilidades, donde nace la necesidad de sentirnos cómodas, seguras y dedicar el tiempo para el cuidado de nuestra salud.
-              </p>
-              <p class="text-justify leading-relaxed">
-                Más allá de las exigencias sociales en la estética actual, busco que cada paciente pueda encontrar su propia belleza desde lo funcional y así poder disfrutar el día a día desde la aceptación.
-              </p> -->
-              
+          <div class="text-center mb-16">
+            <h3 class="text-3xl md:text-4xl font-bold text-title-100 mb-6">Salud Íntima Femenina</h3>
+            <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-pink-600 mx-auto rounded-full"></div>
           </div>
-            <h3 class="text-xl font-bold text-title-100 mb-4 mt-8">Rejuvenecimiento Íntimo</h3>
-            <p class="text-justify leading-relaxed">
-              Sabemos que con el paso de los años perdemos la cantidad y calidad de síntesis de colágeno, esto también afecta la zona genital. Este deterioro no solo se manifiesta como una pérdida del sostén y la turgencia de la zona, sino una atrofia interna de la irrigación de la zona generando dos grandes grupos de patologías: la atrofia vulvovaginal y la hiperlaxitud vulvovaginal.
-            </p>
-            <p class="text-justify leading-relaxed">
-              Esto puede parecer meramente estético pero no es así, cuando analizamos los efectos de la falta de inervación vascular y/o nerviosa de la zona, nos encontramos con alteraciones de la flora normal y a su vez la predisposición a sufrir infecciones, molestias, sequedad, picazón y hasta incomodidad o dolor en la actividad sexual.
-            </p>
+          
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8 text-black">
+              <div class="bg-gradient-to-br from-pink-50 to-pink-100 p-8 rounded-3xl border-l-4 border-pink-400 shadow-lg">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-2xl">♀</span>
+                  </div>
+                  <h4 class="text-xl font-bold text-title-100">¿Qué es Enygma?</h4>
+                </div>
+                <p class="text-justify leading-relaxed">
+                  Enygma es un tratamiento de <strong>Radiofrecuencia Orbital</strong> diseñado específicamente para la salud íntima femenina. Utiliza tecnología avanzada para mejorar la calidad de vida de las mujeres, abordando diversos aspectos de su bienestar íntimo.
+                </p>
+              </div>
+              
+              <div class="bg-gradient-to-br from-pink-100 to-pink-200 p-8 rounded-3xl border-l-4 border-pink-500 shadow-lg">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-2xl">🎯</span>
+                  </div>
+                  <h4 class="text-xl font-bold text-title-100">¿Por qué someterse a Enygma?</h4>
+                </div>
+                <p class="text-justify leading-relaxed">
+                  Muchas mujeres experimentan cambios en su salud íntima debido a factores como el parto, la edad, cambios hormonales o el estilo de vida. Enygma ofrece una solución <strong>no invasiva y efectiva</strong> para mejorar estos aspectos y recuperar la confianza y el bienestar.
+                </p>
+              </div>
+              
+              <div class="bg-gradient-to-br from-pink-200 to-pink-300 p-8 rounded-3xl border-l-4 border-pink-600 shadow-lg">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-pink-300 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-2xl">⚡</span>
+                  </div>
+                  <h4 class="text-xl font-bold text-title-100">Tecnología Avanzada</h4>
+                </div>
+                <p class="text-justify leading-relaxed">
+                  La <strong>Radiofrecuencia Orbital</strong> es una tecnología segura y probada que estimula la producción de colágeno y mejora la circulación sanguínea en la zona íntima, proporcionando resultados naturales y duraderos.
+                </p>
+              </div>
+            </div>
+            
+            <div class="relative">
+              <div class="bg-gradient-to-br from-pink-100 to-pink-200 p-8 rounded-3xl">
+                <h4 class="text-2xl font-bold text-title-100 mb-6 text-center">Condiciones que trata</h4>
+                <div class="space-y-6">
+                  <div class="flex items-center justify-between bg-white p-4 rounded-xl">
+                    <span class="font-medium text-gray-700">Incontinencia</span>
+                    <span class="font-bold text-pink-600">Urinaria</span>
+                  </div>
+                  <div class="flex items-center justify-between bg-white p-4 rounded-xl">
+                    <span class="font-medium text-gray-700">Sequedad</span>
+                    <span class="font-bold text-pink-600">Vaginal</span>
+                  </div>
+                  <div class="flex items-center justify-between bg-white p-4 rounded-xl">
+                    <span class="font-medium text-gray-700">Dolor</span>
+                    <span class="font-bold text-pink-600">Durante relaciones</span>
+                  </div>
+                  <div class="flex items-center justify-between bg-white p-4 rounded-xl">
+                    <span class="font-medium text-gray-700">Prolapso</span>
+                    <span class="font-bold text-pink-600">Leve a moderado</span>
+                  </div>
+                  <div class="flex items-center justify-between bg-white p-4 rounded-xl">
+                    <span class="font-medium text-gray-700">Flacidez</span>
+                    <span class="font-bold text-pink-600">Tisular</span>
+                  </div>
+                  <div class="flex items-center justify-between bg-white p-4 rounded-xl">
+                    <span class="font-medium text-gray-700">Recuperación</span>
+                    <span class="font-bold text-pink-600">Post-parto</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- SECCIÓN 2: Tratamiento y Beneficios -->
-    <section class=" py-16 bg-gradient-to-b from-white to-pink-100">
-      <div class="container px-4 mx-auto ">
-        <div class="max-w-5xl space-y-8 text-black">
-          <h2 class="text-2xl font-bold text-title-100 text-center mb-8">Tratamiento con Radiofrecuencia Orbital - ENYGMA</h2>
-          <div class="space-y-6">
-            <p class="text-justify leading-relaxed">
-              Enygma "X-ORBITAL" es un gran avance para el tratamiento de la hiperlaxitud vaginal, la atrofia genital y la incontinencia urinaria, que utiliza radiofrecuencia como método de estimulación en la producción de colágeno, elastina y neovascularización de la zona.
-            </p>
-            <h3 class="text-xl font-bold text-title-100 mb-4">¿En qué consiste la terapia con Enygma?</h3>
-            <p class="text-justify leading-relaxed">
-              Es una terapia mínimamente invasiva que consiste en la aplicación de esta innovadora tecnología con el fin de bioestimular, rehidratar y tonificar la zona íntima femenina.
-            </p>
-            <h3 class="text-xl font-bold text-title-100 mb-4">¿Por qué someterse a este procedimiento?</h3>
-            <p class="text-justify leading-relaxed">
-                La necesidad de obtener un resultado eficiente en la mejora y/o eliminación de los síntomas asociados con la incontinencia urinaria y/o los signos y síntomas nos marca la necesidad de realizar un tratamiento. Como decíamos anteriormente no solo está indicada por una cuestión estética y visual, sino también por los cambios a nivel de nuestra salud física y emocional.
-            </p>
+    <section class="py-28 md:py-20 bg-gradient-to-b from-pink-50 to-white">
+      <div class="container px-4 mx-auto">
+        <div class="max-w-6xl mx-auto text-black">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-title-100 mb-6">Tratamiento Enygma</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-pink-600 mx-auto rounded-full"></div>
+          </div>
+          
+          <div class="grid lg:grid-cols-2 gap-16">
+            <!-- What is Enygma -->
+            <div class="bg-white p-8 rounded-3xl shadow-lg">
+              <h3 class="text-2xl font-bold text-title-100 mb-6">¿Qué es Enygma?</h3>
+              <div class="bg-gradient-to-br from-pink-50 to-pink-100 p-6 rounded-2xl mb-6">
+                <p class="text-justify leading-relaxed text-gray-700">
+                  Enygma es un tratamiento de <strong>Radiofrecuencia Orbital</strong> que utiliza ondas electromagnéticas de alta frecuencia para estimular la producción de colágeno y mejorar la circulación sanguínea en la zona íntima femenina.
+                </p>
+              </div>
+              <div class="bg-gradient-to-br from-pink-100 to-pink-200 p-6 rounded-2xl">
+                <p class="text-justify leading-relaxed text-gray-700">
+                  Este tratamiento es <strong>completamente no invasivo</strong>, seguro y efectivo, diseñado específicamente para mejorar la salud y el bienestar íntimo de las mujeres de todas las edades.
+                </p>
+              </div>
+            </div>
 
-            <h3 class="text-xl font-bold text-title-100 mb-4">Beneficios del tratamiento</h3>
-            <p class="text-justify leading-relaxed mb-4">
-              La estimulación de la zona no solo genera cambios externos sino también cambios internos que generarán entre otros los siguientes beneficios:
-            </p>
-            <ul class="space-y-3 pl-6 text-justify">
-              <li>• Incremento en la secreción glandular con la consecuente mejora de lubricación vaginal
-              </li>
-              <li>• Regulación de la flora normal de la zona</li>
-              <li>• Mejora en el trofismo celular con aumento de la turgencia de la zona</li>
-              <li>• Mejora visual en el aspecto de los labios mayores y menores de la vagina</li>
-              <li>• Disminuye la incontinencia urinaria de esfuerzo</li>
-              <li>• El tensado de las paredes vaginales provoca el estrechamiento del canal vaginal revirtiendo la disfunción sexual y las molestias ocasionadas por su hiper-laxitud</li>
-            </ul>
+            <!-- Why undergo it -->
+            <div class="bg-white p-8 rounded-3xl shadow-lg">
+              <h3 class="text-2xl font-bold text-title-100 mb-6">¿Por qué someterse a Enygma?</h3>
+              <div class="bg-gradient-to-br from-pink-50 to-pink-100 p-6 rounded-2xl mb-6">
+                <p class="text-justify leading-relaxed text-gray-700">
+                  Muchas mujeres experimentan cambios en su salud íntima debido a factores como el parto, la edad, cambios hormonales o el estilo de vida. Estos cambios pueden afectar significativamente su calidad de vida y autoestima.
+                </p>
+              </div>
+              <div class="bg-gradient-to-br from-pink-100 to-pink-200 p-6 rounded-2xl">
+                <p class="text-justify leading-relaxed text-gray-700">
+                  Enygma ofrece una solución <strong>natural y efectiva</strong> para mejorar estos aspectos, ayudando a las mujeres a recuperar su confianza y bienestar íntimo.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Beneficios -->
+          <div class="mt-16">
+            <h3 class="text-2xl font-bold text-title-100 mb-8 text-center">Beneficios del Tratamiento</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="flex items-center space-x-4 p-6 bg-gradient-to-r from-pink-50 to-pink-100 rounded-xl">
+                <div class="w-10 h-10 bg-pink-400 rounded-full flex items-center justify-center">
+                  <span class="text-white text-lg">✓</span>
+                </div>
+                <span class="text-lg font-medium">Mejora la incontinencia urinaria</span>
+              </div>
+              <div class="flex items-center space-x-4 p-6 bg-gradient-to-r from-pink-100 to-pink-200 rounded-xl">
+                <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center">
+                  <span class="text-white text-lg">✓</span>
+                </div>
+                <span class="text-lg font-medium">Reduce la sequedad vaginal</span>
+              </div>
+              <div class="flex items-center space-x-4 p-6 bg-gradient-to-r from-pink-200 to-pink-300 rounded-xl">
+                <div class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center">
+                  <span class="text-white text-lg">✓</span>
+                </div>
+                <span class="text-lg font-medium">Alivia el dolor durante relaciones</span>
+              </div>
+              <div class="flex items-center space-x-4 p-6 bg-gradient-to-r from-pink-50 to-pink-100 rounded-xl">
+                <div class="w-10 h-10 bg-pink-400 rounded-full flex items-center justify-center">
+                  <span class="text-white text-lg">✓</span>
+                </div>
+                <span class="text-lg font-medium">Mejora el prolapso leve a moderado</span>
+              </div>
+              <div class="flex items-center space-x-4 p-6 bg-gradient-to-r from-pink-100 to-pink-200 rounded-xl">
+                <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center">
+                  <span class="text-white text-lg">✓</span>
+                </div>
+                <span class="text-lg font-medium">Fortalece los tejidos</span>
+              </div>
+              <div class="flex items-center space-x-4 p-6 bg-gradient-to-r from-pink-200 to-pink-300 rounded-xl">
+                <div class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center">
+                  <span class="text-white text-lg">✓</span>
+                </div>
+                <span class="text-lg font-medium">Acelera recuperación post-parto</span>
+              </div>
+              <div class="flex items-center space-x-4 p-6 bg-gradient-to-r from-pink-50 to-pink-100 rounded-xl">
+                <div class="w-10 h-10 bg-pink-400 rounded-full flex items-center justify-center">
+                  <span class="text-white text-lg">✓</span>
+                </div>
+                <span class="text-lg font-medium">Tratamiento no invasivo</span>
+              </div>
+              <div class="flex items-center space-x-4 p-6 bg-gradient-to-r from-pink-100 to-pink-200 rounded-xl">
+                <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center">
+                  <span class="text-white text-lg">✓</span>
+                </div>
+                <span class="text-lg font-medium">Sin tiempo de recuperación</span>
+              </div>
+              <div class="flex items-center space-x-4 p-6 bg-gradient-to-r from-pink-200 to-pink-300 rounded-xl">
+                <div class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center">
+                  <span class="text-white text-lg">✓</span>
+                </div>
+                <span class="text-lg font-medium">Resultados duraderos</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- SECCIÓN 3: Información Práctica -->
-    <section class="py-16 bg-pink-50">
+    <section class="py-20 bg-gradient-to-b from-white to-pink-50">
       <div class="container mx-auto px-4">
-        <div class="max-w-5xl mx-auto">
-          <h2 class="text-2xl font-bold text-title-100 text-center mb-12">Información Práctica del Tratamiento</h2>
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-title-100 mb-6">Información Práctica del Tratamiento</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-pink-600 mx-auto rounded-full"></div>
+          </div>
           
-          <div class="grid md:grid-cols-2 gap-12">
-            <!-- Procedimiento y Cuidados -->
-            <div class="space-y-6 text-black">
-              <h3 class="text-xl font-bold text-title-100 mb-4">El Procedimiento</h3>
-              <div class="space-y-4">
-                <p class="text-justify leading-relaxed">
-                  <strong>¿Cómo se realiza?</strong> Es un procedimiento sencillo e indoloro, donde se estimula la zona afectada mediante la aplicación interna y externa del cabezal Orbital, diseñado exclusivamente para esta zona. Se puede percibir un ligero calor en la zona tratada y posteriormente un leve enrojecimiento del área.
-                </p>
-                <p class="text-justify leading-relaxed">
-                  <strong>Duración:</strong> La duración del tratamiento es menor de 30 minutos por sesión.
-                </p>
-                <p class="text-justify leading-relaxed">
-                  <strong>Anestesia:</strong> No es necesario su uso, ya que no es un tratamiento doloroso.
-                </p>
-                <p class="text-justify leading-relaxed">
-                  <strong>Recuperación:</strong> Tras el tratamiento, la paciente puede retomar su vida normal. Al ser un tratamiento indoloro y no invasivo no es necesario el reposo, ni la abstinencia sexual.
-                </p>
+          <div class="grid lg:grid-cols-2 gap-16">
+            <!-- Procedimiento -->
+            <div class="space-y-8">
+              <div class="bg-gradient-to-br from-pink-50 to-pink-100 p-8 rounded-3xl shadow-lg">
+                <h3 class="text-2xl font-bold text-title-100 mb-6">El Procedimiento</h3>
+                <div class="space-y-6">
+                  <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-pink-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span class="text-white text-sm font-bold">1</span>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-title-100 mb-2">Consulta inicial</h4>
+                      <p class="text-justify leading-relaxed text-gray-700">
+                        Evaluación completa de tu condición y objetivos del tratamiento. Se establece un plan personalizado.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span class="text-white text-sm font-bold">2</span>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-title-100 mb-2">Aplicación</h4>
+                      <p class="text-justify leading-relaxed text-gray-700">
+                        El tratamiento se realiza con un dispositivo especial que aplica radiofrecuencia orbital de manera controlada y segura.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span class="text-white text-sm font-bold">3</span>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-title-100 mb-2">Duración</h4>
+                      <p class="text-justify leading-relaxed text-gray-700">
+                        Cada sesión dura aproximadamente 30-45 minutos. El tratamiento completo incluye varias sesiones según las necesidades individuales.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 bg-pink-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span class="text-white text-sm font-bold">4</span>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-title-100 mb-2">Sensación</h4>
+                      <p class="text-justify leading-relaxed text-gray-700">
+                        El tratamiento es cómodo y no doloroso. Puedes sentir una sensación de calor suave durante la aplicación.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <h3 class="text-xl font-bold text-title-100 mb-4 mt-8">Sesiones y Mantenimiento</h3>
-              <div class="space-y-4">
-                <p class="text-justify leading-relaxed">
-                  <strong>Número de sesiones:</strong> Cada paciente será evaluado de manera personalizada para armar un plan de tratamiento acorde a sus necesidades, pero en líneas generales solemos indicar: Etapa inicial de 3 a 5 sesiones con intervalos de 4 semanas entre cada una de ellas.
-                </p>
-                <p class="text-justify leading-relaxed">
-                  <strong>Mantenimiento:</strong> Las recomendaciones deben ser individualizadas, podemos indicar dependiendo del paciente, una sesión cada uno o dos años.
-                </p>
-                <p class="text-justify leading-relaxed">
-                  <strong>Resultados:</strong> Por supuesto, el tratamiento estimula entre otras cosas la formación de colágeno en las zonas tratadas y por tanto aumento de grosor de la piel, de la mucosa, mejor hidratación, lubrificación, tonificación del tejido que permitirán mejorar la calidad de vida de las pacientes.
-                </p>
+              <div class="bg-gradient-to-br from-pink-100 to-pink-200 p-8 rounded-3xl shadow-lg">
+                <h3 class="text-2xl font-bold text-title-100 mb-6">Sesiones y Resultados</h3>
+                <div class="space-y-6">
+                  <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h4 class="font-bold text-title-100 mb-2">Número de sesiones</h4>
+                    <p class="text-justify leading-relaxed text-gray-700">
+                      Se recomienda un protocolo de 6-8 sesiones con intervalos de 1-2 semanas entre cada una, dependiendo de la condición individual.
+                    </p>
+                  </div>
+                  <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h4 class="font-bold text-title-100 mb-2">Resultados</h4>
+                    <p class="text-justify leading-relaxed text-gray-700">
+                      Los resultados comienzan a notarse después de las primeras sesiones, con mejoras progresivas y duraderas.
+                    </p>
+                  </div>
+                  <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h4 class="font-bold text-title-100 mb-2">Mantenimiento</h4>
+                    <p class="text-justify leading-relaxed text-gray-700">
+                      Para mantener los resultados óptimos, se recomienda una sesión de mantenimiento cada 3-6 meses.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
             <!-- Cuidados y Contraindicaciones -->
-            <div class="space-y-6 text-black">
-              <h3 class="text-xl font-bold text-title-100 mb-4">Cuidados Previos</h3>
-              <p class="text-justify leading-relaxed">
-                De manera preventiva y educacional les pedimos a nuestras pacientes que tengan una visita ginecológica previa y se realicen el PAP y la Colposcopia, para descartar cualquier tipo de patología a este nivel.
-              </p>
+            <div class="space-y-8">
+              <div class="bg-gradient-to-br from-pink-200 to-pink-300 p-8 rounded-3xl shadow-lg">
+                <h3 class="text-2xl font-bold text-title-100 mb-6">Cuidados desde Casa</h3>
+                <p class="text-justify leading-relaxed text-gray-700 mb-6">
+                  Después del tratamiento, es importante seguir algunas recomendaciones para optimizar los resultados:
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                    <span class="text-sm">Mantener hidratación</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
+                    <span class="text-sm">Ejercicios de Kegel</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-pink-600 rounded-full"></div>
+                    <span class="text-sm">Evitar relaciones 48h</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                    <span class="text-sm">Usar ropa cómoda</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
+                    <span class="text-sm">Mantener higiene</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-pink-600 rounded-full"></div>
+                    <span class="text-sm">Seguir indicaciones</span>
+                  </div>
+                </div>
+              </div>
 
-              <h3 class="text-xl font-bold text-title-100 mb-4 mt-8">Cuidados desde Casa</h3>
-              <ul class="space-y-2 pl-6">
-                <li>• Evitar sobrepeso</li>
-                <li>• No consumir exceso de bebidas alcohólicas, cafeína, teína o alimentos que aumenten la diuresis</li>
-                <li>• Evitar actividad física de impacto como saltar y correr</li>
-                <li>• Ejercicios de respiración y musculación para fortalecer la musculatura</li>
-              </ul>
-
-              <h3 class="text-xl font-bold text-title-100 mb-4 mt-8">Contraindicaciones</h3>
-              <p class="text-justify leading-relaxed mb-4">
-                Siempre evaluamos cada caso puntual a la hora de decidir el tratamiento a indicar a nuestros pacientes. Principales contraindicaciones:
-              </p>
-              <ul class="space-y-2 pl-6 text-sm">
-                <li>• Embarazo o planificación de embarazo</li>
-                <li>• Alteraciones en últimos resultados ginecológicos</li>
-                <li>• Pacientes con lesiones vulvares/vaginales</li>
-                <li>• Cáncer activo</li>
-                <li>• Insuficiencia Renal y/o Cardíaca</li>
-                <li>• Cardioversores, desfibriladores, marcapasos</li>
-                <li>• Medicación Inmunosupresores, anticoagulantes y/o anticonvulsivantes</li>
-                <li>• Enfermedades localizadas en la zona a tratar</li>
-                <li>• Patologías autoinmunitarias</li>
-              </ul>
+              <div class="bg-gradient-to-br from-red-50 to-pink-50 p-8 rounded-3xl shadow-lg">
+                <h3 class="text-2xl font-bold text-title-100 mb-6">Contraindicaciones</h3>
+               
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Embarazo</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Lactancia</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Marcapasos</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Cáncer activo</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Infecciones activas</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Heridas abiertas</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Implantes metálicos</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                    <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span class="text-sm">Problemas cardíacos</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

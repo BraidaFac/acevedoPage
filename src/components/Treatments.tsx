@@ -28,7 +28,7 @@ const Treatments: React.FC<TreatmentsProps> = ({
 
   const renderTreatmentCard = (treatment: Treatment) => (
     <div className="bg-white rounded-lg shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 h-full">
-      <div className="lg:h-72 relative">
+      <div className="lg:h-72 h-60 relative">
         <div
           className="w-full h-full"
           style={{
@@ -41,7 +41,7 @@ const Treatments: React.FC<TreatmentsProps> = ({
         <div className="absolute inset-0 bg-gradient-to-t from-primary-200/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end" />
       </div>
       <div className="p-6">
-        <h4 className="font-bold text-black mb-3 group-hover:text-black transition-colors">
+        <h4 className="font-bold text-title-100 mb-3 group-hover:text-black transition-colors">
           {treatment.name}
         </h4>
         <p className="text-black text-sm mb-4">{treatment.shortDescription}</p>
@@ -57,11 +57,11 @@ const Treatments: React.FC<TreatmentsProps> = ({
         </div>
         <a
           href={treatment.url}
-          className="inline-flex items-center text-sm font-medium text-black hover:text-black transition-colors"
+          className="inline-flex items-center text-sm font-semibold text-white bg-gradient-to-r from-pink-500 to-pink-600 rounded-full px-6 py-3 shadow-lg hover:shadow-xl hover:scale-105 hover:bg-gradient-to-r hover:from-pink-600 hover:to-pink-700 transition-all duration-300 border-2 border-pink-400 hover:border-pink-500"
         >
           Más información
           <svg
-            className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300"
+            className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -79,13 +79,15 @@ const Treatments: React.FC<TreatmentsProps> = ({
   );
 
   return (
-    <section id="treatments" className="py-20 bg-transparent">
+    <section id="treatments" className="py-20 md:px-20 px-4 bg-transparent">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-title text-title-100 mb-6 font-bold">
             {title}
           </h2>
-          <p className="text-lg text-black max-w-2xl mx-auto">{description}</p>
+          <p className="text-lg text-primary-200 max-w-2xl mx-auto">
+            {description}
+          </p>
         </div>
 
         {layout === "carousel" ? (
