@@ -6,8 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import controlembarazo from "../../assets/fotos/carrousel1.jpeg";
 import fertilidad from "../../assets/fotos/consuFerti.jpg";
-import consultaginecologica from "../../assets/fotos/controlginecologico.jpeg";
-import rafrecuencia from "../../assets/fotos/recuPostPartoRadioFrec.jpg";
+import consultaginecologica from "../../assets/fotos/consultaGinecologica.jpeg";
+import rafrecuencia from "../../assets/fotos/recuPostPartoRadioFrec.jpeg";
 
 const slides = [
   {
