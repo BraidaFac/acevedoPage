@@ -181,11 +181,11 @@ const tratamientos = [
     </section>
 
     <!-- Tratamientos disponibles -->
-    <section class="bg-gradient-to-b from-pink-100 to-white">
-      <div class="container mx-auto px-4 md:px-8">
-        <Treatments client:load category='incontinencia-urinaria' layout='carousel'/>
+    <div class="bg-gradient-to-b from-pink-100 to-white">
+      <div >
+        <Treatments client:load showAll={true} layout='carousel'/>
       </div>
-    </section>
+    </div>
     <!-- Componente de contacto -->
     <Contact />
   </main>

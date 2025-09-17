@@ -174,11 +174,11 @@ const description = "Información completa sobre la adiposidad localizada, sus c
     </section>
 
     <!-- Tratamientos disponibles -->
-    <section class="bg-gray-50 bg-gradient-to-b from-pink-100 to-white">
-      <div class="container mx-auto px-4 md:px-8">
-        <Treatments client:load showAll={false} layout='carousel' category='adiposidad-localizada'/>
+    <div class="bg-gray-50 bg-gradient-to-b from-pink-100 to-white">
+      <div >
+        <Treatments client:load showAll={true} layout='carousel'/>
       </div>
-    </section>
+    </div>
 
     <!-- Componente de contacto -->
     <Contact />

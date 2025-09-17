@@ -1,6 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-import episitomia from '../../assets/fotos/episiotomia.jpg';
 import Contact from '../../components/Contact.astro';
 import SymptomCard from '../../components/SymptomCard.astro';
 import Treatments from '../../components/Treatments';
@@ -96,33 +94,22 @@ const tratamientos = [
                 La episiotomía puede ocasionar secuelas y cambios en la zona genital femenina después de un parto vaginal y afectar la calidad de vida de las mujeres que la sufren.
               </p>
             </div>
-            <div class="container mx-auto  mt-10">
-              <div class="max-w-6xl mx-auto">
-                <div class="mb-4">
-                  <h2 class="text-2xl font-bold  font-title text-left text-primary-200">
-                    Secuelas de la episiotomía
-                  </h2>
-                  <p class="text-lg text-black max-w-2xl ">
-                    Las principales secuelas que pueden afectar la calidad de vida incluyen:
-                  </p>
-                </div>
-                
-                <div class="space-y-6">
-                  {secuelas.map((secuela, index) => (
-                    <SymptomCard title={secuela.title} description={secuela.description} index={index + 1} showIndex={false} />
-                  ))}
-                </div>
-              </div>
-            </div>
           </div>
-          <div class="lg:w-1/2">
-            <div class="rounded-lg overflow-hidden">
-              <Image 
-                src={episitomia}
-                transition:name={episitomia.src}
-                alt="Consulta médica especializada en episiotomía" 
-                class="w-full h-full object-cover aspect-square"
-              />
+          <div class="container lg:w-1/2 mt-10">
+            <div class="max-w-6xl mx-auto">
+              <div class="mb-4">
+                <h2 class="text-2xl font-bold  font-title text-left text-primary-200">
+                  Secuelas de la episiotomía
+                </h2>
+                <p class="text-lg text-black max-w-2xl ">
+                  Las principales secuelas que pueden afectar la calidad de vida incluyen:
+                </p>
+              </div>
+              <div class="space-y-6">
+                {secuelas.map((secuela, index) => (
+                  <SymptomCard title={secuela.title} description={secuela.description} index={index + 1} showIndex={false} />
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -153,11 +140,11 @@ const tratamientos = [
     </section>
 
     <!-- Tratamientos disponibles -->
-    <section class="bg-gradient-to-b from-white to-pink-100">
-      <div class="container mx-auto px-4 md:px-8">
-        <Treatments client:load showAll={false} layout='carousel' category='episiotomia'/>
+    <div class="bg-gradient-to-b from-white to-pink-100">
+      <div class=" ">
+        <Treatments client:load showAll={true} layout='carousel'/>
       </div>
-    </section>
+    </div>
 
     <!-- Componente de contacto -->
     <Contact />

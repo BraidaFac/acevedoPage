@@ -346,11 +346,11 @@ import nutricion from '../../assets/fotos/nutricion.jpg';
     </section>
 
     <!-- Tratamientos disponibles -->
-    <section class="bg-gradient-to-b from-white to-pink-100">
-      <div class="container mx-auto px-4 md:px-8">
-        <Treatments client:load category='celulitis' layout='carousel'/>
+    <div class="bg-gradient-to-b from-white to-pink-100">
+      <div >
+        <Treatments client:load showAll={true} layout='carousel'/>
       </div>
-    </section>
+    </div>
 
     <!-- Componente de contacto -->
     <Contact />
