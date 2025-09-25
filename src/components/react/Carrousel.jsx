@@ -11,13 +11,6 @@ import rafrecuencia from "../../assets/fotos/recuPostPartoRadioFrec.jpeg";
 
 const slides = [
   {
-    image: rafrecuencia,
-    title: "Radiofrecuencia PostParto",
-    description:
-      "Tratamiento no invasivo para zona corporal, incontinencia urinaria y rejuvenecimiento vaginal",
-    url: "/#contact",
-  },
-  {
     image: consultaginecologica,
     title: "Consulta Ginecológica",
     description:
@@ -36,6 +29,13 @@ const slides = [
     title: "Control de Embarazo",
     description:
       "Acompañamiento integral durante tu embarazo con atención cálida y profesional",
+    url: "/#contact",
+  },
+  {
+    image: rafrecuencia,
+    title: "Radiofrecuencia PostParto",
+    description:
+      "Tratamiento no invasivo para zona corporal, incontinencia urinaria y rejuvenecimiento vaginal",
     url: "/#contact",
   },
 ];
